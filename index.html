@@ -157,6 +157,31 @@
   }
   .result .close:active{transform:scale(.97);}
 
+  /* 定制面板（温度/甜度/加料） */
+  .custom{
+    background:#fff;border-radius:30px;padding:26px 22px;max-width:340px;width:100%;
+    box-shadow:0 20px 60px rgba(120,40,70,.4);animation:pop .35s cubic-bezier(.2,1.2,.4,1);
+    max-height:84%;overflow-y:auto;
+  }
+  .custom .ctitle{font-size:21px;font-weight:800;margin:0 0 2px;}
+  .custom .cmeta{font-size:13px;color:var(--ink-soft);margin-bottom:6px;}
+  .optgroup{margin:16px 0 0;}
+  .optgroup .glabel{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:9px;display:flex;align-items:center;gap:6px;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{
+    border:2px solid var(--line);background:transparent;border-radius:20px;padding:7px 15px;
+    font-size:13px;font-weight:600;color:var(--ink-soft);cursor:pointer;transition:.16s;-webkit-tap-highlight-color:transparent;
+  }
+  .chip:active{transform:scale(.94);}
+  .chip.on{border-color:var(--rose);color:var(--rose-deep);background:rgba(59,130,246,.12);font-weight:700;}
+  .custom .confirm{
+    width:100%;border:none;border-radius:16px;padding:14px;margin-top:22px;font-size:15px;font-weight:800;color:#fff;
+    background:linear-gradient(135deg,var(--peach),var(--rose));cursor:pointer;box-shadow:0 6px 16px rgba(59,130,246,.4);
+  }
+  .custom .confirm:active{transform:scale(.97);}
+  /* 结果里的参数展示 */
+  .result .rparams{font-size:14px;color:var(--ink);background:rgba(59,130,246,.08);border-radius:14px;padding:11px 13px;margin:4px 0 14px;line-height:1.7;text-align:left;}
+
   /* 撒花 */
   .confetti{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;z-index:90;}
   .confetti span{position:absolute;top:-30px;font-size:22px;animation:fall linear forwards;}
@@ -208,6 +233,9 @@
       <div class="overlay" id="overlay">
         <div class="result" id="resultCard"></div>
       </div>
+      <div class="overlay" id="customOverlay">
+        <div class="custom" id="customCard"></div>
+      </div>
       <div class="confetti" id="confetti"></div>
     </div>
   </div>
@@ -257,7 +285,7 @@ function render(){
       el.className='sku';
       const thumb = s.img ? `<img class="thumb" src="${s.img}" alt="${s.name}">` : '';
       el.innerHTML=`${thumb}<div class="left"><div class="sn">${s.name}</div><div class="tags">${s.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div></div><div class="price"><small>¥</small>${s.price}</div>`;
-      el.onclick=()=>showResult(s, DATA[state.cat].label, DATA[state.cat].brands[state.brand].name, false);
+      el.onclick=()=>openCustom(s, DATA[state.cat].label, DATA[state.cat].brands[state.brand].name);
       skus.appendChild(el);
     });
   } else {
@@ -284,17 +312,103 @@ function pickCat(k){
 }
 function pickBrand(k){ state.brand=k; render(); }
 
-function showResult(s, catLabel, brandName, isSurprise){
+const OPT_GROUPS = ['temp','sugar','topping'];
+function groupIcon(k){return k==='temp'?'🌡️':k==='sugar'?'🍯':'➕';}
+
+// 返回某杯在某组的选项数组；false 表示该组隐藏
+function resolveItems(s, key){
+  if(s.opts && s.opts[key] !== undefined){
+    if(s.opts[key] === false) return false;
+    if(Array.isArray(s.opts[key])) return s.opts[key];
+  }
+  const g = (typeof OPTIONS!=='undefined') ? OPTIONS[key] : null;
+  return g ? g.items : false;
+}
+
+let custom = null; // {s, catLabel, brandName, sel:{}}
+
+function openCustom(s, catLabel, brandName){
+  custom = { s, catLabel, brandName, sel:{} };
+  OPT_GROUPS.forEach(k=>{
+    const items = resolveItems(s,k);
+    if(items===false) return;
+    const multi = OPTIONS[k] && OPTIONS[k].multi;
+    custom.sel[k] = multi ? [] : items[0]; // 默认：单选取第一项，多选为空
+  });
+  renderCustom();
+  $('customOverlay').classList.add('show');
+}
+
+function renderCustom(){
+  const {s, catLabel, brandName} = custom;
+  let groupsHtml = '';
+  OPT_GROUPS.forEach(k=>{
+    const items = resolveItems(s,k);
+    if(items===false) return;
+    const multi = OPTIONS[k] && OPTIONS[k].multi;
+    const chips = items.map(it=>{
+      const on = multi ? custom.sel[k].includes(it) : custom.sel[k]===it;
+      return `<span class="chip${on?' on':''}" data-k="${k}" data-it="${it}" data-multi="${multi?1:0}">${it}</span>`;
+    }).join('');
+    groupsHtml += `<div class="optgroup"><div class="glabel">${groupIcon(k)} ${OPTIONS[k].label}</div><div class="chips">${chips}</div></div>`;
+  });
+  $('customCard').innerHTML = `
+    <div class="ctitle">${s.name}</div>
+    <div class="cmeta">${catLabel} · ${brandName} · ¥${s.price}</div>
+    ${groupsHtml}
+    <button class="confirm" id="confirmBtn">确认 ✅</button>
+  `;
+  $('customCard').querySelectorAll('.chip').forEach(ch=>{
+    ch.onclick = ()=>{
+      const k=ch.dataset.k, it=ch.dataset.it, multi=ch.dataset.multi==='1';
+      if(multi){
+        const arr=custom.sel[k];
+        const i=arr.indexOf(it);
+        if(i>=0) arr.splice(i,1); else arr.push(it);
+      } else {
+        custom.sel[k]=it;
+      }
+      renderCustom();
+    };
+  });
+  $('confirmBtn').onclick = confirmCustom;
+}
+
+function confirmCustom(){
+  const {s, catLabel, brandName, sel} = custom;
+  $('customOverlay').classList.remove('show');
+  showResult(s, catLabel, brandName, false, sel);
+}
+function closeCustom(){ $('customOverlay').classList.remove('show'); }
+
+function showResult(s, catLabel, brandName, isSurprise, params){
   const card=$('resultCard');
   const bigHtml = s.img
     ? `<img src="${s.img}" alt="${s.name}" style="width:96px;height:96px;border-radius:24px;object-fit:cover;margin:8px auto;display:block;box-shadow:0 10px 24px rgba(59,130,246,.25)">`
     : `<div class="big">${DATA_emo(catLabel)}</div>`;
+  // 参数展示
+  let paramsHtml='';
+  if(params){
+    const parts=[];
+    OPT_GROUPS.forEach(k=>{
+      const items=resolveItems(s,k);
+      if(items===false) return;
+      const sel=params[k];
+      if(sel===undefined) return;
+      let val;
+      if(Array.isArray(sel)){ if(sel.length===0) return; val=sel.join('、'); }
+      else val=sel;
+      parts.push(`${groupIcon(k)} ${OPTIONS[k].label}：${val}`);
+    });
+    if(parts.length) paramsHtml=`<div class="rparams">${parts.join('<br>')}</div>`;
+  }
   card.innerHTML=`
     <div class="ribbon">${isSurprise?'🎉 随机惊喜 · 命中':'💖 为你挑好啦'}</div>
     ${bigHtml}
     <div class="rname">${s.name}</div>
     <div class="rmeta">${catLabel} · ${brandName}</div>
     <div class="rprice">¥${s.price}</div>
+    ${paramsHtml}
     <div class="rtags">${s.tags.map(t=>`<span class="rtag">${t}</span>`).join('')}</div>
     <button class="close" onclick="closeResult()">好耶，就去买！💕</button>
   `;
@@ -331,7 +445,20 @@ function surprise(){
     const r=pickAll();cat=r.cat;brand=r.brand;sku=r.sku;
   }
   state.cat=cat;state.brand=brand;render();
-  showResult(sku, DATA[cat].label, DATA[cat].brands[brand].name, true);
+  const params={};
+  OPT_GROUPS.forEach(k=>{
+    const items=resolveItems(sku,k);
+    if(items===false) return;
+    const multi=OPTIONS[k] && OPTIONS[k].multi;
+    if(multi){
+      const n=Math.floor(Math.random()*3); // 随机 0~2 样加料
+      const pool=[...items].sort(()=>Math.random()-0.5);
+      params[k]=pool.slice(0,n);
+    } else {
+      params[k]=items[Math.floor(Math.random()*items.length)];
+    }
+  });
+  showResult(sku, DATA[cat].label, DATA[cat].brands[brand].name, true, params);
 }
 
 function burst(){
@@ -350,6 +477,7 @@ function burst(){
 
 $('surpriseBtn').onclick=surprise;
 $('resetBtn').onclick=()=>{state.cat=null;state.brand=null;closeResult();render();};
+$('customOverlay').addEventListener('click', e=>{ if(e.target===$('customOverlay')) closeCustom(); });
 render();
 </script>
 </body>
