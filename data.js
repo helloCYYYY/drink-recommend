@@ -33,11 +33,19 @@
 // ============================================================
 
 
-// 可选参数（温度 / 甜度 / 加料）—— 全局默认值，所有饮品都会显示这三组供选择。
-// 想针对某杯做特殊限制，可在那杯里加 opts 字段，例如：
-//   opts: { topping:false }            -> 隐藏「加料」这组（比如咖啡不加料）
-//   opts: { topping:['珍珠','椰果'] }  -> 只保留指定几项
-//   opts: { temp:['热','少冰'] }       -> 这杯只提供热/少冰
+// 参数系统（三级覆盖：SKU.opts > 大类 options > 这里全局默认）
+// ------------------------------------------------------------------
+// 1) 全局默认 OPTIONS：任何「没有单独定义 options 的大类」都会用这一套。
+// 2) 大类级 options：写在下面 DATA 里每个大类底下（见 coffee/milktea/fruittea），
+//    一旦写了，该大类就【只用自己这套】，不再套用上面的全局默认 —— 这就是「每类不一样」。
+// 3) SKU 级 opts：在某一杯里加 opts 字段，做最细的覆盖：
+//      opts: { topping:false }            -> 这杯隐藏「加料」组
+//      opts: { topping:['珍珠','椰果'] }  -> 这杯加料只给这两样
+//      opts: { temp:['热'] }              -> 这杯温度只能选热
+// 想加新参数组（如浓度/份量）直接在大类 options 里加一项即可，例如：
+//      strength: { label:'浓度', items:['标准','加浓','减淡'] }
+//      size:     { label:'份量', items:['中杯','大杯'] }
+// multi:true 表示可多选（如加料），不加或 false 为单选。
 const OPTIONS = {
   temp:    { label: '温度', items: ['热', '少冰', '去冰'] },
   sugar:   { label: '甜度', items: ['全糖', '七分糖', '五分糖', '三分糖', '无糖'] },
@@ -49,6 +57,12 @@ const DATA = {
   coffee: {
     label: '咖啡',
     emoji: '☕',
+    // ☕ 咖啡的参数（与奶茶/果茶不同：用「浓度」代替「甜度」，加料是燕麦奶/厚乳/椰乳）
+    options: {
+      temp:    { label: '温度', items: ['热', '冰', '去冰'] },
+      strength:{ label: '浓度', items: ['标准', '加浓', '减淡'] },
+      topping: { label: '加料', items: ['燕麦奶', '厚乳', '椰乳'], multi: true },
+    },
     brands: {
       starbucks: {
         name: '星巴克',
@@ -81,6 +95,12 @@ const DATA = {
   milktea: {
     label: '奶茶',
     emoji: '🥤',
+    // 🥤 奶茶的参数（经典：温度 + 甜度 + 加料）
+    options: {
+      temp:    { label: '温度', items: ['热', '少冰', '去冰'] },
+      sugar:   { label: '甜度', items: ['全糖', '七分糖', '五分糖', '三分糖', '无糖'] },
+      topping: { label: '加料', items: ['珍珠', '椰果', '布丁', '芋圆'], multi: true },
+    },
     brands: {
       heytea: {
         name: '喜茶',
@@ -110,6 +130,13 @@ const DATA = {
   fruittea: {
     label: '果茶',
     emoji: '🍹',
+    // 🍹 果茶的参数（温度 + 甜度 + 加料 + 份量）
+    options: {
+      temp:    { label: '温度', items: ['热', '少冰', '去冰'] },
+      sugar:   { label: '甜度', items: ['全糖', '七分糖', '五分糖', '三分糖', '无糖'] },
+      topping: { label: '加料', items: ['西米', '寒天', '脆波波'], multi: true },
+      size:    { label: '份量', items: ['中杯', '大杯'] },
+    },
     brands: {
       starbucks: {
         name: '星巴克',
