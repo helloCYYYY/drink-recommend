@@ -63,9 +63,9 @@
   .header p{margin:0;font-size:13px;color:var(--ink-soft);}
 
   .progress{display:flex;align-items:center;gap:8px;margin:18px 2px 6px;}
-  .progress .dot{width:9px;height:9px;border-radius:50%;background:rgba(255,94,138,.25);transition:.3s;}
+  .progress .dot{width:9px;height:9px;border-radius:50%;background:rgba(59,130,246,.25);transition:.3s;}
   .progress .dot.on{background:var(--rose);transform:scale(1.25);}
-  .progress .bar{flex:1;height:3px;border-radius:3px;background:rgba(255,94,138,.18);overflow:hidden;}
+  .progress .bar{flex:1;height:3px;border-radius:3px;background:rgba(59,130,246,.18);overflow:hidden;}
   .progress .bar > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--peach),var(--rose));transition:.4s;}
 
   .section{margin-top:22px;}
@@ -91,7 +91,7 @@
     cursor:pointer;transition:.22s;display:flex;align-items:center;gap:10px;backdrop-filter:blur(8px);
     box-shadow:0 6px 16px rgba(59,130,246,.10);
   }
-  .brand .logo{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px;color:#fff;font-weight:800;flex:none;}
+  .brand .logo{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px;color:#fff;font-weight:800;flex:none;overflow:hidden;}
   .brand .bn{font-size:15px;font-weight:700;}
   .brand:active{transform:scale(.96);}
   .brand.sel{border-color:var(--rose);background:var(--card-strong);box-shadow:var(--shadow);}
@@ -104,7 +104,8 @@
     box-shadow:0 6px 16px rgba(59,130,246,.10);border:2px solid transparent;
   }
   .sku:active{transform:scale(.98);}
-  .sku .left{display:flex;flex-direction:column;gap:6px;}
+  .sku .left{display:flex;flex-direction:column;gap:6px;flex:1;min-width:0;}
+  .sku .thumb{width:46px;height:46px;border-radius:14px;object-fit:cover;flex:none;box-shadow:0 4px 10px rgba(59,130,246,.22);}
   .sku .sn{font-size:15px;font-weight:700;}
   .sku .tags{display:flex;gap:6px;flex-wrap:wrap;}
   .sku .tag{font-size:11px;color:var(--rose-deep);background:rgba(59,130,246,.12);padding:2px 8px;border-radius:20px;}
@@ -237,7 +238,8 @@ function render(){
     Object.entries(DATA[state.cat].brands).forEach(([k,v])=>{
       const el=document.createElement('div');
       el.className='brand'+(state.brand===k?' sel':'');
-      el.innerHTML=`<div class="logo" style="background:linear-gradient(135deg,var(--peach),var(--rose))">${v.logo}</div><div class="bn">${v.name}</div>`;
+      const logoHtml = v.logoImg ? `<img src="${v.logoImg}" alt="${v.name}" style="width:100%;height:100%;object-fit:cover">` : v.logo;
+      el.innerHTML=`<div class="logo" style="background:linear-gradient(135deg,var(--peach),var(--rose))">${logoHtml}</div><div class="bn">${v.name}</div>`;
       el.onclick=()=>pickBrand(k);
       brands.appendChild(el);
     });
@@ -253,7 +255,8 @@ function render(){
     DATA[state.cat].brands[state.brand].skus.forEach(s=>{
       const el=document.createElement('div');
       el.className='sku';
-      el.innerHTML=`<div class="left"><div class="sn">${s.name}</div><div class="tags">${s.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div></div><div class="price"><small>¥</small>${s.price}</div>`;
+      const thumb = s.img ? `<img class="thumb" src="${s.img}" alt="${s.name}">` : '';
+      el.innerHTML=`${thumb}<div class="left"><div class="sn">${s.name}</div><div class="tags">${s.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div></div><div class="price"><small>¥</small>${s.price}</div>`;
       el.onclick=()=>showResult(s, DATA[state.cat].label, DATA[state.cat].brands[state.brand].name, false);
       skus.appendChild(el);
     });
@@ -283,9 +286,12 @@ function pickBrand(k){ state.brand=k; render(); }
 
 function showResult(s, catLabel, brandName, isSurprise){
   const card=$('resultCard');
+  const bigHtml = s.img
+    ? `<img src="${s.img}" alt="${s.name}" style="width:96px;height:96px;border-radius:24px;object-fit:cover;margin:8px auto;display:block;box-shadow:0 10px 24px rgba(59,130,246,.25)">`
+    : `<div class="big">${DATA_emo(catLabel)}</div>`;
   card.innerHTML=`
     <div class="ribbon">${isSurprise?'🎉 随机惊喜 · 命中':'💖 为你挑好啦'}</div>
-    <div class="big">${DATA_emo(catLabel)}</div>
+    ${bigHtml}
     <div class="rname">${s.name}</div>
     <div class="rmeta">${catLabel} · ${brandName}</div>
     <div class="rprice">¥${s.price}</div>

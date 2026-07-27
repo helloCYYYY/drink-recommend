@@ -8,11 +8,23 @@
 //      - emoji：大类图标
 //      - brands（品牌）：starbucks / luckin / heytea / guming
 //          - name：品牌中文名
-//          - logo：品牌图标（随便选个 emoji 即可）
+//          - logo：品牌图标（随便选个 emoji 即可，留作无图时的兜底）
+//          - logoImg：品牌 logo 图片路径（可选！）
+//                把图片文件放进项目里的 images/ 文件夹，这里写 'images/starbucks.png'
+//                留空 '' 就继续用上面的 emoji；填了路径就显示真实图片
 //          - skus（具体饮品）：每一项是一杯
 //              - name：饮品名
 //              - price：价格（数字，单位元）
 //              - tags：口味标签（数组，可写多个，如 ['甜','小料']）
+//              - img：饮品图片路径（可选！）
+//                同样把图片放进 images/ 文件夹，写 'images/shengyu_natile.png'
+//                留空 '' 就用原来的图标；填了路径就显示真实图片
+//
+//  ★ 图片怎么放：
+//    1) 在项目根目录建一个 images/ 文件夹（如果还没有）
+//    2) 把图片文件丢进去，文件名用英文/数字，比如 starbucks.png、shengyu_natile.jpg
+//    3) 在下面对应的 logoImg / img 里写 'images/xxx.png'（相对路径，注意引号英文）
+//    4) 提交并推送后，GitHub Pages 会自动更新
 //
 //  注意：
 //  1. 每条之间用逗号分隔，最后一个不要逗号（看下面例子）。
@@ -28,24 +40,26 @@ const DATA = {
       starbucks: {
         name: '星巴克',
         logo: '🟢',
+        logoImg: '', // 例：'images/starbucks.png'
         skus: [
-          { name: '美式', price: 27, tags: ['清爽', '微苦'] },
-          { name: '拿铁', price: 29, tags: ['奶香'] },
-          { name: '燕麦拿铁', price: 33, tags: ['低卡', '奶香'] },
-          { name: '焦糖玛奇朵', price: 35, tags: ['甜', '香浓'] },
-          { name: '冷萃', price: 30, tags: ['清爽', '顺滑'] },
+          { name: '美式', price: 27, tags: ['清爽', '微苦'], img: '' },
+          { name: '拿铁', price: 29, tags: ['奶香'], img: '' },
+          { name: '燕麦拿铁', price: 33, tags: ['低卡', '奶香'], img: '' },
+          { name: '焦糖玛奇朵', price: 35, tags: ['甜', '香浓'], img: '' },
+          { name: '冷萃', price: 30, tags: ['清爽', '顺滑'], img: '' },
         ],
       },
       luckin: {
         name: '瑞幸',
         logo: '🔵',
+        logoImg: '', // 例：'images/luckin.png'
         skus: [
-          { name: '生椰拿铁', price: 18, tags: ['椰香', '爆款'] },
-          { name: '厚乳拿铁', price: 18, tags: ['奶香', '醇厚'] },
-          { name: '美式', price: 13, tags: ['清爽', '微苦'] },
-          { name: '丝绒拿铁', price: 18, tags: ['丝滑'] },
-          { name: '橙C美式', price: 18, tags: ['果香', '清爽'] },
-          { name: '陨石拿铁', price: 19, tags: ['奶香', '嚼着喝'] },
+          { name: '生椰拿铁', price: 18, tags: ['椰香', '爆款'], img: '' },
+          { name: '厚乳拿铁', price: 18, tags: ['奶香', '醇厚'], img: '' },
+          { name: '美式', price: 13, tags: ['清爽', '微苦'], img: '' },
+          { name: '丝绒拿铁', price: 18, tags: ['丝滑'], img: '' },
+          { name: '橙C美式', price: 18, tags: ['果香', '清爽'], img: '' },
+          { name: '陨石拿铁', price: 19, tags: ['奶香', '嚼着喝'], img: '' },
         ],
       },
     },
@@ -58,21 +72,23 @@ const DATA = {
       heytea: {
         name: '喜茶',
         logo: '🟣',
+        logoImg: '', // 例：'images/heyta.png'
         skus: [
-          { name: '烤黑糖波波牛乳', price: 19, tags: ['甜', '小料'] },
-          { name: '芝芝莓莓', price: 29, tags: ['草莓', '芝士'] },
-          { name: '芝芝芒芒', price: 29, tags: ['芒果', '芝士'] },
-          { name: '满杯红柚', price: 21, tags: ['柚子', '清爽'] },
+          { name: '烤黑糖波波牛乳', price: 19, tags: ['甜', '小料'], img: '' },
+          { name: '芝芝莓莓', price: 29, tags: ['草莓', '芝士'], img: '' },
+          { name: '芝芝芒芒', price: 29, tags: ['芒果', '芝士'], img: '' },
+          { name: '满杯红柚', price: 21, tags: ['柚子', '清爽'], img: '' },
         ],
       },
       guming: {
         name: '古茗',
         logo: '🟡',
+        logoImg: '', // 例：'images/guming.png'
         skus: [
-          { name: '烤奶', price: 12, tags: ['甜', '经典'] },
-          { name: '古茗奶茶', price: 10, tags: ['经典', '平价'] },
-          { name: '超A芝士葡萄', price: 16, tags: ['葡萄', '芝士'] },
-          { name: '杨枝甘露', price: 15, tags: ['芒果', '西米'] },
+          { name: '烤奶', price: 12, tags: ['甜', '经典'], img: '' },
+          { name: '古茗奶茶', price: 10, tags: ['经典', '平价'], img: '' },
+          { name: '超A芝士葡萄', price: 16, tags: ['葡萄', '芝士'], img: '' },
+          { name: '杨枝甘露', price: 15, tags: ['芒果', '西米'], img: '' },
         ],
       },
     },
@@ -85,35 +101,39 @@ const DATA = {
       starbucks: {
         name: '星巴克',
         logo: '🟢',
+        logoImg: '', // 例：'images/starbucks.png'
         skus: [
-          { name: '冰摇柠檬茶', price: 24, tags: ['柠檬', '清爽'] },
-          { name: '芒果西米露', price: 28, tags: ['芒果', '香甜'] },
+          { name: '冰摇柠檬茶', price: 24, tags: ['柠檬', '清爽'], img: '' },
+          { name: '芒果西米露', price: 28, tags: ['芒果', '香甜'], img: '' },
         ],
       },
       luckin: {
         name: '瑞幸',
         logo: '🔵',
+        logoImg: '', // 例：'images/luckin.png'
         skus: [
-          { name: '满杯杨梅', price: 18, tags: ['杨梅', '酸甜'] },
-          { name: '葡萄冰萃', price: 18, tags: ['葡萄', '清爽'] },
+          { name: '满杯杨梅', price: 18, tags: ['杨梅', '酸甜'], img: '' },
+          { name: '葡萄冰萃', price: 18, tags: ['葡萄', '清爽'], img: '' },
         ],
       },
       heytea: {
         name: '喜茶',
         logo: '🟣',
+        logoImg: '', // 例：'images/heyta.png'
         skus: [
-          { name: '多肉葡萄', price: 29, tags: ['葡萄', '爆款'] },
-          { name: '满杯红柚', price: 21, tags: ['柚子', '清爽'] },
-          { name: '芝芝桃桃', price: 25, tags: ['桃子', '芝士'] },
+          { name: '多肉葡萄', price: 29, tags: ['葡萄', '爆款'], img: '' },
+          { name: '满杯红柚', price: 21, tags: ['柚子', '清爽'], img: '' },
+          { name: '芝芝桃桃', price: 25, tags: ['桃子', '芝士'], img: '' },
         ],
       },
       guming: {
         name: '古茗',
         logo: '🟡',
+        logoImg: '', // 例：'images/guming.png'
         skus: [
-          { name: '超A芝士葡萄', price: 16, tags: ['葡萄', '芝士'] },
-          { name: '杨枝甘露', price: 15, tags: ['芒果', '西米'] },
-          { name: '百香果双响炮', price: 12, tags: ['百香果', '酸甜'] },
+          { name: '超A芝士葡萄', price: 16, tags: ['葡萄', '芝士'], img: '' },
+          { name: '杨枝甘露', price: 15, tags: ['芒果', '西米'], img: '' },
+          { name: '百香果双响炮', price: 12, tags: ['百香果', '酸甜'], img: '' },
         ],
       },
     },
