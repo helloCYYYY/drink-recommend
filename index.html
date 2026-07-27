@@ -312,35 +312,21 @@ function pickCat(k){
 }
 function pickBrand(k){ state.brand=k; render(); }
 
-// 参数解析：三级覆盖（SKU.opts > 大类 options > 全局 OPTIONS）
-// 返回 {label,items,multi} 或 false（该组不显示）
-function catOpts(catKey){
-  return (DATA[catKey] && DATA[catKey].options) ? DATA[catKey].options : null;
-}
-function resolveGroup(s, catKey, key){
-  // 1) SKU 级覆盖
-  if(s.opts && s.opts[key] !== undefined){
-    if(s.opts[key] === false) return false;            // 隐藏该组
-    if(Array.isArray(s.opts[key])){                    // 限定子集
-      const base = (catOpts(catKey) && catOpts(catKey)[key]) || (typeof OPTIONS!=='undefined' ? OPTIONS[key] : null) || {label:key, multi:false};
-      return { label:base.label, multi:!!base.multi, items:s.opts[key] };
-    }
-  }
-  // 2) 大类级（若定义了 options，则完全取代全局，实现「每类不一样」）
-  const co = catOpts(catKey);
-  if(co){
-    const g = co[key];
-    return g ? { label:g.label, multi:!!g.multi, items:g.items } : false;
-  }
-  // 3) 全局默认
-  const g = (typeof OPTIONS!=='undefined') ? OPTIONS[key] : null;
-  return g ? { label:g.label, multi:!!g.multi, items:g.items } : false;
+// 参数解析：每杯在 s.opts 里自己定义参数组。
+// 某杯没有 opts（或没有合法组）=> 无参数，点它直接出结果、不弹面板。
+// 返回 {label,items,multi} 或 false（无此组）
+function resolveGroup(s, key){
+  const o = s.opts;
+  if(!o || !o[key]) return false;
+  const g = o[key];
+  if(!g.items || !Array.isArray(g.items) || g.items.length===0) return false;
+  return { label: g.label || key, multi: !!g.multi, items: g.items };
 }
 // 某杯可用的参数组（按定义顺序）
-function groupsFor(catKey, s){
-  const co = catOpts(catKey);
-  const source = co ? co : (typeof OPTIONS!=='undefined' ? OPTIONS : {});
-  return Object.keys(source).filter(k=> resolveGroup(s, catKey, k) !== false);
+function groupsFor(s){
+  const o = s.opts;
+  if(!o) return [];
+  return Object.keys(o).filter(k=> resolveGroup(s, k) !== false);
 }
 const ICONS = { temp:'🌡️', sugar:'🍯', size:'🥤', strength:'☕', topping:'➕', ice:'❄️', milk:'🥛', spice:'🌶️' };
 function groupIcon(k){ return ICONS[k] || '•'; }
@@ -348,9 +334,13 @@ function groupIcon(k){ return ICONS[k] || '•'; }
 let custom = null; // {s, catKey, catLabel, brandName, sel:{}}
 
 function openCustom(s, catKey, catLabel, brandName){
+  if(groupsFor(s).length === 0){            // 这杯没参数，直接出结果
+    showResult(s, catLabel, brandName, false, null, catKey);
+    return;
+  }
   custom = { s, catKey, catLabel, brandName, sel:{} };
-  groupsFor(catKey, s).forEach(k=>{
-    const g = resolveGroup(s, catKey, k);
+  groupsFor(s).forEach(k=>{
+    const g = resolveGroup(s, k);
     custom.sel[k] = g.multi ? [] : g.items[0]; // 默认：单选取第一项，多选为空
   });
   renderCustom();
@@ -360,8 +350,8 @@ function openCustom(s, catKey, catLabel, brandName){
 function renderCustom(){
   const {s, catKey, catLabel, brandName} = custom;
   let groupsHtml = '';
-  groupsFor(catKey, s).forEach(k=>{
-    const g = resolveGroup(s, catKey, k);
+  groupsFor(s).forEach(k=>{
+    const g = resolveGroup(s, k);
     const chips = g.items.map(it=>{
       const on = g.multi ? custom.sel[k].includes(it) : custom.sel[k]===it;
       return `<span class="chip${on?' on':''}" data-k="${k}" data-it="${it}" data-multi="${g.multi?1:0}">${it}</span>`;
@@ -406,8 +396,8 @@ function showResult(s, catLabel, brandName, isSurprise, params, catKey){
   let paramsHtml='';
   if(params){
     const parts=[];
-    groupsFor(catKey, s).forEach(k=>{
-      const g = resolveGroup(s, catKey, k);
+    groupsFor(s).forEach(k=>{
+      const g = resolveGroup(s, k);
       const sel=params[k];
       if(sel===undefined) return;
       let val;
@@ -461,8 +451,8 @@ function surprise(){
   }
   state.cat=cat;state.brand=brand;render();
   const params={};
-  groupsFor(cat, sku).forEach(k=>{
-    const g=resolveGroup(sku, cat, k);
+  groupsFor(sku).forEach(k=>{
+    const g=resolveGroup(sku, k);
     if(g.multi){
       const n=Math.floor(Math.random()*3); // 随机 0~2 样加料
       const pool=[...g.items].sort(()=>Math.random()-0.5);

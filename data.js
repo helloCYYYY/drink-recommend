@@ -33,36 +33,28 @@
 // ============================================================
 
 
-// 参数系统（三级覆盖：SKU.opts > 大类 options > 这里全局默认）
+// 参数系统（每杯单独定义）
 // ------------------------------------------------------------------
-// 1) 全局默认 OPTIONS：任何「没有单独定义 options 的大类」都会用这一套。
-// 2) 大类级 options：写在下面 DATA 里每个大类底下（见 coffee/milktea/fruittea），
-//    一旦写了，该大类就【只用自己这套】，不再套用上面的全局默认 —— 这就是「每类不一样」。
-// 3) SKU 级 opts：在某一杯里加 opts 字段，做最细的覆盖：
-//      opts: { topping:false }            -> 这杯隐藏「加料」组
-//      opts: { topping:['珍珠','椰果'] }  -> 这杯加料只给这两样
-//      opts: { temp:['热'] }              -> 这杯温度只能选热
-// 想加新参数组（如浓度/份量）直接在大类 options 里加一项即可，例如：
-//      strength: { label:'浓度', items:['标准','加浓','减淡'] }
-//      size:     { label:'份量', items:['中杯','大杯'] }
-// multi:true 表示可多选（如加料），不加或 false 为单选。
-const OPTIONS = {
-  temp:    { label: '温度', items: ['热', '少冰', '去冰'] },
-  sugar:   { label: '甜度', items: ['全糖', '七分糖', '五分糖', '三分糖', '无糖'] },
-  topping: { label: '加料', items: ['珍珠', '椰果', '布丁', '芋圆', '燕麦'], multi: true },
-};
+// 每杯饮品可以【自己定义】参数组，写在那一杯的 opts 字段里。
+// 没写 opts（或留空）的饮品 => 没有任何参数，点它直接出结果、不弹面板。
+//
+// 写法示例（直接抄到任意一杯里）：
+//   { name:'生椰拿铁', price:18, tags:['椰香','爆款'], img:'',
+//     opts: {
+//       temp:    { label:'温度', items:['热','冰','去冰'] },          // 单选
+//       sugar:   { label:'甜度', items:['全糖','五分糖','无糖'] },     // 单选
+//       topping: { label:'加料', items:['珍珠','椰果'], multi:true },  // 多选
+//     } }
+// 说明：
+//   - 想加哪组就写哪组，组名随意（temp/sugar/topping/size/strength…都行）。
+//   - multi:true 表示可多选（如加料）；不加或 false 为单选，默认选第一项。
+//   - 某杯完全不要参数？直接不写 opts 即可。
 
 
 const DATA = {
   coffee: {
     label: '咖啡',
     emoji: '☕',
-    // ☕ 咖啡的参数（与奶茶/果茶不同：用「浓度」代替「甜度」，加料是燕麦奶/厚乳/椰乳）
-    options: {
-      temp:    { label: '温度', items: ['热', '冰', '去冰'] },
-      strength:{ label: '浓度', items: ['标准', '加浓', '减淡'] },
-      topping: { label: '加料', items: ['燕麦奶', '厚乳', '椰乳'], multi: true },
-    },
     brands: {
       starbucks: {
         name: '星巴克',
@@ -81,7 +73,12 @@ const DATA = {
         logo: '🔵',
         logoImg: '', // 例：'images/luckin.png'
         skus: [
-          { name: '生椰拿铁', price: 18, tags: ['椰香', '爆款'], img: '' },
+          { name: '生椰拿铁', price: 18, tags: ['椰香', '爆款'], img: '',
+            opts: {
+              temp:    { label:'温度', items:['热','冰','去冰'] },
+              sugar:   { label:'甜度', items:['全糖','五分糖','无糖'] },
+              topping: { label:'加料', items:['珍珠','椰果'], multi:true },
+            } },
           { name: '厚乳拿铁', price: 18, tags: ['奶香', '醇厚'], img: '' },
           { name: '美式', price: 13, tags: ['清爽', '微苦'], img: '' },
           { name: '丝绒拿铁', price: 18, tags: ['丝滑'], img: '' },
@@ -95,12 +92,6 @@ const DATA = {
   milktea: {
     label: '奶茶',
     emoji: '🥤',
-    // 🥤 奶茶的参数（经典：温度 + 甜度 + 加料）
-    options: {
-      temp:    { label: '温度', items: ['热', '少冰', '去冰'] },
-      sugar:   { label: '甜度', items: ['全糖', '七分糖', '五分糖', '三分糖', '无糖'] },
-      topping: { label: '加料', items: ['珍珠', '椰果', '布丁', '芋圆'], multi: true },
-    },
     brands: {
       heytea: {
         name: '喜茶',
@@ -130,13 +121,6 @@ const DATA = {
   fruittea: {
     label: '果茶',
     emoji: '🍹',
-    // 🍹 果茶的参数（温度 + 甜度 + 加料 + 份量）
-    options: {
-      temp:    { label: '温度', items: ['热', '少冰', '去冰'] },
-      sugar:   { label: '甜度', items: ['全糖', '七分糖', '五分糖', '三分糖', '无糖'] },
-      topping: { label: '加料', items: ['西米', '寒天', '脆波波'], multi: true },
-      size:    { label: '份量', items: ['中杯', '大杯'] },
-    },
     brands: {
       starbucks: {
         name: '星巴克',
