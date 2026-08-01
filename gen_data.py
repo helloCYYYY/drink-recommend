@@ -10,6 +10,7 @@ os.makedirs(os.path.join(IMG_DIR, "mstand"), exist_ok=True)
 CAT_MAP = {"咖啡": "coffee", "奶茶": "milktea", "果茶": "fruittea"}
 
 def extract(fpath, brand_key, brand_name, brand_logo):
+    os.makedirs(os.path.join(IMG_DIR, brand_key), exist_ok=True)
     z = zipfile.ZipFile(fpath)
     # rels: rId -> media (attrs may appear in any order)
     relx = z.read("xl/drawings/_rels/drawing1.xml.rels").decode("utf-8")
@@ -74,19 +75,33 @@ print(">> MSTAND")
 ms = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\MSTAND_饮品SKU清单.xlsx",
              "mstand", "M Stand", "M")
 
-# ---- placeholders (keep 瑞幸/喜茶/古茗 as-is) ----
+print(">> LUCKIN")
+lk = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\瑞幸咖啡_饮品SKU清单_补全版.xlsx",
+             "luckin", "瑞幸", "🔵")
+# 真实清单里没有“生椰拿铁”，但定制参数面板需要有样本：把演示 opts 挂到一杯真实拿铁上
+DEMO_OPTS = {"temp": {"label": "温度", "items": ["热", "冰", "去冰"]},
+             "sugar": {"label": "甜度", "items": ["全糖", "五分糖", "无糖"]},
+             "topping": {"label": "加料", "items": ["珍珠", "椰果"], "multi": True}}
+def attach_demo():
+    target = None
+    for cat in lk:
+        for b in lk[cat].values():
+            for s in b["skus"]:
+                if s["name"] == "生椰丝绒拿铁":
+                    target = s; break
+            if target: break
+        if target: break
+    if not target:
+        for b in lk.get("coffee", {}).values():
+            if b["skus"]:
+                target = b["skus"][0]; break
+    if target:
+        target["opts"] = DEMO_OPTS
+        print(f"  * 定制演示 opts 挂在：{target['name']}")
+attach_demo()
+
+# ---- placeholders (keep 喜茶/古茗 as-is; 瑞幸改用真实 Excel) ----
 placeholders = {
-    "coffee": {"luckin": {"name": "瑞幸", "logo": "🔵", "skus": [
-        {"name": "生椰拿铁", "price": 18, "tags": ["椰香", "爆款"], "img": "",
-         "opts": {"temp": {"label": "温度", "items": ["热", "冰", "去冰"]},
-                  "sugar": {"label": "甜度", "items": ["全糖", "五分糖", "无糖"]},
-                  "topping": {"label": "加料", "items": ["珍珠", "椰果"], "multi": True}}},
-        {"name": "厚乳拿铁", "price": 18, "tags": ["奶香", "醇厚"], "img": ""},
-        {"name": "美式", "price": 13, "tags": ["清爽", "微苦"], "img": ""},
-        {"name": "丝绒拿铁", "price": 18, "tags": ["丝滑"], "img": ""},
-        {"name": "橙C美式", "price": 18, "tags": ["果香", "清爽"], "img": ""},
-        {"name": "陨石拿铁", "price": 19, "tags": ["奶香", "嚼着喝"], "img": ""},
-    ]}},
     "milktea": {"heytea": {"name": "喜茶", "logo": "🟣", "skus": [
         {"name": "烤黑糖波波牛乳", "price": 19, "tags": ["甜", "小料"], "img": ""},
         {"name": "芝芝莓莓", "price": 29, "tags": ["草莓", "芝士"], "img": ""},
@@ -98,10 +113,7 @@ placeholders = {
         {"name": "超A芝士葡萄", "price": 16, "tags": ["葡萄", "芝士"], "img": ""},
         {"name": "杨枝甘露", "price": 15, "tags": ["芒果", "西米"], "img": ""},
     ]}},
-    "fruittea": {"luckin": {"name": "瑞幸", "logo": "🔵", "skus": [
-        {"name": "满杯杨梅", "price": 18, "tags": ["杨梅", "酸甜"], "img": ""},
-        {"name": "葡萄冰萃", "price": 18, "tags": ["葡萄", "清爽"], "img": ""},
-    ]}, "heytea": {"name": "喜茶", "logo": "🟣", "skus": [
+    "fruittea": {"heytea": {"name": "喜茶", "logo": "🟣", "skus": [
         {"name": "多肉葡萄", "price": 29, "tags": ["葡萄", "爆款"], "img": ""},
         {"name": "满杯红柚", "price": 21, "tags": ["柚子", "清爽"], "img": ""},
         {"name": "芝芝桃桃", "price": 25, "tags": ["桃子", "芝士"], "img": ""},
@@ -120,7 +132,7 @@ DATA = {
 }
 for cat_key in ("coffee", "milktea", "fruittea"):
     merged = {}
-    for src in (sb, ms):                    # 合并 STARBUCKS + MSTAND 两表
+    for src in (sb, ms, lk):                # 合并 STARBUCKS + MSTAND + LUCKIN 三表
         for bk, bv in src.get(cat_key, {}).items():
             merged[bk] = bv
     for bk, bv in placeholders.get(cat_key, {}).items():  # 保留 瑞幸/喜茶/古茗 占位

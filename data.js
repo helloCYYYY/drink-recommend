@@ -549,13 +549,178 @@ const DATA = {
         "logo": "🔵",
         "skus": [
           {
-            "name": "生椰拿铁",
-            "price": 18,
-            "tags": [
-              "椰香",
-              "爆款"
-            ],
-            "img": "",
+            "name": "小黄油美式（首创）",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/2.jpg"
+          },
+          {
+            "name": "全冰黑巧美式",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/3.jpg"
+          },
+          {
+            "name": "全冰奶酪美式",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/4.jpg"
+          },
+          {
+            "name": "椰芙佳朵拿铁",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/7.jpg"
+          },
+          {
+            "name": "百香果C美式",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/11.jpg"
+          },
+          {
+            "name": "橙C美式（首创）",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/12.jpg"
+          },
+          {
+            "name": "轻椰茉莉拿铁",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/14.jpg"
+          },
+          {
+            "name": "标准美式",
+            "price": 19,
+            "tags": [],
+            "img": "images/luckin/17.jpg"
+          },
+          {
+            "name": "埃塞瑰夏冷萃",
+            "price": 19,
+            "tags": [],
+            "img": "images/luckin/18.jpg"
+          },
+          {
+            "name": "瑰夏云朵冷萃",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/19.jpg"
+          },
+          {
+            "name": "埃塞金烘美式",
+            "price": 19,
+            "tags": [],
+            "img": "images/luckin/20.jpg"
+          },
+          {
+            "name": "深烘美式",
+            "price": 19,
+            "tags": [],
+            "img": "images/luckin/21.jpg"
+          },
+          {
+            "name": "加浓美式",
+            "price": 22,
+            "tags": [],
+            "img": "images/luckin/22.jpg"
+          },
+          {
+            "name": "茉莉花香美式",
+            "price": 22,
+            "tags": [],
+            "img": "images/luckin/23.jpg"
+          },
+          {
+            "name": "小黄油拿铁（首创）",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/24.jpg"
+          },
+          {
+            "name": "小青桔C美式",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/25.jpg"
+          },
+          {
+            "name": "缤纷C美式",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/26.jpg"
+          },
+          {
+            "name": "柠C气泡美式",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/27.jpg"
+          },
+          {
+            "name": "苹果C美式",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/28.jpg"
+          },
+          {
+            "name": "柚C美式",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/29.jpg"
+          },
+          {
+            "name": "鲜切柠C美式",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/30.jpg"
+          },
+          {
+            "name": "椰青冰萃美式",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/31.jpg"
+          },
+          {
+            "name": "葡萄冰萃美式",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/32.jpg"
+          },
+          {
+            "name": "绿沙沙拿铁",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/59.jpg"
+          },
+          {
+            "name": "绿沙沙拿铁（超大杯）",
+            "price": 26,
+            "tags": [],
+            "img": "images/luckin/60.jpg"
+          },
+          {
+            "name": "海盐焦糖拿铁",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/61.jpg"
+          },
+          {
+            "name": "茉莉花香拿铁",
+            "price": 22,
+            "tags": [],
+            "img": "images/luckin/62.jpg"
+          },
+          {
+            "name": "丝绒拿铁",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/63.jpg"
+          },
+          {
+            "name": "生椰丝绒拿铁",
+            "price": 26,
+            "tags": [],
+            "img": "images/luckin/64.jpg",
             "opts": {
               "temp": {
                 "label": "温度",
@@ -584,48 +749,70 @@ const DATA = {
             }
           },
           {
-            "name": "厚乳拿铁",
-            "price": 18,
-            "tags": [
-              "奶香",
-              "醇厚"
-            ],
-            "img": ""
+            "name": "香草丝绒拿铁",
+            "price": 26,
+            "tags": [],
+            "img": "images/luckin/65.jpg"
           },
           {
-            "name": "美式",
-            "price": 13,
-            "tags": [
-              "清爽",
-              "微苦"
-            ],
-            "img": ""
+            "name": "埃塞金烘拿铁",
+            "price": 21,
+            "tags": [],
+            "img": "images/luckin/66.jpg"
           },
           {
-            "name": "丝绒拿铁",
-            "price": 18,
-            "tags": [
-              "丝滑"
-            ],
-            "img": ""
+            "name": "深烘拿铁",
+            "price": 21,
+            "tags": [],
+            "img": "images/luckin/67.jpg"
           },
           {
-            "name": "橙C美式",
-            "price": 18,
-            "tags": [
-              "果香",
-              "清爽"
-            ],
-            "img": ""
+            "name": "拿铁",
+            "price": 21,
+            "tags": [],
+            "img": "images/luckin/68.jpg"
           },
           {
-            "name": "陨石拿铁",
-            "price": 19,
-            "tags": [
-              "奶香",
-              "嚼着喝"
-            ],
-            "img": ""
+            "name": "精萃澳瑞白",
+            "price": 23,
+            "tags": [],
+            "img": "images/luckin/69.jpg"
+          },
+          {
+            "name": "燕麦拿铁",
+            "price": 21,
+            "tags": [],
+            "img": "images/luckin/70.jpg"
+          },
+          {
+            "name": "焦糖玛奇朵",
+            "price": 23,
+            "tags": [],
+            "img": "images/luckin/71.jpg"
+          },
+          {
+            "name": "香草拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "images/luckin/72.jpg"
+          },
+          {
+            "name": "卡布奇诺",
+            "price": 23,
+            "tags": [],
+            "img": "images/luckin/73.jpg"
+          },
+          {
+            "name": "耶加雪菲美式",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/74.jpg"
+          },
+          {
+            "name": "耶加雪菲拿铁",
+            "price": 27,
+            "tags": [],
+            "img": "images/luckin/75.jpg"
           }
         ]
       }
@@ -806,6 +993,126 @@ const DATA = {
             "price": 36,
             "tags": [],
             "img": "images/mstand/56.jpg"
+          }
+        ]
+      },
+      "luckin": {
+        "name": "瑞幸",
+        "logo": "🔵",
+        "skus": [
+          {
+            "name": "抹茶丝绒拿铁",
+            "price": 26,
+            "tags": [],
+            "img": "images/luckin/5.jpg"
+          },
+          {
+            "name": "Hello苹果茉莉",
+            "price": 22,
+            "tags": [],
+            "img": "images/luckin/40.jpg"
+          },
+          {
+            "name": "小青桔茉莉冰奶",
+            "price": 22,
+            "tags": [],
+            "img": "images/luckin/41.jpg"
+          },
+          {
+            "name": "小青桔茉莉冰奶（超大杯）",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/42.jpg"
+          },
+          {
+            "name": "Hello苹果茉莉（超大杯）",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/43.jpg"
+          },
+          {
+            "name": "鲜萃轻轻茉莉（特大杯）",
+            "price": 23,
+            "tags": [],
+            "img": "images/luckin/44.jpg"
+          },
+          {
+            "name": "鲜萃轻轻茉莉",
+            "price": 20,
+            "tags": [],
+            "img": "images/luckin/45.jpg"
+          },
+          {
+            "name": "生椰杨枝甘露（超大杯）",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/46.jpg"
+          },
+          {
+            "name": "生椰杨枝甘露",
+            "price": 22,
+            "tags": [],
+            "img": "images/luckin/47.jpg"
+          },
+          {
+            "name": "雪酪芝士抹茶",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/48.jpg"
+          },
+          {
+            "name": "瑞之抹茶（特大杯）",
+            "price": 23,
+            "tags": [],
+            "img": "images/luckin/50.jpg"
+          },
+          {
+            "name": "瑞之抹茶",
+            "price": 20,
+            "tags": [],
+            "img": "images/luckin/51.jpg"
+          },
+          {
+            "name": "抹茶丝绒拿铁",
+            "price": 26,
+            "tags": [],
+            "img": "images/luckin/52.jpg"
+          },
+          {
+            "name": "抹茶好喝椰",
+            "price": 26,
+            "tags": [],
+            "img": "images/luckin/53.jpg"
+          },
+          {
+            "name": "抹茶拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "images/luckin/54.jpg"
+          },
+          {
+            "name": "瓦尔登蓝芒果酸奶昔",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/55.jpg"
+          },
+          {
+            "name": "瓦尔登蓝芒果酸奶昔（冰沙）",
+            "price": 29,
+            "tags": [],
+            "img": "images/luckin/56.jpg"
+          },
+          {
+            "name": "奶霜青露茉莉（特大杯）",
+            "price": 23,
+            "tags": [],
+            "img": "images/luckin/57.jpg"
+          },
+          {
+            "name": "纯牛奶",
+            "price": 19,
+            "tags": [],
+            "img": "images/luckin/58.jpg"
           }
         ]
       },
@@ -1108,22 +1415,94 @@ const DATA = {
         "logo": "🔵",
         "skus": [
           {
-            "name": "满杯杨梅",
-            "price": 18,
-            "tags": [
-              "杨梅",
-              "酸甜"
-            ],
-            "img": ""
+            "name": "大菠萝生椰冷萃",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/6.jpg"
           },
           {
-            "name": "葡萄冰萃",
-            "price": 18,
-            "tags": [
-              "葡萄",
-              "清爽"
-            ],
-            "img": ""
+            "name": "大菠萝海盐气泡水（鲜柠）",
+            "price": 22,
+            "tags": [],
+            "img": "images/luckin/8.jpg"
+          },
+          {
+            "name": "百香果凤梨气泡水（鲜柠）",
+            "price": 22,
+            "tags": [],
+            "img": "images/luckin/9.jpg"
+          },
+          {
+            "name": "百香果C冰茶",
+            "price": 19,
+            "tags": [],
+            "img": "images/luckin/10.jpg"
+          },
+          {
+            "name": "大西瓜生椰冷萃",
+            "price": 24,
+            "tags": [],
+            "img": "images/luckin/13.jpg"
+          },
+          {
+            "name": "苹果C冰茶",
+            "price": 19,
+            "tags": [],
+            "img": "images/luckin/15.jpg"
+          },
+          {
+            "name": "羽衣轻体果蔬茶",
+            "price": 22,
+            "tags": [],
+            "img": "images/luckin/16.jpg"
+          },
+          {
+            "name": "苹果C冰茶",
+            "price": 19,
+            "tags": [],
+            "img": "images/luckin/33.jpg"
+          },
+          {
+            "name": "橙C冰茶",
+            "price": 19,
+            "tags": [],
+            "img": "images/luckin/34.jpg"
+          },
+          {
+            "name": "小青桔C冰茶",
+            "price": 19,
+            "tags": [],
+            "img": "images/luckin/35.jpg"
+          },
+          {
+            "name": "柚C冰茶",
+            "price": 19,
+            "tags": [],
+            "img": "images/luckin/36.jpg"
+          },
+          {
+            "name": "葡萄冰茶",
+            "price": 19,
+            "tags": [],
+            "img": "images/luckin/37.jpg"
+          },
+          {
+            "name": "手打鲜切柠檬茶（超大杯）",
+            "price": 23,
+            "tags": [],
+            "img": "images/luckin/38.jpg"
+          },
+          {
+            "name": "葡萄鲜切柠檬茶（超大杯）",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/39.jpg"
+          },
+          {
+            "name": "羽衣轻体果蔬茶（超大杯）",
+            "price": 25,
+            "tags": [],
+            "img": "images/luckin/49.jpg"
           }
         ]
       },
