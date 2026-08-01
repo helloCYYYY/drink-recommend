@@ -815,6 +815,72 @@ const DATA = {
             "img": "images/luckin/75.jpg"
           }
         ]
+      },
+      "guming": {
+        "name": "古茗",
+        "logo": "🟡",
+        "skus": [
+          {
+            "name": "咸奶油美式",
+            "price": 12.9,
+            "tags": [],
+            "img": "images/guming/2.jpg"
+          },
+          {
+            "name": "超大杯冰美式",
+            "price": 10.9,
+            "tags": [],
+            "img": "images/guming/10.jpg"
+          },
+          {
+            "name": "咸奶油美式",
+            "price": 12.9,
+            "tags": [],
+            "img": "images/guming/11.jpg"
+          },
+          {
+            "name": "生椰拿铁",
+            "price": 13.9,
+            "tags": [],
+            "img": "images/guming/12.jpg"
+          },
+          {
+            "name": "苦尽柑来拿铁（原创）",
+            "price": 17.9,
+            "tags": [],
+            "img": "images/guming/13.jpg"
+          },
+          {
+            "name": "鲜奶拿铁",
+            "price": 11.9,
+            "tags": [],
+            "img": "images/guming/16.jpg"
+          },
+          {
+            "name": "冰咖小黄柠",
+            "price": 12.9,
+            "tags": [],
+            "img": "images/guming/17.jpg"
+          },
+          {
+            "name": "泰橘美式",
+            "price": 13.9,
+            "tags": [],
+            "img": "images/guming/18.jpg"
+          },
+          {
+            "name": "全冰有米美式",
+            "price": 13.9,
+            "tags": [],
+            "img": "images/guming/19.jpg"
+          },
+          {
+            "name": "美式咖啡",
+            "price": 8.9,
+            "tags": [],
+            "img": "images/guming/20.jpg"
+          }
+        ]
       }
     }
   },
@@ -1116,6 +1182,144 @@ const DATA = {
           }
         ]
       },
+      "guming": {
+        "name": "古茗",
+        "logo": "🟡",
+        "skus": [
+          {
+            "name": "泰橘糯米酸奶",
+            "price": 16,
+            "tags": [],
+            "img": "images/guming/3.jpg"
+          },
+          {
+            "name": "马上有米拿铁",
+            "price": 16.9,
+            "tags": [],
+            "img": "images/guming/5.jpg"
+          },
+          {
+            "name": "芭乐冰奶",
+            "price": 14,
+            "tags": [],
+            "img": "images/guming/7.jpg"
+          },
+          {
+            "name": "马上有米拿铁",
+            "price": 16.9,
+            "tags": [],
+            "img": "images/guming/14.jpg"
+          },
+          {
+            "name": "香草籽雪芙拿铁",
+            "price": 16.9,
+            "tags": [],
+            "img": "images/guming/15.jpg"
+          },
+          {
+            "name": "早安鲜牛奶",
+            "price": 7.9,
+            "tags": [],
+            "img": "images/guming/21.jpg"
+          },
+          {
+            "name": "鲜叶糯米酸奶",
+            "price": 15,
+            "tags": [],
+            "img": "images/guming/22.jpg"
+          },
+          {
+            "name": "泰橘糯米酸奶",
+            "price": 16,
+            "tags": [],
+            "img": "images/guming/23.jpg"
+          },
+          {
+            "name": "桃桃糯米酸奶",
+            "price": 17,
+            "tags": [],
+            "img": "images/guming/24.jpg"
+          },
+          {
+            "name": "云岭茉莉",
+            "price": 13,
+            "tags": [],
+            "img": "images/guming/25.jpg"
+          },
+          {
+            "name": "四季青山",
+            "price": 14,
+            "tags": [],
+            "img": "images/guming/26.jpg"
+          },
+          {
+            "name": "云深幽兰",
+            "price": 15,
+            "tags": [],
+            "img": "images/guming/27.jpg"
+          },
+          {
+            "name": "芭乐冰奶",
+            "price": 14,
+            "tags": [],
+            "img": "images/guming/36.jpg"
+          },
+          {
+            "name": "黑糖珍珠牛乳",
+            "price": 14,
+            "tags": [],
+            "img": "images/guming/38.jpg"
+          },
+          {
+            "name": "咸乳酪泰奶",
+            "price": 15,
+            "tags": [],
+            "img": "images/guming/39.jpg"
+          },
+          {
+            "name": "抹茶四季春",
+            "price": 15,
+            "tags": [],
+            "img": "images/guming/40.jpg"
+          },
+          {
+            "name": "咸乳酪泰有米",
+            "price": 17,
+            "tags": [],
+            "img": "images/guming/41.jpg"
+          },
+          {
+            "name": "古茗奶茶",
+            "price": 10,
+            "tags": [],
+            "img": "images/guming/42.jpg"
+          },
+          {
+            "name": "茉莉奶绿",
+            "price": 10,
+            "tags": [],
+            "img": "images/guming/43.jpg"
+          },
+          {
+            "name": "大叔奶茶",
+            "price": 12,
+            "tags": [],
+            "img": "images/guming/44.jpg"
+          },
+          {
+            "name": "布蕾脆脆奶芙",
+            "price": 17,
+            "tags": [],
+            "img": "images/guming/45.jpg"
+          },
+          {
+            "name": "布丁西米露",
+            "price": 10,
+            "tags": [],
+            "img": "images/guming/46.jpg"
+          }
+        ]
+      },
       "heytea": {
         "name": "喜茶",
         "logo": "🟣",
@@ -1153,48 +1357,6 @@ const DATA = {
             "tags": [
               "柚子",
               "清爽"
-            ],
-            "img": ""
-          }
-        ]
-      },
-      "guming": {
-        "name": "古茗",
-        "logo": "🟡",
-        "skus": [
-          {
-            "name": "烤奶",
-            "price": 12,
-            "tags": [
-              "甜",
-              "经典"
-            ],
-            "img": ""
-          },
-          {
-            "name": "古茗奶茶",
-            "price": 10,
-            "tags": [
-              "经典",
-              "平价"
-            ],
-            "img": ""
-          },
-          {
-            "name": "超A芝士葡萄",
-            "price": 16,
-            "tags": [
-              "葡萄",
-              "芝士"
-            ],
-            "img": ""
-          },
-          {
-            "name": "杨枝甘露",
-            "price": 15,
-            "tags": [
-              "芒果",
-              "西米"
             ],
             "img": ""
           }
@@ -1506,6 +1668,102 @@ const DATA = {
           }
         ]
       },
+      "guming": {
+        "name": "古茗",
+        "logo": "🟡",
+        "skus": [
+          {
+            "name": "泰橘冰茶",
+            "price": 12,
+            "tags": [],
+            "img": "images/guming/4.jpg"
+          },
+          {
+            "name": "桃桃冰冰李",
+            "price": 13,
+            "tags": [],
+            "img": "images/guming/6.jpg"
+          },
+          {
+            "name": "杨枝甘露轻盈版",
+            "price": 16,
+            "tags": [],
+            "img": "images/guming/8.jpg"
+          },
+          {
+            "name": "超A芝士葡萄",
+            "price": 20,
+            "tags": [],
+            "img": "images/guming/9.jpg"
+          },
+          {
+            "name": "桃桃冰冰李",
+            "price": 13,
+            "tags": [],
+            "img": "images/guming/28.jpg"
+          },
+          {
+            "name": "杨枝甘露轻盈版",
+            "price": 16,
+            "tags": [],
+            "img": "images/guming/29.jpg"
+          },
+          {
+            "name": "甜心芭乐葡",
+            "price": 17,
+            "tags": [],
+            "img": "images/guming/30.jpg"
+          },
+          {
+            "name": "超A多肉葡萄",
+            "price": 19,
+            "tags": [],
+            "img": "images/guming/31.jpg"
+          },
+          {
+            "name": "超A芝士葡萄",
+            "price": 20,
+            "tags": [],
+            "img": "images/guming/32.jpg"
+          },
+          {
+            "name": "青橘柠檬水",
+            "price": 4.9,
+            "tags": [],
+            "img": "images/guming/33.jpg"
+          },
+          {
+            "name": "百香双重奏",
+            "price": 12,
+            "tags": [],
+            "img": "images/guming/34.jpg"
+          },
+          {
+            "name": "泰橘冰茶",
+            "price": 12,
+            "tags": [],
+            "img": "images/guming/35.jpg"
+          },
+          {
+            "name": "青橘芭乐冰冰茶",
+            "price": 12,
+            "tags": [],
+            "img": "images/guming/37.jpg"
+          },
+          {
+            "name": "曲香茉莉",
+            "price": 7,
+            "tags": [],
+            "img": "images/guming/47.jpg"
+          },
+          {
+            "name": "四季沁春",
+            "price": 7,
+            "tags": [],
+            "img": "images/guming/48.jpg"
+          }
+        ]
+      },
       "heytea": {
         "name": "喜茶",
         "logo": "🟣",
@@ -1534,39 +1792,6 @@ const DATA = {
             "tags": [
               "桃子",
               "芝士"
-            ],
-            "img": ""
-          }
-        ]
-      },
-      "guming": {
-        "name": "古茗",
-        "logo": "🟡",
-        "skus": [
-          {
-            "name": "超A芝士葡萄",
-            "price": 16,
-            "tags": [
-              "葡萄",
-              "芝士"
-            ],
-            "img": ""
-          },
-          {
-            "name": "杨枝甘露",
-            "price": 15,
-            "tags": [
-              "芒果",
-              "西米"
-            ],
-            "img": ""
-          },
-          {
-            "name": "百香果双响炮",
-            "price": 12,
-            "tags": [
-              "百香果",
-              "酸甜"
             ],
             "img": ""
           }

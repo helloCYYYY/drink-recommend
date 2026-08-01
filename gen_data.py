@@ -78,6 +78,9 @@ ms = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\MSTAND_
 print(">> LUCKIN")
 lk = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\瑞幸咖啡_饮品SKU清单_补全版.xlsx",
              "luckin", "瑞幸", "🔵")
+print(">> GUMING")
+gm = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\古茗_饮品SKU清单.xlsx",
+             "guming", "古茗", "🟡")
 # 真实清单里没有“生椰拿铁”，但定制参数面板需要有样本：把演示 opts 挂到一杯真实拿铁上
 DEMO_OPTS = {"temp": {"label": "温度", "items": ["热", "冰", "去冰"]},
              "sugar": {"label": "甜度", "items": ["全糖", "五分糖", "无糖"]},
@@ -107,20 +110,11 @@ placeholders = {
         {"name": "芝芝莓莓", "price": 29, "tags": ["草莓", "芝士"], "img": ""},
         {"name": "芝芝芒芒", "price": 29, "tags": ["芒果", "芝士"], "img": ""},
         {"name": "满杯红柚", "price": 21, "tags": ["柚子", "清爽"], "img": ""},
-    ]}, "guming": {"name": "古茗", "logo": "🟡", "skus": [
-        {"name": "烤奶", "price": 12, "tags": ["甜", "经典"], "img": ""},
-        {"name": "古茗奶茶", "price": 10, "tags": ["经典", "平价"], "img": ""},
-        {"name": "超A芝士葡萄", "price": 16, "tags": ["葡萄", "芝士"], "img": ""},
-        {"name": "杨枝甘露", "price": 15, "tags": ["芒果", "西米"], "img": ""},
     ]}},
     "fruittea": {"heytea": {"name": "喜茶", "logo": "🟣", "skus": [
         {"name": "多肉葡萄", "price": 29, "tags": ["葡萄", "爆款"], "img": ""},
         {"name": "满杯红柚", "price": 21, "tags": ["柚子", "清爽"], "img": ""},
         {"name": "芝芝桃桃", "price": 25, "tags": ["桃子", "芝士"], "img": ""},
-    ]}, "guming": {"name": "古茗", "logo": "🟡", "skus": [
-        {"name": "超A芝士葡萄", "price": 16, "tags": ["葡萄", "芝士"], "img": ""},
-        {"name": "杨枝甘露", "price": 15, "tags": ["芒果", "西米"], "img": ""},
-        {"name": "百香果双响炮", "price": 12, "tags": ["百香果", "酸甜"], "img": ""},
     ]}},
 }
 
@@ -132,7 +126,7 @@ DATA = {
 }
 for cat_key in ("coffee", "milktea", "fruittea"):
     merged = {}
-    for src in (sb, ms, lk):                # 合并 STARBUCKS + MSTAND + LUCKIN 三表
+    for src in (sb, ms, lk, gm):            # 合并 STARBUCKS + MSTAND + LUCKIN + GUMING 四表
         for bk, bv in src.get(cat_key, {}).items():
             merged[bk] = bv
     for bk, bv in placeholders.get(cat_key, {}).items():  # 保留 瑞幸/喜茶/古茗 占位
