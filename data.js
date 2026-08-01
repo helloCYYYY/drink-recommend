@@ -881,6 +881,18 @@ const DATA = {
             "img": "images/guming/20.jpg"
           }
         ]
+      },
+      "otlc": {
+        "name": "OT另茶",
+        "logo": "🍃",
+        "skus": [
+          {
+            "name": "黑金咸摩卡",
+            "price": 25,
+            "tags": [],
+            "img": "images/otlc/11.jpg"
+          }
+        ]
       }
     }
   },
@@ -1317,6 +1329,60 @@ const DATA = {
             "price": 10,
             "tags": [],
             "img": "images/guming/46.jpg"
+          }
+        ]
+      },
+      "otlc": {
+        "name": "OT另茶",
+        "logo": "🍃",
+        "skus": [
+          {
+            "name": "泰式咸法酪(首创)",
+            "price": 24,
+            "tags": [],
+            "img": "images/otlc/8.jpg"
+          },
+          {
+            "name": "黑熔岩泰奶",
+            "price": 25,
+            "tags": [],
+            "img": "images/otlc/9.jpg"
+          },
+          {
+            "name": "泰式冰茶",
+            "price": 21,
+            "tags": [],
+            "img": "images/otlc/10.jpg"
+          },
+          {
+            "name": "黑熔岩雪域",
+            "price": 25,
+            "tags": [],
+            "img": "images/otlc/12.jpg"
+          },
+          {
+            "name": "雪盐生椰茉莉",
+            "price": 20,
+            "tags": [],
+            "img": "images/otlc/13.jpg"
+          },
+          {
+            "name": "醇抹咸法酪(首创)",
+            "price": 27,
+            "tags": [],
+            "img": "images/otlc/17.jpg"
+          },
+          {
+            "name": "鲜芒清抹生椰",
+            "price": 25,
+            "tags": [],
+            "img": "images/otlc/22.jpg"
+          },
+          {
+            "name": "鲜乳茶",
+            "price": 18,
+            "tags": [],
+            "img": "images/otlc/23.jpg"
           }
         ]
       },
@@ -1761,6 +1827,96 @@ const DATA = {
             "price": 7,
             "tags": [],
             "img": "images/guming/48.jpg"
+          }
+        ]
+      },
+      "otlc": {
+        "name": "OT另茶",
+        "logo": "🍃",
+        "skus": [
+          {
+            "name": "虎斑手摇冻柠茶",
+            "price": 21,
+            "tags": [],
+            "img": "images/otlc/2.jpg"
+          },
+          {
+            "name": "菠萝冰萃肯尼亚",
+            "price": 23,
+            "tags": [],
+            "img": "images/otlc/3.jpg"
+          },
+          {
+            "name": "氧气油柑青苹果",
+            "price": 23,
+            "tags": [],
+            "img": "images/otlc/4.jpg"
+          },
+          {
+            "name": "圣胡安火凤梨",
+            "price": 23,
+            "tags": [],
+            "img": "images/otlc/5.jpg"
+          },
+          {
+            "name": "火凤梨冰茉莉",
+            "price": 23,
+            "tags": [],
+            "img": "images/otlc/6.jpg"
+          },
+          {
+            "name": "黑凤梨椰子冰",
+            "price": 25,
+            "tags": [],
+            "img": "images/otlc/7.jpg"
+          },
+          {
+            "name": "血橙茉莉鲜柠茶",
+            "price": 21,
+            "tags": [],
+            "img": "images/otlc/14.jpg"
+          },
+          {
+            "name": "茉莉山柚鲜柠茶",
+            "price": 21,
+            "tags": [],
+            "img": "images/otlc/15.jpg"
+          },
+          {
+            "name": "经典酒鬼鲜柠茶",
+            "price": 21,
+            "tags": [],
+            "img": "images/otlc/16.jpg"
+          },
+          {
+            "name": "圣胡安火凤梨",
+            "price": 23,
+            "tags": [],
+            "img": "images/otlc/18.jpg"
+          },
+          {
+            "name": "黑凤梨椰子冰",
+            "price": 25,
+            "tags": [],
+            "img": "images/otlc/19.jpg"
+          },
+          {
+            "name": "火凤梨冰茉莉",
+            "price": 23,
+            "tags": [],
+            "img": "images/otlc/20.jpg"
+          },
+          {
+            "name": "花椰芒",
+            "price": 25,
+            "tags": [],
+            "img": "images/otlc/21.jpg"
+          },
+          {
+            "name": "清茶",
+            "price": 13,
+            "tags": [],
+            "img": "images/otlc/24.jpg"
           }
         ]
       },
