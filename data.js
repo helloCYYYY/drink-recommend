@@ -1386,6 +1386,132 @@ const DATA = {
           }
         ]
       },
+      "molly": {
+        "name": "茉莉奶白",
+        "logo": "🌿",
+        "skus": [
+          {
+            "name": "针王香芋椰",
+            "price": 20,
+            "tags": [],
+            "img": "images/molly/4.jpg"
+          },
+          {
+            "name": "冰淇淋针王香芋椰",
+            "price": 23,
+            "tags": [],
+            "img": "images/molly/5.jpg"
+          },
+          {
+            "name": "开心果茉莉椰",
+            "price": 20,
+            "tags": [],
+            "img": "images/molly/8.jpg"
+          },
+          {
+            "name": "白兰",
+            "price": 17,
+            "tags": [],
+            "img": "images/molly/9.jpg"
+          },
+          {
+            "name": "抹茶白兰",
+            "price": 23,
+            "tags": [],
+            "img": "images/molly/10.jpg"
+          },
+          {
+            "name": "抹茶茉莉咸酪乳",
+            "price": 21,
+            "tags": [],
+            "img": "images/molly/11.jpg"
+          },
+          {
+            "name": "茉莉薄巧",
+            "price": 20,
+            "tags": [],
+            "img": "images/molly/12.jpg"
+          },
+          {
+            "name": "针王葡萄咸酪乳",
+            "price": 21,
+            "tags": [],
+            "img": "images/molly/17.jpg"
+          },
+          {
+            "name": "针王苹果咸酪乳",
+            "price": 21,
+            "tags": [],
+            "img": "images/molly/18.jpg"
+          },
+          {
+            "name": "抹茶白兰",
+            "price": 23,
+            "tags": [],
+            "img": "images/molly/19.jpg"
+          },
+          {
+            "name": "抹茶针王",
+            "price": 23,
+            "tags": [],
+            "img": "images/molly/20.jpg"
+          },
+          {
+            "name": "抹茶茉莉咸酪乳",
+            "price": 21,
+            "tags": [],
+            "img": "images/molly/21.jpg"
+          },
+          {
+            "name": "抹茶栀子咸酪乳",
+            "price": 22,
+            "tags": [],
+            "img": "images/molly/22.jpg"
+          },
+          {
+            "name": "抹茶白兰咸酪乳",
+            "price": 23,
+            "tags": [],
+            "img": "images/molly/23.jpg"
+          },
+          {
+            "name": "开心果茉莉椰",
+            "price": 20,
+            "tags": [],
+            "img": "images/molly/24.jpg"
+          },
+          {
+            "name": "开心小兰花",
+            "price": 21,
+            "tags": [],
+            "img": "images/molly/25.jpg"
+          },
+          {
+            "name": "茉莉奶白",
+            "price": 16,
+            "tags": [],
+            "img": "images/molly/26.jpg"
+          },
+          {
+            "name": "茉莉针王",
+            "price": 17,
+            "tags": [],
+            "img": "images/molly/27.jpg"
+          },
+          {
+            "name": "白兰",
+            "price": 17,
+            "tags": [],
+            "img": "images/molly/28.jpg"
+          },
+          {
+            "name": "栀子奶白",
+            "price": 16,
+            "tags": [],
+            "img": "images/molly/29.jpg"
+          }
+        ]
+      },
       "heytea": {
         "name": "喜茶",
         "logo": "🟣",
@@ -1917,6 +2043,114 @@ const DATA = {
             "price": 13,
             "tags": [],
             "img": "images/otlc/24.jpg"
+          }
+        ]
+      },
+      "molly": {
+        "name": "茉莉奶白",
+        "logo": "🌿",
+        "skus": [
+          {
+            "name": "白兰与树番茄",
+            "price": 20,
+            "tags": [],
+            "img": "images/molly/2.jpg"
+          },
+          {
+            "name": "针王香柠",
+            "price": 19,
+            "tags": [],
+            "img": "images/molly/3.jpg"
+          },
+          {
+            "name": "针王葡萄",
+            "price": 19,
+            "tags": [],
+            "img": "images/molly/6.jpg"
+          },
+          {
+            "name": "针王苹果",
+            "price": 19,
+            "tags": [],
+            "img": "images/molly/7.jpg"
+          },
+          {
+            "name": "针王苹果",
+            "price": 19,
+            "tags": [],
+            "img": "images/molly/13.jpg"
+          },
+          {
+            "name": "针王葡萄",
+            "price": 19,
+            "tags": [],
+            "img": "images/molly/14.jpg"
+          },
+          {
+            "name": "针王葡萄（热）",
+            "price": 19,
+            "tags": [],
+            "img": "images/molly/15.jpg"
+          },
+          {
+            "name": "针王苹果（热）",
+            "price": 19,
+            "tags": [],
+            "img": "images/molly/16.jpg"
+          },
+          {
+            "name": "栀子冰茶",
+            "price": 12,
+            "tags": [],
+            "img": "images/molly/30.jpg"
+          },
+          {
+            "name": "针王冰茶",
+            "price": 13,
+            "tags": [],
+            "img": "images/molly/31.jpg"
+          },
+          {
+            "name": "青芒黄皮冰茶",
+            "price": 19,
+            "tags": [],
+            "img": "images/molly/32.jpg"
+          },
+          {
+            "name": "青芒香柚橄榄",
+            "price": 19,
+            "tags": [],
+            "img": "images/molly/33.jpg"
+          },
+          {
+            "name": "奇兰葡萄冰茶",
+            "price": 15,
+            "tags": [],
+            "img": "images/molly/34.jpg"
+          },
+          {
+            "name": "奇兰奶霜葡萄",
+            "price": 20,
+            "tags": [],
+            "img": "images/molly/35.jpg"
+          },
+          {
+            "name": "粉红苹果茉莉椰",
+            "price": 18,
+            "tags": [],
+            "img": "images/molly/36.jpg"
+          },
+          {
+            "name": "冰淇淋苹果茉莉椰",
+            "price": 21,
+            "tags": [],
+            "img": "images/molly/37.jpg"
+          },
+          {
+            "name": "茉莉椰冰茶",
+            "price": 17,
+            "tags": [],
+            "img": "images/molly/38.jpg"
           }
         ]
       },

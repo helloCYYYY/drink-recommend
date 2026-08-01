@@ -84,6 +84,9 @@ gm = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\古茗_
 print(">> OT另茶")
 ot = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\OT另茶_饮品SKU清单.xlsx",
              "otlc", "OT另茶", "🍃")
+print(">> 茉莉奶白")
+molly = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\茉莉奶白_饮品SKU清单.xlsx",
+                "molly", "茉莉奶白", "🌿")
 # 真实清单里没有“生椰拿铁”，但定制参数面板需要有样本：把演示 opts 挂到一杯真实拿铁上
 DEMO_OPTS = {"temp": {"label": "温度", "items": ["热", "冰", "去冰"]},
              "sugar": {"label": "甜度", "items": ["全糖", "五分糖", "无糖"]},
@@ -129,7 +132,7 @@ DATA = {
 }
 for cat_key in ("coffee", "milktea", "fruittea"):
     merged = {}
-    for src in (sb, ms, lk, gm, ot):        # 合并 STARBUCKS + MSTAND + LUCKIN + GUMING + OT另茶 五表
+    for src in (sb, ms, lk, gm, ot, molly):  # 合并 STARBUCKS + MSTAND + LUCKIN + GUMING + OT另茶 + 茉莉奶白 六表
         for bk, bv in src.get(cat_key, {}).items():
             merged[bk] = bv
     for bk, bv in placeholders.get(cat_key, {}).items():  # 保留 瑞幸/喜茶/古茗 占位
