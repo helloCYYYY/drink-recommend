@@ -1835,6 +1835,216 @@ const DATA = {
             "img": "images/heytea/36.jpg"
           }
         ]
+      },
+      "yidiandian": {
+        "name": "一点点",
+        "logo": "🔴",
+        "skus": [
+          {
+            "name": "特浓抹茶奶茶玛奇朵",
+            "price": 18,
+            "tags": [],
+            "img": "images/yidiandian/3.jpg"
+          },
+          {
+            "name": "抹茶奶茶",
+            "price": 15,
+            "tags": [],
+            "img": "images/yidiandian/4.jpg"
+          },
+          {
+            "name": "藏青盐咸奶绿",
+            "price": 13,
+            "tags": [],
+            "img": "images/yidiandian/8.jpg"
+          },
+          {
+            "name": "冰淇淋红茶",
+            "price": 15,
+            "tags": [],
+            "img": "images/yidiandian/9.jpg"
+          },
+          {
+            "name": "QQ美莓奶茶",
+            "price": 15,
+            "tags": [],
+            "img": "images/yidiandian/10.jpg"
+          },
+          {
+            "name": "奶绿装芒",
+            "price": 16,
+            "tags": [],
+            "img": "images/yidiandian/11.jpg"
+          },
+          {
+            "name": "波霸奶茶",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/12.jpg"
+          },
+          {
+            "name": "四季奶青",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/13.jpg"
+          },
+          {
+            "name": "A2牛乳红茶",
+            "price": 15,
+            "tags": [],
+            "img": "images/yidiandian/15.jpg"
+          },
+          {
+            "name": "芭乐奶绿",
+            "price": 15,
+            "tags": [],
+            "img": "images/yidiandian/18.jpg"
+          },
+          {
+            "name": "QQ美莓奶茶",
+            "price": 15,
+            "tags": [],
+            "img": "images/yidiandian/19.jpg"
+          },
+          {
+            "name": "奶绿装芒",
+            "price": 16,
+            "tags": [],
+            "img": "images/yidiandian/20.jpg"
+          },
+          {
+            "name": "甜橙奶绿",
+            "price": 16,
+            "tags": [],
+            "img": "images/yidiandian/21.jpg"
+          },
+          {
+            "name": "薄荷奶绿",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/22.jpg"
+          },
+          {
+            "name": "苹果奶绿",
+            "price": 14,
+            "tags": [],
+            "img": "images/yidiandian/23.jpg"
+          },
+          {
+            "name": "蔓越莓奶绿",
+            "price": 13,
+            "tags": [],
+            "img": "images/yidiandian/24.jpg"
+          },
+          {
+            "name": "草莓森林",
+            "price": 18,
+            "tags": [],
+            "img": "images/yidiandian/25.jpg"
+          },
+          {
+            "name": "藏青盐咸奶绿",
+            "price": 13,
+            "tags": [],
+            "img": "images/yidiandian/26.jpg"
+          },
+          {
+            "name": "冰淇淋红茶",
+            "price": 15,
+            "tags": [],
+            "img": "images/yidiandian/27.jpg"
+          },
+          {
+            "name": "重焙奶乌(龙·重一点)",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/28.jpg"
+          },
+          {
+            "name": "四季奶青",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/29.jpg"
+          },
+          {
+            "name": "六窨茉莉奶绿",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/30.jpg"
+          },
+          {
+            "name": "红茶玛奇朵",
+            "price": 14,
+            "tags": [],
+            "img": "images/yidiandian/31.jpg"
+          },
+          {
+            "name": "阿华田",
+            "price": 15,
+            "tags": [],
+            "img": "images/yidiandian/32.jpg"
+          },
+          {
+            "name": "奶茶",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/33.jpg"
+          },
+          {
+            "name": "黑糖粉粿奶乌",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/34.jpg"
+          },
+          {
+            "name": "波霸奶茶",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/35.jpg"
+          },
+          {
+            "name": "波霸奶绿",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/37.jpg"
+          },
+          {
+            "name": "小珍珠奶茶",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/38.jpg"
+          },
+          {
+            "name": "布丁奶茶",
+            "price": 16,
+            "tags": [],
+            "img": "images/yidiandian/39.jpg"
+          },
+          {
+            "name": "椰果奶茶",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/40.jpg"
+          },
+          {
+            "name": "A2牛乳红茶",
+            "price": 15,
+            "tags": [],
+            "img": "images/yidiandian/45.jpg"
+          },
+          {
+            "name": "草莓A2牛乳绿茶",
+            "price": 18,
+            "tags": [],
+            "img": "images/yidiandian/46.jpg"
+          },
+          {
+            "name": "A2牛乳四季春茶",
+            "price": 15,
+            "tags": [],
+            "img": "images/yidiandian/47.jpg"
+          }
+        ]
       }
     }
   },
@@ -2799,6 +3009,138 @@ const DATA = {
             "price": 17,
             "tags": [],
             "img": "images/heytea/33.jpg"
+          }
+        ]
+      },
+      "yidiandian": {
+        "name": "一点点",
+        "logo": "🔴",
+        "skus": [
+          {
+            "name": "百香芒芒绿",
+            "price": 13,
+            "tags": [],
+            "img": "images/yidiandian/2.jpg"
+          },
+          {
+            "name": "抹茶",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/5.jpg"
+          },
+          {
+            "name": "芒果番茄绿",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/6.jpg"
+          },
+          {
+            "name": "芒番了",
+            "price": 15,
+            "tags": [],
+            "img": "images/yidiandian/7.jpg"
+          },
+          {
+            "name": "苹果茉莉绿",
+            "price": 11,
+            "tags": [],
+            "img": "images/yidiandian/14.jpg"
+          },
+          {
+            "name": "只此猕猴桃",
+            "price": 10.9,
+            "tags": [],
+            "img": "images/yidiandian/16.jpg"
+          },
+          {
+            "name": "只此芒果青",
+            "price": 10.9,
+            "tags": [],
+            "img": "images/yidiandian/17.jpg"
+          },
+          {
+            "name": "招牌四季春+珍波椰",
+            "price": 8,
+            "tags": [],
+            "img": "images/yidiandian/36.jpg"
+          },
+          {
+            "name": "四季春茶",
+            "price": 8,
+            "tags": [],
+            "img": "images/yidiandian/41.jpg"
+          },
+          {
+            "name": "六窨茉莉绿茶",
+            "price": 8,
+            "tags": [],
+            "img": "images/yidiandian/42.jpg"
+          },
+          {
+            "name": "养乐多绿",
+            "price": 15,
+            "tags": [],
+            "img": "images/yidiandian/43.jpg"
+          },
+          {
+            "name": "锦鲤红茶",
+            "price": 8,
+            "tags": [],
+            "img": "images/yidiandian/44.jpg"
+          },
+          {
+            "name": "苹果茉莉绿",
+            "price": 11,
+            "tags": [],
+            "img": "images/yidiandian/48.jpg"
+          },
+          {
+            "name": "葡萄柚绿",
+            "price": 14,
+            "tags": [],
+            "img": "images/yidiandian/49.jpg"
+          },
+          {
+            "name": "六窨香柠绿",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/50.jpg"
+          },
+          {
+            "name": "加油！薄荷柠",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/51.jpg"
+          },
+          {
+            "name": "加油！柠橙绿",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/52.jpg"
+          },
+          {
+            "name": "金桔柠檬",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/53.jpg"
+          },
+          {
+            "name": "香柠养乐多",
+            "price": 17,
+            "tags": [],
+            "img": "images/yidiandian/54.jpg"
+          },
+          {
+            "name": "柠檬汁",
+            "price": 12,
+            "tags": [],
+            "img": "images/yidiandian/55.jpg"
+          },
+          {
+            "name": "葡萄柚汁",
+            "price": 14,
+            "tags": [],
+            "img": "images/yidiandian/56.jpg"
           }
         ]
       }
