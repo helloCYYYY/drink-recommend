@@ -89,7 +89,11 @@ molly = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\茉�
                 "molly", "茉莉奶白", "🌿")
 print(">> 裕莲茶楼")
 yulian = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\裕莲茶楼_饮品SKU清单.xlsx",
-                 "yulian", "裕莲茶楼", "🏮")
+                "yulian", "裕莲茶楼", "🏮")
+
+print(">> KOI")
+koi = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\KOI_饮品SKU清单.xlsx",
+              "koi", "KOI", "🧋")
 # 真实清单里没有“生椰拿铁”，但定制参数面板需要有样本：把演示 opts 挂到一杯真实拿铁上
 DEMO_OPTS = {"temp": {"label": "温度", "items": ["热", "冰", "去冰"]},
              "sugar": {"label": "甜度", "items": ["全糖", "五分糖", "无糖"]},
@@ -135,7 +139,7 @@ DATA = {
 }
 for cat_key in ("coffee", "milktea", "fruittea"):
     merged = {}
-    for src in (sb, ms, lk, gm, ot, molly, yulian):  # 合并 星巴克+MStand+瑞幸+古茗+OT另茶+茉莉奶白+裕莲茶楼 七表
+    for src in (sb, ms, lk, gm, ot, molly, yulian, koi):  # 合并 星巴克+MStand+瑞幸+古茗+OT另茶+茉莉奶白+裕莲茶楼+KOI 八表
         for bk, bv in src.get(cat_key, {}).items():
             merged[bk] = bv
     for bk, bv in placeholders.get(cat_key, {}).items():  # 保留 瑞幸/喜茶/古茗 占位

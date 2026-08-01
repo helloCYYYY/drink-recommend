@@ -1608,6 +1608,174 @@ const DATA = {
           }
         ]
       },
+      "koi": {
+        "name": "KOI",
+        "logo": "🧋",
+        "skus": [
+          {
+            "name": "酪酪菠萝夹心奶绿",
+            "price": 27,
+            "tags": [],
+            "img": "images/koi/3.jpg"
+          },
+          {
+            "name": "香草籽冰淇淋奶茶",
+            "price": 25,
+            "tags": [],
+            "img": "images/koi/4.jpg"
+          },
+          {
+            "name": "香草籽冰淇淋抹茶奶茶",
+            "price": 23,
+            "tags": [],
+            "img": "images/koi/6.jpg"
+          },
+          {
+            "name": "烤糖粉糿冬瓜金乌龙奶茶",
+            "price": 20,
+            "tags": [],
+            "img": "images/koi/7.jpg"
+          },
+          {
+            "name": "黄金珍奶",
+            "price": 20,
+            "tags": [],
+            "img": "images/koi/10.jpg"
+          },
+          {
+            "name": "饼干奶茶",
+            "price": 25,
+            "tags": [],
+            "img": "images/koi/11.jpg"
+          },
+          {
+            "name": "浆果乳酪奶绿",
+            "price": 25,
+            "tags": [],
+            "img": "images/koi/12.jpg"
+          },
+          {
+            "name": "布蕾咸芝士奶绿",
+            "price": 23,
+            "tags": [],
+            "img": "images/koi/13.jpg"
+          },
+          {
+            "name": "比利时酥酪金乌龙奶茶",
+            "price": 23,
+            "tags": [],
+            "img": "images/koi/14.jpg"
+          },
+          {
+            "name": "炒米荞麦乌龙咸奶茶",
+            "price": 21,
+            "tags": [],
+            "img": "images/koi/15.jpg"
+          },
+          {
+            "name": "波霸奶茶",
+            "price": 20,
+            "tags": [],
+            "img": "images/koi/16.jpg"
+          },
+          {
+            "name": "比利时酥酪奶茶",
+            "price": 23,
+            "tags": [],
+            "img": "images/koi/17.jpg"
+          },
+          {
+            "name": "酪酪浆果夹心奶绿",
+            "price": 27,
+            "tags": [],
+            "img": "images/koi/18.jpg"
+          },
+          {
+            "name": "酪酪多莓果夹心奶绿",
+            "price": 27,
+            "tags": [],
+            "img": "images/koi/19.jpg"
+          },
+          {
+            "name": "酪酪芒果夹心奶绿",
+            "price": 27,
+            "tags": [],
+            "img": "images/koi/20.jpg"
+          },
+          {
+            "name": "多莓果乳酪奶绿",
+            "price": 25,
+            "tags": [],
+            "img": "images/koi/21.jpg"
+          },
+          {
+            "name": "水蜜桃乳酪奶绿",
+            "price": 25,
+            "tags": [],
+            "img": "images/koi/22.jpg"
+          },
+          {
+            "name": "芒果乳酪奶绿",
+            "price": 25,
+            "tags": [],
+            "img": "images/koi/23.jpg"
+          },
+          {
+            "name": "葡萄乳酪奶绿",
+            "price": 25,
+            "tags": [],
+            "img": "images/koi/24.jpg"
+          },
+          {
+            "name": "金乌龙咸拿铁",
+            "price": 20,
+            "tags": [],
+            "img": "images/koi/30.jpg"
+          },
+          {
+            "name": "茶拿铁",
+            "price": 20,
+            "tags": [],
+            "img": "images/koi/31.jpg"
+          },
+          {
+            "name": "芋圆红茶拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "images/koi/32.jpg"
+          },
+          {
+            "name": "芋圆牛乳",
+            "price": 26,
+            "tags": [],
+            "img": "images/koi/33.jpg"
+          },
+          {
+            "name": "金乌龙咸奶茶",
+            "price": 17,
+            "tags": [],
+            "img": "images/koi/34.jpg"
+          },
+          {
+            "name": "烤糖粉糿奶茶",
+            "price": 20,
+            "tags": [],
+            "img": "images/koi/35.jpg"
+          },
+          {
+            "name": "咸芝士奶绿",
+            "price": 20,
+            "tags": [],
+            "img": "images/koi/36.jpg"
+          },
+          {
+            "name": "阿萨姆奶茶",
+            "price": 17,
+            "tags": [],
+            "img": "images/koi/37.jpg"
+          }
+        ]
+      },
       "heytea": {
         "name": "喜茶",
         "logo": "🟣",
@@ -2355,6 +2523,102 @@ const DATA = {
             "price": 25,
             "tags": [],
             "img": "images/yulian/32.jpg"
+          }
+        ]
+      },
+      "koi": {
+        "name": "KOI",
+        "logo": "🧋",
+        "skus": [
+          {
+            "name": "菠萝青柠油柑果茶",
+            "price": 22,
+            "tags": [],
+            "img": "images/koi/2.jpg"
+          },
+          {
+            "name": "香草籽冰淇淋冬瓜金乌龙",
+            "price": 20,
+            "tags": [],
+            "img": "images/koi/5.jpg"
+          },
+          {
+            "name": "烤糖粉糿冬瓜柠檬茶",
+            "price": 19,
+            "tags": [],
+            "img": "images/koi/8.jpg"
+          },
+          {
+            "name": "烤糖粉糿冬瓜金乌龙",
+            "price": 15,
+            "tags": [],
+            "img": "images/koi/9.jpg"
+          },
+          {
+            "name": "多莓果茶",
+            "price": 22,
+            "tags": [],
+            "img": "images/koi/25.jpg"
+          },
+          {
+            "name": "青柠香茶",
+            "price": 19,
+            "tags": [],
+            "img": "images/koi/26.jpg"
+          },
+          {
+            "name": "水蜜桃果茶",
+            "price": 22,
+            "tags": [],
+            "img": "images/koi/27.jpg"
+          },
+          {
+            "name": "芒果果茶",
+            "price": 19,
+            "tags": [],
+            "img": "images/koi/28.jpg"
+          },
+          {
+            "name": "葡萄果茶",
+            "price": 22,
+            "tags": [],
+            "img": "images/koi/29.jpg"
+          },
+          {
+            "name": "红茶玛奇朵",
+            "price": 17,
+            "tags": [],
+            "img": "images/koi/38.jpg"
+          },
+          {
+            "name": "芒果绿茶玛奇朵",
+            "price": 22,
+            "tags": [],
+            "img": "images/koi/39.jpg"
+          },
+          {
+            "name": "阿萨姆红茶",
+            "price": 12,
+            "tags": [],
+            "img": "images/koi/40.jpg"
+          },
+          {
+            "name": "茉莉绿茶",
+            "price": 12,
+            "tags": [],
+            "img": "images/koi/41.jpg"
+          },
+          {
+            "name": "金乌龙",
+            "price": 12,
+            "tags": [],
+            "img": "images/koi/42.jpg"
+          },
+          {
+            "name": "荞麦金乌龙",
+            "price": 12,
+            "tags": [],
+            "img": "images/koi/43.jpg"
           }
         ]
       },
