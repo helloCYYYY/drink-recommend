@@ -1781,40 +1781,58 @@ const DATA = {
         "logo": "🟣",
         "skus": [
           {
-            "name": "烤黑糖波波牛乳",
+            "name": "金韵苹果人参果",
+            "price": 23,
+            "tags": [],
+            "img": "images/heytea/4.jpg"
+          },
+          {
+            "name": "烤黑糖波波牛乳茶",
             "price": 19,
-            "tags": [
-              "甜",
-              "小料"
-            ],
-            "img": ""
+            "tags": [],
+            "img": "images/heytea/13.jpg"
           },
           {
-            "name": "芝芝莓莓",
-            "price": 29,
-            "tags": [
-              "草莓",
-              "芝士"
-            ],
-            "img": ""
+            "name": "嫣红牛乳茶",
+            "price": 15,
+            "tags": [],
+            "img": "images/heytea/19.jpg"
           },
           {
-            "name": "芝芝芒芒",
-            "price": 29,
-            "tags": [
-              "芒果",
-              "芝士"
-            ],
-            "img": ""
+            "name": "芝芝绿妍茶后(首创)",
+            "price": 13,
+            "tags": [],
+            "img": "images/heytea/21.jpg"
           },
           {
-            "name": "满杯红柚",
-            "price": 21,
-            "tags": [
-              "柚子",
-              "清爽"
-            ],
-            "img": ""
+            "name": "小奶茉",
+            "price": 13,
+            "tags": [],
+            "img": "images/heytea/22.jpg"
+          },
+          {
+            "name": "轻芝多肉葡萄(首创)",
+            "price": 19,
+            "tags": [],
+            "img": "images/heytea/28.jpg"
+          },
+          {
+            "name": "烤黑糖波波牛乳茶",
+            "price": 19,
+            "tags": [],
+            "img": "images/heytea/34.jpg"
+          },
+          {
+            "name": "烤黑糖波波牛乳(首创)",
+            "price": 19,
+            "tags": [],
+            "img": "images/heytea/35.jpg"
+          },
+          {
+            "name": "咸酪厚抹",
+            "price": 19,
+            "tags": [],
+            "img": "images/heytea/36.jpg"
           }
         ]
       }
@@ -2627,31 +2645,160 @@ const DATA = {
         "logo": "🟣",
         "skus": [
           {
-            "name": "多肉葡萄",
-            "price": 29,
-            "tags": [
-              "葡萄",
-              "爆款"
-            ],
-            "img": ""
+            "name": "奇香黄皮桃",
+            "price": 22,
+            "tags": [],
+            "img": "images/heytea/2.jpg"
           },
           {
-            "name": "满杯红柚",
+            "name": "多肉黄皮葡",
+            "price": 22,
+            "tags": [],
+            "img": "images/heytea/3.jpg"
+          },
+          {
+            "name": "清爽芭乐提(白芭乐)",
+            "price": 19,
+            "tags": [],
+            "img": "images/heytea/5.jpg"
+          },
+          {
+            "name": "多肉葡萄(首创)",
+            "price": 18,
+            "tags": [],
+            "img": "images/heytea/6.jpg"
+          },
+          {
+            "name": "多肉桃李(首创)",
+            "price": 17,
+            "tags": [],
+            "img": "images/heytea/7.jpg"
+          },
+          {
+            "name": "多肉桃李(首创)",
+            "price": 17,
+            "tags": [],
+            "img": "images/heytea/8.jpg"
+          },
+          {
+            "name": "杨桃三重甘",
+            "price": 22,
+            "tags": [],
+            "img": "images/heytea/9.jpg"
+          },
+          {
+            "name": "奇兰苹果杏(首创)",
+            "price": 19,
+            "tags": [],
+            "img": "images/heytea/10.jpg"
+          },
+          {
+            "name": "清爽芭乐提(白芭乐)",
+            "price": 19,
+            "tags": [],
+            "img": "images/heytea/11.jpg"
+          },
+          {
+            "name": "去火*纤体瓶(首创)",
+            "price": 19,
+            "tags": [],
+            "img": "images/heytea/12.jpg"
+          },
+          {
+            "name": "杨桃三重甘",
+            "price": 22,
+            "tags": [],
+            "img": "images/heytea/14.jpg"
+          },
+          {
+            "name": "奇兰苹果杏(首创)",
+            "price": 19,
+            "tags": [],
+            "img": "images/heytea/15.jpg"
+          },
+          {
+            "name": "奇兰芭乐莲雾(首创)",
+            "price": 23,
+            "tags": [],
+            "img": "images/heytea/16.jpg"
+          },
+          {
+            "name": "纯绿妍茶后",
+            "price": 8,
+            "tags": [],
+            "img": "images/heytea/17.jpg"
+          },
+          {
+            "name": "奇兰粉芭乐(首创)",
             "price": 21,
-            "tags": [
-              "柚子",
-              "清爽"
-            ],
-            "img": ""
+            "tags": [],
+            "img": "images/heytea/18.jpg"
           },
           {
-            "name": "芝芝桃桃",
-            "price": 25,
-            "tags": [
-              "桃子",
-              "芝士"
-            ],
-            "img": ""
+            "name": "轻酵黄皮康普茶",
+            "price": 22,
+            "tags": [],
+            "img": "images/heytea/20.jpg"
+          },
+          {
+            "name": "清爽芭乐提(白芭乐)",
+            "price": 19,
+            "tags": [],
+            "img": "images/heytea/23.jpg"
+          },
+          {
+            "name": "多肉葡萄(首创)",
+            "price": 18,
+            "tags": [],
+            "img": "images/heytea/24.jpg"
+          },
+          {
+            "name": "多肉桃李(首创)",
+            "price": 17,
+            "tags": [],
+            "img": "images/heytea/25.jpg"
+          },
+          {
+            "name": "椰椰芒芒",
+            "price": 15,
+            "tags": [],
+            "img": "images/heytea/26.jpg"
+          },
+          {
+            "name": "芒芒甘露(首创)",
+            "price": 18,
+            "tags": [],
+            "img": "images/heytea/27.jpg"
+          },
+          {
+            "name": "绿妍轻柠茶(超大杯)",
+            "price": 13,
+            "tags": [],
+            "img": "images/heytea/29.jpg"
+          },
+          {
+            "name": "鸭喜香轻柠茶(超大杯)",
+            "price": 13,
+            "tags": [],
+            "img": "images/heytea/30.jpg"
+          },
+          {
+            "name": "去火*纤体瓶(首创)",
+            "price": 19,
+            "tags": [],
+            "img": "images/heytea/31.jpg"
+          },
+          {
+            "name": "羽衣纤体瓶(首创)",
+            "price": 19,
+            "tags": [],
+            "img": "images/heytea/32.jpg"
+          },
+          {
+            "name": "多肉芒芒",
+            "price": 17,
+            "tags": [],
+            "img": "images/heytea/33.jpg"
           }
         ]
       }
