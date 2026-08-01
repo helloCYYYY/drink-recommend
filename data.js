@@ -2045,6 +2045,48 @@ const DATA = {
             "img": "images/yidiandian/47.jpg"
           }
         ]
+      },
+      "o2": {
+        "name": "O2",
+        "logo": "🫧",
+        "skus": [
+          {
+            "name": "牛油果芒芒甘露",
+            "price": 26,
+            "tags": [],
+            "img": "images/o2/30.jpg"
+          },
+          {
+            "name": "芭乐鲜奶昔",
+            "price": 22,
+            "tags": [],
+            "img": "images/o2/42.jpg"
+          },
+          {
+            "name": "芒果鲜奶",
+            "price": 20,
+            "tags": [],
+            "img": "images/o2/43.jpg"
+          },
+          {
+            "name": "牛油果鲜奶",
+            "price": 28,
+            "tags": [],
+            "img": "images/o2/44.jpg"
+          },
+          {
+            "name": "红龙果酸奶",
+            "price": 18,
+            "tags": [],
+            "img": "images/o2/45.jpg"
+          },
+          {
+            "name": "杨枝甘露",
+            "price": 19,
+            "tags": [],
+            "img": "images/o2/46.jpg"
+          }
+        ]
       }
     }
   },
@@ -3141,6 +3183,258 @@ const DATA = {
             "price": 14,
             "tags": [],
             "img": "images/yidiandian/56.jpg"
+          }
+        ]
+      },
+      "o2": {
+        "name": "O2",
+        "logo": "🫧",
+        "skus": [
+          {
+            "name": "鲜橙雪梨",
+            "price": 20,
+            "tags": [],
+            "img": "images/o2/2.jpg"
+          },
+          {
+            "name": "芭乐苹果雪梨",
+            "price": 20,
+            "tags": [],
+            "img": "images/o2/3.jpg"
+          },
+          {
+            "name": "莲雾雪梨",
+            "price": 23,
+            "tags": [],
+            "img": "images/o2/4.jpg"
+          },
+          {
+            "name": "爆汁葡萄凤梨维C",
+            "price": 22,
+            "tags": [],
+            "img": "images/o2/5.jpg"
+          },
+          {
+            "name": "爆汁葡萄绿",
+            "price": 18,
+            "tags": [],
+            "img": "images/o2/6.jpg"
+          },
+          {
+            "name": "爆汁芭乐葡（果蓉冰）",
+            "price": 22,
+            "tags": [],
+            "img": "images/o2/7.jpg"
+          },
+          {
+            "name": "芭乐苹果雪梨",
+            "price": 20,
+            "tags": [],
+            "img": "images/o2/8.jpg"
+          },
+          {
+            "name": "鲜橙雪梨",
+            "price": 20,
+            "tags": [],
+            "img": "images/o2/9.jpg"
+          },
+          {
+            "name": "鲜橙汁",
+            "price": 21,
+            "tags": [],
+            "img": "images/o2/10.jpg"
+          },
+          {
+            "name": "雪梨汁｜甘甜清润",
+            "price": 17,
+            "tags": [],
+            "img": "images/o2/11.jpg"
+          },
+          {
+            "name": "西瓜雪梨",
+            "price": 17,
+            "tags": [],
+            "img": "images/o2/12.jpg"
+          },
+          {
+            "name": "西瓜汁",
+            "price": 17,
+            "tags": [],
+            "img": "images/o2/13.jpg"
+          },
+          {
+            "name": "凤梨雪梨",
+            "price": 20,
+            "tags": [],
+            "img": "images/o2/14.jpg"
+          },
+          {
+            "name": "百香凤梨橙",
+            "price": 23,
+            "tags": [],
+            "img": "images/o2/15.jpg"
+          },
+          {
+            "name": "红龙果雪梨",
+            "price": 19,
+            "tags": [],
+            "img": "images/o2/16.jpg"
+          },
+          {
+            "name": "苹果胡萝卜雪梨",
+            "price": 17,
+            "tags": [],
+            "img": "images/o2/17.jpg"
+          },
+          {
+            "name": "芒果苹果雪梨",
+            "price": 21,
+            "tags": [],
+            "img": "images/o2/18.jpg"
+          },
+          {
+            "name": "牛油果鲜橙雪梨",
+            "price": 27,
+            "tags": [],
+            "img": "images/o2/19.jpg"
+          },
+          {
+            "name": "芒果鲜橙雪梨",
+            "price": 22,
+            "tags": [],
+            "img": "images/o2/20.jpg"
+          },
+          {
+            "name": "百香果雪梨",
+            "price": 19,
+            "tags": [],
+            "img": "images/o2/21.jpg"
+          },
+          {
+            "name": "百香果鲜橙",
+            "price": 23,
+            "tags": [],
+            "img": "images/o2/22.jpg"
+          },
+          {
+            "name": "柠檬雪梨",
+            "price": 20,
+            "tags": [],
+            "img": "images/o2/23.jpg"
+          },
+          {
+            "name": "雪梨青瓜",
+            "price": 17,
+            "tags": [],
+            "img": "images/o2/24.jpg"
+          },
+          {
+            "name": "鲜橙胡萝卜",
+            "price": 20,
+            "tags": [],
+            "img": "images/o2/25.jpg"
+          },
+          {
+            "name": "苹果雪梨",
+            "price": 17,
+            "tags": [],
+            "img": "images/o2/26.jpg"
+          },
+          {
+            "name": "鲜橙苹果",
+            "price": 20,
+            "tags": [],
+            "img": "images/o2/27.jpg"
+          },
+          {
+            "name": "牛油果雪梨",
+            "price": 27,
+            "tags": [],
+            "img": "images/o2/28.jpg"
+          },
+          {
+            "name": "多肉芒芒",
+            "price": 21,
+            "tags": [],
+            "img": "images/o2/29.jpg"
+          },
+          {
+            "name": "牛油果羽衣甘蓝",
+            "price": 25,
+            "tags": [],
+            "img": "images/o2/31.jpg"
+          },
+          {
+            "name": "芭乐牛油果",
+            "price": 25,
+            "tags": [],
+            "img": "images/o2/32.jpg"
+          },
+          {
+            "name": "萌宝活力·西瓜",
+            "price": 14,
+            "tags": [],
+            "img": "images/o2/33.jpg"
+          },
+          {
+            "name": "萌宝活力·鲜橙",
+            "price": 18,
+            "tags": [],
+            "img": "images/o2/34.jpg"
+          },
+          {
+            "name": "萌宝活力·鲜橙雪梨",
+            "price": 17,
+            "tags": [],
+            "img": "images/o2/35.jpg"
+          },
+          {
+            "name": "萌宝活力·苹果雪梨",
+            "price": 14,
+            "tags": [],
+            "img": "images/o2/36.jpg"
+          },
+          {
+            "name": "萌宝活力·芒果鲜橙雪梨",
+            "price": 18,
+            "tags": [],
+            "img": "images/o2/37.jpg"
+          },
+          {
+            "name": "萌宝活力·苹果胡萝卜雪梨",
+            "price": 14,
+            "tags": [],
+            "img": "images/o2/38.jpg"
+          },
+          {
+            "name": "莲雾雪梨",
+            "price": 23,
+            "tags": [],
+            "img": "images/o2/39.jpg"
+          },
+          {
+            "name": "超润杨桃轻",
+            "price": 22,
+            "tags": [],
+            "img": "images/o2/40.jpg"
+          },
+          {
+            "name": "怕上火杨桃",
+            "price": 23,
+            "tags": [],
+            "img": "images/o2/41.jpg"
+          },
+          {
+            "name": "一颗柠檬水（仅限冰饮）",
+            "price": 11,
+            "tags": [],
+            "img": "images/o2/47.jpg"
+          },
+          {
+            "name": "百香果柠檬（仅限冰饮）",
+            "price": 14,
+            "tags": [],
+            "img": "images/o2/48.jpg"
           }
         ]
       }

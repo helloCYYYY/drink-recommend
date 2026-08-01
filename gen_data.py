@@ -102,6 +102,10 @@ hytea = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-08-01\new-chat\outputs
 print(">> 一点点")
 yd = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-08-01\new-chat\outputs\一点点饮品清单.xlsx",
              "yidiandian", "一点点", "🔴")
+
+print(">> O2")
+o2 = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-08-01\new-chat\outputs\O2饮品清单.xlsx",
+             "o2", "O2", "🫧")
 # 真实清单里没有“生椰拿铁”，但定制参数面板需要有样本：把演示 opts 挂到一杯真实拿铁上
 DEMO_OPTS = {"temp": {"label": "温度", "items": ["热", "冰", "去冰"]},
              "sugar": {"label": "甜度", "items": ["全糖", "五分糖", "无糖"]},
@@ -132,7 +136,7 @@ DATA = {
 }
 for cat_key in ("coffee", "milktea", "fruittea"):
     merged = {}
-    for src in (sb, ms, lk, gm, ot, molly, yulian, koi, hytea, yd):  # 合并 十表
+    for src in (sb, ms, lk, gm, ot, molly, yulian, koi, hytea, yd, o2):  # 合并 十一表
         for bk, bv in src.get(cat_key, {}).items():
             merged[bk] = bv
     DATA[cat_key]["brands"] = merged
