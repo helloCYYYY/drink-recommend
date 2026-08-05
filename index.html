@@ -60,8 +60,20 @@
   /* ===== 内容区 ===== */
   .scroll{flex:1;overflow-y:auto;padding:max(54px,env(safe-area-inset-top)) 20px max(120px,calc(120px + env(safe-area-inset-bottom)));-webkit-overflow-scrolling:touch;}
   .header{padding:6px 4px 14px;}
-  .header h1{font-size:23px;margin:0 0 4px;font-weight:800;letter-spacing:.5px;}
+  .header-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
+  .header-copy{min-width:0;}
+  .header h1{font-size:23px;margin:0 0 4px;font-weight:800;letter-spacing:0;}
   .header p{margin:0;font-size:13px;color:var(--ink-soft);}
+  .quick-actions{display:flex;gap:6px;flex:none;}
+  .icon-btn{
+    width:38px;height:38px;border:1px solid var(--line);border-radius:12px;background:var(--card-strong);
+    color:var(--ink);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 4px 12px rgba(59,130,246,.10);
+  }
+  .icon-btn:active{transform:scale(.94);}
+  .icon-btn:focus-visible,.cat:focus-visible,.brand:focus-visible,.sku-select:focus-visible,.chip:focus-visible{
+    outline:3px solid rgba(37,99,235,.35);outline-offset:2px;
+  }
 
   .progress{display:flex;align-items:center;gap:8px;margin:18px 2px 6px;}
   .progress .dot{width:9px;height:9px;border-radius:50%;background:rgba(59,130,246,.25);transition:.3s;}
@@ -78,7 +90,7 @@
   .cat{
     background:var(--card);border:2px solid transparent;border-radius:var(--radius);
     padding:18px 8px;text-align:center;cursor:pointer;transition:.22s;backdrop-filter:blur(8px);
-    box-shadow:0 6px 16px rgba(59,130,246,.10);
+    box-shadow:0 6px 16px rgba(59,130,246,.10);color:inherit;font:inherit;width:100%;
   }
   .cat .emo{font-size:34px;display:block;margin-bottom:8px;}
   .cat .nm{font-size:14px;font-weight:700;}
@@ -90,7 +102,7 @@
   .brand{
     background:var(--card);border:2px solid transparent;border-radius:18px;padding:16px 12px;
     cursor:pointer;transition:.22s;display:flex;align-items:center;gap:10px;backdrop-filter:blur(8px);
-    box-shadow:0 6px 16px rgba(59,130,246,.10);
+    box-shadow:0 6px 16px rgba(59,130,246,.10);color:inherit;font:inherit;width:100%;text-align:left;
   }
   .brand .logo{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px;color:#fff;font-weight:800;flex:none;overflow:hidden;}
   .brand .bn{font-size:15px;font-weight:700;}
@@ -100,11 +112,13 @@
   /* SKU 列表 */
   .skus{display:flex;flex-direction:column;gap:11px;}
   .sku{
-    background:var(--card-strong);border-radius:18px;padding:14px 16px;cursor:pointer;transition:.2s;
+    background:var(--card-strong);border-radius:18px;padding:14px 16px;transition:.2s;
     display:flex;align-items:center;justify-content:space-between;gap:10px;
     box-shadow:0 6px 16px rgba(59,130,246,.10);border:2px solid transparent;
+    color:inherit;font:inherit;width:100%;text-align:left;
   }
-  .sku:active{transform:scale(.98);}
+  .sku-select{display:flex;align-items:center;gap:10px;min-width:0;flex:1;border:0;background:transparent;padding:0;color:inherit;font:inherit;text-align:left;cursor:pointer;}
+  .sku-select:active{transform:scale(.98);}
   .sku .left{display:flex;flex-direction:column;gap:6px;flex:1;min-width:0;}
   .sku .thumb{width:46px;height:46px;border-radius:14px;object-fit:cover;flex:none;box-shadow:0 4px 10px rgba(59,130,246,.22);}
   .sku .sn{font-size:15px;font-weight:700;}
@@ -112,6 +126,12 @@
   .sku .tag{font-size:11px;color:var(--rose-deep);background:rgba(59,130,246,.12);padding:2px 8px;border-radius:20px;}
   .sku .price{font-size:16px;font-weight:800;color:var(--rose-deep);white-space:nowrap;}
   .sku .price small{font-size:11px;font-weight:600;opacity:.7;}
+  .sku-actions{display:flex;align-items:center;gap:8px;flex:none;}
+  .heart{
+    width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--rose-deep);
+    font-size:19px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none;
+  }
+  .heart.on{background:rgba(59,130,246,.12);border-color:var(--rose);}
 
   /* 底部操作条 */
   .footer{
@@ -183,6 +203,45 @@
   /* 结果里的参数展示 */
   .result .rparams{font-size:14px;color:var(--ink);background:rgba(59,130,246,.08);border-radius:14px;padding:11px 13px;margin:4px 0 14px;line-height:1.7;text-align:left;}
 
+  /* 搜索、收藏与最近记录 */
+  .panel{
+    background:#fff;border-radius:26px;padding:22px;max-width:360px;width:100%;max-height:88%;overflow-y:auto;
+    box-shadow:0 20px 60px rgba(40,60,90,.35);animation:pop .25s cubic-bezier(.2,1.1,.4,1);
+  }
+  .panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;}
+  .panel-title{font-size:20px;font-weight:800;margin:0;}
+  .panel-close{border:0;background:transparent;width:36px;height:36px;font-size:24px;color:var(--ink-soft);cursor:pointer;}
+  .search-input{
+    width:100%;height:46px;border:2px solid var(--line);border-radius:14px;padding:0 14px;font-size:15px;
+    color:var(--ink);background:#fff;outline:none;
+  }
+  .search-input:focus{border-color:var(--rose);box-shadow:0 0 0 3px rgba(59,130,246,.12);}
+  .filters{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:10px 0 14px;}
+  .filters select{
+    min-width:0;height:40px;border:1px solid var(--line);border-radius:12px;padding:0 9px;background:#f8fbff;
+    color:var(--ink);font-size:13px;
+  }
+  .result-count{font-size:12px;color:var(--ink-soft);margin:0 2px 10px;}
+  .panel-list{display:flex;flex-direction:column;gap:9px;}
+  .panel-list .sku{padding:11px 12px;border-radius:14px;}
+  .panel-list .sku .thumb{width:42px;height:42px;border-radius:11px;}
+  .panel-list .sku .sn{font-size:14px;}
+  .drink-meta{font-size:11px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .segments{display:grid;grid-template-columns:1fr 1fr;background:#eef4ff;border-radius:12px;padding:3px;margin-bottom:14px;}
+  .segment{border:0;border-radius:9px;padding:9px;background:transparent;color:var(--ink-soft);font-weight:700;cursor:pointer;}
+  .segment.on{background:#fff;color:var(--rose-deep);box-shadow:0 2px 8px rgba(59,130,246,.12);}
+  .empty{padding:42px 14px;text-align:center;color:var(--ink-soft);font-size:14px;line-height:1.7;}
+  .clear-history{display:none;margin:14px auto 0;border:0;background:transparent;color:var(--ink-soft);font-size:12px;cursor:pointer;}
+  .result-actions{display:flex;gap:9px;align-items:center;}
+  .result-actions .close{flex:1;}
+  .result-actions .heart{width:46px;height:46px;border-radius:16px;font-size:23px;}
+  .result-actions .close:disabled{opacity:.55;cursor:wait;}
+  .share-status{min-height:18px;margin:9px 0 0;font-size:12px;color:var(--ink-soft);}
+  .again{
+    border:0;background:transparent;color:var(--ink-soft);font-size:13px;font-weight:700;
+    padding:9px 12px 0;cursor:pointer;
+  }
+
   /* 撒花 */
   .confetti{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;z-index:90;}
   .confetti span{position:absolute;top:-30px;font-size:22px;animation:fall linear forwards;}
@@ -195,8 +254,16 @@
     <div class="screen">
       <div class="scroll">
         <div class="header">
-          <h1>今天想喝点什么呀 💕</h1>
-          <p id="sub">先选个大类，我帮你挑～</p>
+          <div class="header-top">
+            <div class="header-copy">
+              <h1>今天想喝点什么呀 💕</h1>
+              <p id="sub">先选个大类，我帮你挑～</p>
+            </div>
+            <div class="quick-actions">
+              <button class="icon-btn" id="searchBtn" type="button" title="搜索饮品" aria-label="搜索饮品">🔍</button>
+              <button class="icon-btn" id="libraryBtn" type="button" title="收藏与最近" aria-label="收藏与最近">♡</button>
+            </div>
+          </div>
         </div>
 
         <div class="progress">
@@ -237,6 +304,35 @@
       <div class="overlay" id="customOverlay">
         <div class="custom" id="customCard"></div>
       </div>
+      <div class="overlay" id="searchOverlay">
+        <div class="panel" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+          <div class="panel-head"><h2 class="panel-title" id="searchTitle">搜索饮品</h2><button class="panel-close" id="closeSearchBtn" type="button" aria-label="关闭">×</button></div>
+          <input class="search-input" id="searchInput" type="search" placeholder="饮品名称或品牌" autocomplete="off" />
+          <div class="filters">
+            <select id="filterCat" aria-label="品类筛选"></select>
+            <select id="filterBrand" aria-label="品牌筛选"></select>
+            <select id="filterPrice" aria-label="最高价格">
+              <option value="">不限价格</option><option value="15">¥15以内</option><option value="20">¥20以内</option><option value="30">¥30以内</option>
+            </select>
+            <select id="filterSort" aria-label="排序方式">
+              <option value="default">默认排序</option><option value="priceAsc">价格从低到高</option><option value="priceDesc">价格从高到低</option>
+            </select>
+          </div>
+          <p class="result-count" id="searchCount"></p>
+          <div class="panel-list" id="searchResults"></div>
+        </div>
+      </div>
+      <div class="overlay" id="libraryOverlay">
+        <div class="panel" role="dialog" aria-modal="true" aria-labelledby="libraryTitle">
+          <div class="panel-head"><h2 class="panel-title" id="libraryTitle">我的饮品</h2><button class="panel-close" id="closeLibraryBtn" type="button" aria-label="关闭">×</button></div>
+          <div class="segments" role="tablist">
+            <button class="segment on" id="favoritesTab" type="button" role="tab" aria-selected="true">收藏</button>
+            <button class="segment" id="historyTab" type="button" role="tab" aria-selected="false">最近</button>
+          </div>
+          <div class="panel-list" id="libraryList"></div>
+          <button class="clear-history" id="clearHistoryBtn" type="button">清空最近记录</button>
+        </div>
+      </div>
       <div class="confetti" id="confetti"></div>
     </div>
   </div>
@@ -246,13 +342,87 @@
 <script>
 const state = {cat:null, brand:null};
 const $ = id => document.getElementById(id);
+const STORAGE = { favorites:'drink-favorites-v1', history:'drink-history-v1' };
+
+function readList(key){
+  try{
+    const value=JSON.parse(localStorage.getItem(key) || '[]');
+    return Array.isArray(value) ? value : [];
+  }catch(_){ return []; }
+}
+function writeList(key, value){
+  try{ localStorage.setItem(key, JSON.stringify(value)); }catch(_){}
+}
+function drinkKey(catKey, brandKey, s){
+  return JSON.stringify([catKey, brandKey, s.name, s.price, s.img || '']);
+}
+function catalogEntries(){
+  const entries=[];
+  Object.entries(DATA).forEach(([catKey,cat])=>{
+    Object.entries(cat.brands).forEach(([brandKey,brand])=>{
+      brand.skus.forEach(s=>entries.push({
+        s, catKey, brandKey, catLabel:cat.label, brandName:brand.name,
+        key:drinkKey(catKey, brandKey, s)
+      }));
+    });
+  });
+  return entries;
+}
+const catalog=catalogEntries();
+const catalogByKey=new Map(catalog.map(entry=>[entry.key,entry]));
+const favorites=new Set(readList(STORAGE.favorites).filter(key=>catalogByKey.has(key)));
+let history=readList(STORAGE.history).filter(key=>catalogByKey.has(key)).slice(0,30);
+let recentRandom=[];
+
+function toggleFavorite(key){
+  if(favorites.has(key)) favorites.delete(key); else favorites.add(key);
+  writeList(STORAGE.favorites,[...favorites]);
+  updateLibraryIcon();
+  render();
+  if($('searchOverlay').classList.contains('show')) renderSearchResults();
+  if($('libraryOverlay').classList.contains('show')) renderLibrary();
+  if(activeResult) renderResultCard();
+}
+function recordHistory(key){
+  history=[key,...history.filter(item=>item!==key)].slice(0,30);
+  writeList(STORAGE.history,history);
+}
+function updateLibraryIcon(){
+  $('libraryBtn').textContent=favorites.size?'♥':'♡';
+  $('libraryBtn').title=favorites.size?`收藏与最近（${favorites.size}）`:'收藏与最近';
+}
+function renderDrinkRow(entry, showMeta=false){
+  const {s,key}=entry;
+  const el=document.createElement('div');
+  el.className='sku';
+  const select=document.createElement('button');
+  select.type='button';select.className='sku-select';
+  select.setAttribute('aria-label',`选择${s.name}`);
+  const thumb=s.img?`<img class="thumb" src="${s.img}" alt="" loading="lazy">`:'';
+  const tags=s.tags && s.tags.length ? `<div class="tags">${s.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>` : '';
+  const meta=showMeta?`<div class="drink-meta">${entry.catLabel} · ${entry.brandName}</div>`:'';
+  select.innerHTML=`${thumb}<div class="left"><div class="sn">${s.name}</div>${meta}${tags}</div><div class="price"><small>¥</small>${s.price}</div>`;
+  select.onclick=()=>{
+    closeSearch();closeLibrary();
+    openCustom(s,entry.catKey,entry.catLabel,entry.brandName,entry.brandKey);
+  };
+  const heart=document.createElement('button');
+  heart.type='button';heart.className='heart'+(favorites.has(key)?' on':'');
+  heart.textContent=favorites.has(key)?'♥':'♡';
+  heart.title=favorites.has(key)?'取消收藏':'收藏';
+  heart.setAttribute('aria-label',heart.title+s.name);
+  heart.onclick=()=>toggleFavorite(key);
+  el.append(select,heart);
+  return el;
+}
 
 function render(){
   // 大类
   const cats = $('cats');
   cats.innerHTML = '';
   Object.entries(DATA).forEach(([k,v])=>{
-    const el = document.createElement('div');
+    const el = document.createElement('button');
+    el.type='button';
     el.className = 'cat' + (state.cat===k?' sel':'');
     el.innerHTML = `<span class="emo">${v.emoji || v.emo}</span><span class="nm">${v.label}</span>`;
     el.onclick = ()=>pickCat(k);
@@ -265,7 +435,8 @@ function render(){
     const brands = $('brands');
     brands.innerHTML='';
     Object.entries(DATA[state.cat].brands).forEach(([k,v])=>{
-      const el=document.createElement('div');
+      const el=document.createElement('button');
+      el.type='button';
       el.className='brand'+(state.brand===k?' sel':'');
       const logoHtml = v.logoImg ? `<img src="${v.logoImg}" alt="${v.name}" style="width:100%;height:100%;object-fit:cover">` : v.logo;
       el.innerHTML=`<div class="logo" style="background:linear-gradient(135deg,var(--peach),var(--rose))">${logoHtml}</div><div class="bn">${v.name}</div>`;
@@ -281,14 +452,11 @@ function render(){
     $('secSku').classList.remove('hidden');
     const skus = $('skus');
     skus.innerHTML='';
-    DATA[state.cat].brands[state.brand].skus.forEach(s=>{
-      const el=document.createElement('div');
-      el.className='sku';
-      const thumb = s.img ? `<img class="thumb" src="${s.img}" alt="${s.name}">` : '';
-      el.innerHTML=`${thumb}<div class="left"><div class="sn">${s.name}</div><div class="tags">${s.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div></div><div class="price"><small>¥</small>${s.price}</div>`;
-      el.onclick=()=>openCustom(s, state.cat, DATA[state.cat].label, DATA[state.cat].brands[state.brand].name);
-      skus.appendChild(el);
-    });
+    const brand=DATA[state.cat].brands[state.brand];
+    brand.skus.forEach(s=>skus.appendChild(renderDrinkRow({
+      s,catKey:state.cat,brandKey:state.brand,catLabel:DATA[state.cat].label,brandName:brand.name,
+      key:drinkKey(state.cat,state.brand,s)
+    })));
   } else {
     $('secSku').classList.add('hidden');
   }
@@ -332,14 +500,18 @@ function groupsFor(s){
 const ICONS = { temp:'🌡️', sugar:'🍯', size:'🥤', strength:'☕', topping:'➕', ice:'❄️', milk:'🥛', spice:'🌶️' };
 function groupIcon(k){ return ICONS[k] || '•'; }
 
-let custom = null; // {s, catKey, catLabel, brandName, sel:{}}
+let custom = null; // {s, catKey, catLabel, brandKey, brandName, sel:{}}
+let activeResult = null;
+let activeShareFile = null;
+let shareStatus = '';
+let shareGeneration = 0;
 
-function openCustom(s, catKey, catLabel, brandName){
+function openCustom(s, catKey, catLabel, brandName, brandKey){
   if(groupsFor(s).length === 0){            // 这杯没参数，直接出结果
-    showResult(s, catLabel, brandName, false, null, catKey);
+    showResult(s, catLabel, brandName, false, null, catKey, brandKey);
     return;
   }
-  custom = { s, catKey, catLabel, brandName, sel:{} };
+  custom = { s, catKey, catLabel, brandKey, brandName, sel:{} };
   groupsFor(s).forEach(k=>{
     const g = resolveGroup(s, k);
     custom.sel[k] = g.multi ? [] : g.items[0]; // 默认：单选取第一项，多选为空
@@ -382,14 +554,40 @@ function renderCustom(){
 }
 
 function confirmCustom(){
-  const {s, catKey, catLabel, brandName, sel} = custom;
+  const {s, catKey, catLabel, brandKey, brandName, sel} = custom;
   $('customOverlay').classList.remove('show');
-  showResult(s, catLabel, brandName, false, sel, catKey);
+  showResult(s, catLabel, brandName, false, sel, catKey, brandKey);
 }
 function closeCustom(){ $('customOverlay').classList.remove('show'); }
 
-function showResult(s, catLabel, brandName, isSurprise, params, catKey){
+function showResult(s, catLabel, brandName, isSurprise, params, catKey, brandKey){
+  const key=drinkKey(catKey,brandKey,s);
+  activeResult={s,catLabel,brandName,isSurprise,params,catKey,brandKey,key};
+  activeShareFile=null;
+  shareStatus='正在准备分享卡片…';
+  const generation=++shareGeneration;
+  recordHistory(key);
+  renderResultCard();
+  $('overlay').classList.add('show');
+  if(isSurprise) burst();
+  prepareShareCard(activeResult).then(file=>{
+    if(generation!==shareGeneration) return;
+    activeShareFile=file;
+    shareStatus='';
+    renderResultCard();
+  }).catch(()=>{
+    if(generation!==shareGeneration) return;
+    shareStatus='图片生成失败，仍可复制订单文字';
+    renderResultCard();
+  });
+}
+
+function renderResultCard(){
+  if(!activeResult) return;
+  const {s,catLabel,brandName,isSurprise,params,key}=activeResult;
   const card=$('resultCard');
+  const shareAvailable=!!activeShareFile || shareStatus.startsWith('图片生成失败');
+  const shareLabel=activeShareFile?'发给你 💌':(shareAvailable?'复制订单文字':'准备分享卡片…');
   const bigHtml = s.img
     ? `<img src="${s.img}" alt="${s.name}" style="width:96px;height:96px;border-radius:24px;object-fit:cover;margin:8px auto;display:block;box-shadow:0 10px 24px rgba(59,130,246,.25)">`
     : `<div class="big">${DATA_emo(catLabel)}</div>`;
@@ -416,41 +614,165 @@ function showResult(s, catLabel, brandName, isSurprise, params, catKey){
     <div class="rprice">¥${s.price}</div>
     ${paramsHtml}
     <div class="rtags">${s.tags.map(t=>`<span class="rtag">${t}</span>`).join('')}</div>
-    <button class="close" onclick="closeResult()">好耶，就去买！💕</button>
+    <div class="result-actions">
+      <button class="heart${favorites.has(key)?' on':''}" id="resultHeart" type="button" aria-label="${favorites.has(key)?'取消收藏':'收藏'}${s.name}">${favorites.has(key)?'♥':'♡'}</button>
+      <button class="close" id="shareBtn" type="button" ${shareAvailable?'':'disabled'}>${shareLabel}</button>
+    </div>
+    <div class="share-status" role="status">${shareStatus}</div>
+    <button class="again" type="button" onclick="closeResult()">再选一杯</button>
   `;
-  $('overlay').classList.add('show');
-  if(isSurprise) burst();
+  $('resultHeart').onclick=()=>toggleFavorite(key);
+  $('shareBtn').onclick=shareResultCard;
+}
+
+function parameterLines(s, params){
+  if(!params) return [];
+  const lines=[];
+  groupsFor(s).forEach(k=>{
+    const g=resolveGroup(s,k);
+    const selected=params[k];
+    if(selected===undefined) return;
+    const value=Array.isArray(selected)?selected.join('、'):selected;
+    if(value) lines.push(`${g.label}：${value}`);
+  });
+  return lines;
+}
+function shareTextFor(result){
+  const {s,catLabel,brandName,params}=result;
+  const details=parameterLines(s,params);
+  return [`今天想喝：${s.name}`,`${catLabel} · ${brandName} · ¥${s.price}`,...details].join('\n');
+}
+function roundedPath(ctx,x,y,w,h,r){
+  const radius=Math.min(r,w/2,h/2);
+  ctx.beginPath();
+  ctx.moveTo(x+radius,y);
+  ctx.arcTo(x+w,y,x+w,y+h,radius);
+  ctx.arcTo(x+w,y+h,x,y+h,radius);
+  ctx.arcTo(x,y+h,x,y,radius);
+  ctx.arcTo(x,y,x+w,y,radius);
+  ctx.closePath();
+}
+function drawCover(ctx,img,x,y,w,h){
+  const scale=Math.max(w/img.naturalWidth,h/img.naturalHeight);
+  const sw=w/scale,sh=h/scale;
+  const sx=(img.naturalWidth-sw)/2,sy=(img.naturalHeight-sh)/2;
+  ctx.drawImage(img,sx,sy,sw,sh,x,y,w,h);
+}
+function wrapCanvasText(ctx,text,x,y,maxWidth,lineHeight,maxLines){
+  const chars=[...String(text)];
+  const lines=[];let line='';
+  chars.forEach(char=>{
+    const next=line+char;
+    if(line && ctx.measureText(next).width>maxWidth){lines.push(line);line=char;}else line=next;
+  });
+  if(line) lines.push(line);
+  const visible=lines.slice(0,maxLines);
+  if(lines.length>maxLines){
+    let last=visible[maxLines-1];
+    while(last && ctx.measureText(last+'…').width>maxWidth) last=last.slice(0,-1);
+    visible[maxLines-1]=last+'…';
+  }
+  visible.forEach((value,index)=>ctx.fillText(value,x,y+index*lineHeight));
+  return y+visible.length*lineHeight;
+}
+function loadCardImage(src){
+  return new Promise(resolve=>{
+    if(!src){resolve(null);return;}
+    const img=new Image();
+    img.onload=()=>resolve(img);img.onerror=()=>resolve(null);img.src=src;
+  });
+}
+async function prepareShareCard(result){
+  const {s,catLabel,brandName,params}=result;
+  const canvas=document.createElement('canvas');
+  canvas.width=900;canvas.height=1200;
+  const ctx=canvas.getContext('2d');
+  ctx.fillStyle='#f4f8ff';ctx.fillRect(0,0,900,1200);
+
+  ctx.fillStyle='#17324d';ctx.font='700 30px system-ui, sans-serif';
+  ctx.fillText('今天想喝这杯',70,82);
+  ctx.fillStyle='#e11d48';ctx.font='34px system-ui, sans-serif';ctx.fillText('♥',798,82);
+
+  // file:// 下本地图片会污染 Canvas；线上同源部署时使用真实饮品图。
+  const img=location.protocol==='file:'?null:await loadCardImage(s.img);
+  roundedPath(ctx,70,130,760,520,38);ctx.save();ctx.clip();
+  if(img) drawCover(ctx,img,70,130,760,520);
+  else {ctx.fillStyle='#dbeafe';ctx.fillRect(70,130,760,520);ctx.font='150px system-ui';ctx.textAlign='center';ctx.fillText(DATA_emo(catLabel),450,440);ctx.textAlign='left';}
+  ctx.restore();
+
+  ctx.fillStyle='#2563eb';ctx.font='700 24px system-ui, sans-serif';
+  ctx.fillText(`${catLabel} · ${brandName}`,70,712);
+  ctx.fillStyle='#17324d';ctx.font='800 52px system-ui, sans-serif';
+  let y=wrapCanvasText(ctx,s.name,70,780,600,64,2);
+  ctx.fillStyle='#2563eb';ctx.font='800 46px system-ui, sans-serif';ctx.fillText(`¥${s.price}`,710,780);
+
+  const details=parameterLines(s,params).slice(0,4);
+  if(details.length){
+    y=Math.max(y+10,890);
+    ctx.fillStyle='#ffffff';roundedPath(ctx,70,y-44,760,Math.max(88,details.length*38+30),24);ctx.fill();
+    ctx.fillStyle='#526a82';ctx.font='500 25px system-ui, sans-serif';
+    details.forEach((line,index)=>ctx.fillText(line,100,y+index*38));
+  }
+
+  ctx.fillStyle='#526a82';ctx.font='500 23px system-ui, sans-serif';ctx.fillText('饮料推荐系统 · 今天就喝这杯',70,1120);
+  ctx.fillStyle='#2563eb';roundedPath(ctx,70,1150,140,8,4);ctx.fill();
+
+  const blob=await new Promise((resolve,reject)=>canvas.toBlob(value=>value?resolve(value):reject(new Error('Canvas export failed')),'image/png'));
+  const safeName=s.name.replace(/[\\/:*?"<>|]/g,'-');
+  return new File([blob],`${safeName}-饮品卡片.png`,{type:'image/png'});
+}
+async function copyOrderText(text){
+  try{
+    if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(text);return true;}
+  }catch(_){}
+  const area=document.createElement('textarea');
+  area.value=text;area.style.position='fixed';area.style.opacity='0';document.body.appendChild(area);area.select();
+  const copied=document.execCommand('copy');area.remove();return copied;
+}
+async function fallbackShare(text){
+  if(activeShareFile){
+    const url=URL.createObjectURL(activeShareFile);
+    const link=document.createElement('a');link.href=url;link.download=activeShareFile.name;document.body.appendChild(link);link.click();link.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
+  const copied=await copyOrderText(text);
+  shareStatus=activeShareFile?(copied?'分享卡片已保存，订单文字已复制':'分享卡片已保存'):(copied?'订单文字已复制':'暂时无法分享，请截图发送');
+  renderResultCard();
+}
+async function shareResultCard(){
+  if(!activeResult) return;
+  const text=shareTextFor(activeResult);
+  if(activeShareFile && navigator.share){
+    const payload={title:`今天想喝：${activeResult.s.name}`,text,files:[activeShareFile]};
+    const canShare=!navigator.canShare || navigator.canShare({files:payload.files});
+    if(canShare){
+      try{
+        await navigator.share(payload);
+        shareStatus='已经发出啦 ✓';renderResultCard();return;
+      }catch(error){
+        if(error && error.name==='AbortError') return;
+      }
+    }
+  }
+  await fallbackShare(text);
 }
 function DATA_emo(label){return label==='咖啡'?'☕':label==='奶茶'?'🥤':'🍹';}
 function closeResult(){$('overlay').classList.remove('show');}
 
-function pickAll(){
-  const cats=Object.keys(DATA);
-  const cat=cats[Math.floor(Math.random()*cats.length)];
-  const brands=Object.keys(DATA[cat].brands);
-  const brand=brands[Math.floor(Math.random()*brands.length)];
-  const skus=DATA[cat].brands[brand].skus;
-  const sku=skus[Math.floor(Math.random()*skus.length)];
-  return {cat,brand,sku};
+function randomCandidates(){
+  if(state.cat && state.brand) return catalog.filter(entry=>entry.catKey===state.cat && entry.brandKey===state.brand);
+  if(state.cat) return catalog.filter(entry=>entry.catKey===state.cat);
+  return catalog;
 }
 
 function surprise(){
-  // 已选范围则在该范围内随机，否则全随机
-  let cat,brand,sku;
-  if(state.cat && state.brand){
-    const skus=DATA[state.cat].brands[state.brand].skus;
-    sku=skus[Math.floor(Math.random()*skus.length)];
-    cat=state.cat;brand=state.brand;
-  } else if(state.cat){
-    const brands=Object.keys(DATA[state.cat].brands);
-    brand=brands[Math.floor(Math.random()*brands.length)];
-    const skus=DATA[state.cat].brands[brand].skus;
-    sku=skus[Math.floor(Math.random()*skus.length)];
-    cat=state.cat;
-  } else {
-    const r=pickAll();cat=r.cat;brand=r.brand;sku=r.sku;
-  }
-  state.cat=cat;state.brand=brand;render();
+  // 当前范围内每个 SKU 等概率；候选足够时避开最近 5 次随机结果。
+  const all=randomCandidates();
+  const fresh=all.filter(entry=>!recentRandom.includes(entry.key));
+  const pool=fresh.length ? fresh : all;
+  const entry=pool[Math.floor(Math.random()*pool.length)];
+  const {s:sku,catKey:cat,brandKey:brand}=entry;
+  recentRandom=[entry.key,...recentRandom.filter(key=>key!==entry.key)].slice(0,5);
   const params={};
   groupsFor(sku).forEach(k=>{
     const g=resolveGroup(sku, k);
@@ -462,8 +784,72 @@ function surprise(){
       params[k]=g.items[Math.floor(Math.random()*g.items.length)];
     }
   });
-  showResult(sku, DATA[cat].label, DATA[cat].brands[brand].name, true, params, cat);
+  showResult(sku, entry.catLabel, entry.brandName, true, params, cat, brand);
 }
+
+function fillSearchFilters(){
+  $('filterCat').innerHTML='<option value="">全部品类</option>'+Object.entries(DATA).map(([key,cat])=>`<option value="${key}">${cat.label}</option>`).join('');
+  refreshBrandFilter();
+}
+function refreshBrandFilter(){
+  const catKey=$('filterCat').value;
+  const current=$('filterBrand').value;
+  const brands=new Map();
+  catalog.filter(entry=>!catKey || entry.catKey===catKey).forEach(entry=>brands.set(entry.brandKey,entry.brandName));
+  $('filterBrand').innerHTML='<option value="">全部品牌</option>'+[...brands].map(([key,name])=>`<option value="${key}">${name}</option>`).join('');
+  if(brands.has(current)) $('filterBrand').value=current;
+}
+function renderSearchResults(){
+  const q=$('searchInput').value.trim().toLocaleLowerCase();
+  const catKey=$('filterCat').value;
+  const brandKey=$('filterBrand').value;
+  const maxPrice=Number($('filterPrice').value || Infinity);
+  const sort=$('filterSort').value;
+  let matches=catalog.filter(entry=>(
+    (!q || `${entry.s.name} ${entry.brandName}`.toLocaleLowerCase().includes(q)) &&
+    (!catKey || entry.catKey===catKey) && (!brandKey || entry.brandKey===brandKey) && Number(entry.s.price)<=maxPrice
+  ));
+  if(sort==='priceAsc') matches=[...matches].sort((a,b)=>Number(a.s.price)-Number(b.s.price));
+  if(sort==='priceDesc') matches=[...matches].sort((a,b)=>Number(b.s.price)-Number(a.s.price));
+  $('searchCount').textContent=`共 ${matches.length} 杯`;
+  const box=$('searchResults');box.innerHTML='';
+  if(!matches.length){box.innerHTML='<div class="empty">没有找到符合条件的饮品</div>';return;}
+  const frag=document.createDocumentFragment();
+  matches.forEach(entry=>frag.appendChild(renderDrinkRow(entry,true)));
+  box.appendChild(frag);
+}
+function openSearch(){
+  renderSearchResults();
+  $('searchOverlay').classList.add('show');
+  setTimeout(()=>$('searchInput').focus(),50);
+}
+function closeSearch(){$('searchOverlay').classList.remove('show');}
+
+let libraryMode='favorites';
+function setLibraryMode(mode){
+  libraryMode=mode;
+  const isFavorites=mode==='favorites';
+  $('favoritesTab').classList.toggle('on',isFavorites);
+  $('historyTab').classList.toggle('on',!isFavorites);
+  $('favoritesTab').setAttribute('aria-selected',String(isFavorites));
+  $('historyTab').setAttribute('aria-selected',String(!isFavorites));
+  renderLibrary();
+}
+function renderLibrary(){
+  const keys=libraryMode==='favorites'?[...favorites].reverse():history;
+  const entries=keys.map(key=>catalogByKey.get(key)).filter(Boolean);
+  const box=$('libraryList');box.innerHTML='';
+  if(!entries.length){
+    box.innerHTML=`<div class="empty">${libraryMode==='favorites'?'还没有收藏的饮品':'还没有最近记录'}</div>`;
+  }else{
+    const frag=document.createDocumentFragment();
+    entries.forEach(entry=>frag.appendChild(renderDrinkRow(entry,true)));
+    box.appendChild(frag);
+  }
+  $('clearHistoryBtn').style.display=libraryMode==='history' && history.length?'block':'none';
+}
+function openLibrary(){setLibraryMode('favorites');$('libraryOverlay').classList.add('show');}
+function closeLibrary(){$('libraryOverlay').classList.remove('show');}
 
 function burst(){
   const box=$('confetti');box.innerHTML='';
@@ -482,6 +868,30 @@ function burst(){
 $('surpriseBtn').onclick=surprise;
 $('resetBtn').onclick=()=>{state.cat=null;state.brand=null;closeResult();render();};
 $('customOverlay').addEventListener('click', e=>{ if(e.target===$('customOverlay')) closeCustom(); });
+$('searchBtn').onclick=openSearch;
+$('libraryBtn').onclick=openLibrary;
+$('closeSearchBtn').onclick=closeSearch;
+$('closeLibraryBtn').onclick=closeLibrary;
+$('searchInput').oninput=renderSearchResults;
+$('filterCat').onchange=()=>{refreshBrandFilter();renderSearchResults();};
+$('filterBrand').onchange=renderSearchResults;
+$('filterPrice').onchange=renderSearchResults;
+$('filterSort').onchange=renderSearchResults;
+$('favoritesTab').onclick=()=>setLibraryMode('favorites');
+$('historyTab').onclick=()=>setLibraryMode('history');
+$('clearHistoryBtn').onclick=()=>{history=[];writeList(STORAGE.history,history);renderLibrary();};
+$('searchOverlay').addEventListener('click',e=>{if(e.target===$('searchOverlay')) closeSearch();});
+$('libraryOverlay').addEventListener('click',e=>{if(e.target===$('libraryOverlay')) closeLibrary();});
+$('overlay').addEventListener('click',e=>{if(e.target===$('overlay')) closeResult();});
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Escape') return;
+  if($('customOverlay').classList.contains('show')) closeCustom();
+  else if($('overlay').classList.contains('show')) closeResult();
+  else if($('searchOverlay').classList.contains('show')) closeSearch();
+  else if($('libraryOverlay').classList.contains('show')) closeLibrary();
+});
+fillSearchFilters();
+updateLibraryIcon();
 render();
 </script>
 </body>
