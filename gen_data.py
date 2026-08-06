@@ -7,7 +7,7 @@ IMG_DIR = os.path.join(BASE, "images")
 os.makedirs(os.path.join(IMG_DIR, "starbucks"), exist_ok=True)
 os.makedirs(os.path.join(IMG_DIR, "mstand"), exist_ok=True)
 
-CAT_MAP = {"咖啡": "coffee", "奶茶": "milktea", "果茶": "fruittea"}
+CAT_MAP = {"咖啡": "coffee", "奶茶": "milktea", "果茶": "fruittea", "其他": "other"}
 
 def extract(fpath, brand_key, brand_name, brand_logo):
     os.makedirs(os.path.join(IMG_DIR, brand_key), exist_ok=True)
@@ -113,7 +113,7 @@ def extract_url(fpath, brand_key, brand_name, brand_logo, price_col=4, url_col=5
 print(">> STARBUCKS (图床直链)")
 sb = extract_url(r"C:\Users\hspcadmin\Documents\drink\starbucks.xlsx",
                  "starbucks", "星巴克", "🟢", price_col=3, url_col=4,
-                 force_https=True, cat_map={"其他": "milktea"})
+                 force_https=True, cat_map={"其他": "other"})
 print(">> MSTAND")
 ms = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\MSTAND_饮品SKU清单.xlsx",
              "mstand", "M Stand", "M")
@@ -179,8 +179,9 @@ DATA = {
     "coffee":   {"label": "咖啡", "emoji": "☕", "brands": {}},
     "milktea":  {"label": "奶茶", "emoji": "🥤", "brands": {}},
     "fruittea": {"label": "果茶", "emoji": "🍹", "brands": {}},
+    "other":    {"label": "其他", "emoji": "🍦", "brands": {}},
 }
-for cat_key in ("coffee", "milktea", "fruittea"):
+for cat_key in ("coffee", "milktea", "fruittea", "other"):
     merged = {}
     for src in (sb, ms, lk, gm, ot, molly, yulian, koi, hytea, yd, o2, ky):  # 合并 十二表
         for bk, bv in src.get(cat_key, {}).items():

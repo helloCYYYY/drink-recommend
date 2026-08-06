@@ -1272,138 +1272,6 @@ const DATA = {
     "label": "奶茶",
     "emoji": "🥤",
     "brands": {
-      "starbucks": {
-        "name": "星巴克",
-        "logo": "🟢",
-        "skus": [
-          {
-            "name": "抹茶可可碎片星冰乐®",
-            "price": 34,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/b081c2a938384d1409d219d81b2147c4115008.jpg"
-          },
-          {
-            "name": "抹茶星冰乐®",
-            "price": 31,
-            "tags": [],
-            "img": "https://p1.meituan.net/waimaiopenbucket/82df36771c0b30599d90e91d35ec82db109889.jpg"
-          },
-          {
-            "name": "焙茶星冰乐",
-            "price": 31,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/6b1d47a63caf53e0c65ca95afb3fae9f123055.jpg"
-          },
-          {
-            "name": "米芝士软雪星冰乐",
-            "price": 38,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/ede3ede47fc44baa3edcd15a2404ee97202732.jpg"
-          },
-          {
-            "name": "意式开心果软雪星冰乐",
-            "price": 38,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/804ea2a513e2df5a71add49fac1217c7184049.jpg"
-          },
-          {
-            "name": "摩卡可可碎片星冰乐®",
-            "price": 35,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/0a43e0261db0191455744a934f140763165920.png"
-          },
-          {
-            "name": "焦糖咖啡星冰乐®",
-            "price": 32,
-            "tags": [],
-            "img": "https://p1.meituan.net/waimaiopenbucket/066984e3f5f3dd9baf8928b572b3d2f4133534.jpg"
-          },
-          {
-            "name": "摩卡星冰乐®",
-            "price": 32,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/7eb83d475a9c32ab29973b30e35da0a7111463.jpg"
-          },
-          {
-            "name": "浓缩咖啡星冰乐®",
-            "price": 32,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/21bcd8083fd581da514fadc17e62f3af141841.jpg"
-          },
-          {
-            "name": "黄金奇异果果昔星冰乐",
-            "price": 35,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/eedfa43cd8ad874287d0fc28d96e4d6c192590.jpg"
-          },
-          {
-            "name": "红颜草莓星冰乐®",
-            "price": 34,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/f0ae36c393b07f092564c8a8cc4429e8203879.jpg"
-          },
-          {
-            "name": "比利时巧克力星冰乐®",
-            "price": 34,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/efd8cce7dd2934dbe7206806bdc82d06209003.jpg"
-          },
-          {
-            "name": "桃桃果冻星冰乐",
-            "price": 34,
-            "tags": [],
-            "img": "https://p1.meituan.net/waimaiopenbucket/884670e13d7da903dc2bf8801d232846135395.jpg"
-          },
-          {
-            "name": "芒果西番莲果茶星冰乐®",
-            "price": 28,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/a2b17a0376cdef6855e641fe3563be47128909.jpg"
-          },
-          {
-            "name": "香草风味星冰乐®",
-            "price": 28,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/bd21e2b15ae91fcd606eae2659d2ea55103360.jpg"
-          },
-          {
-            "name": "椰子好芒星冰乐",
-            "price": 39,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/c0142fc834939680449e4478241a96a5143020.jpg"
-          },
-          {
-            "name": "椰子可可香草星冰乐",
-            "price": 39,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/c62cc59817238cbe4f3fedd4bd40030d138436.jpg"
-          },
-          {
-            "name": "巧克力风味星冰乐®",
-            "price": 31,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/b99671ed26b37668b30574bfdf9ee0ec28426.jpg"
-          },
-          {
-            "name": "粉莓柠力生咖",
-            "price": 34,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/97bee3fdf4ae418fe7a1a5c3a62de07e170359.jpg"
-          },
-          {
-            "name": "原味蒸气奶",
-            "price": 22,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/d7f06f82166cd3849c45e9dec00e490398837.jpg"
-          },
-          {
-            "name": "香草味蒸气奶",
-            "price": 25,
-            "tags": [],
-            "img": "https://p0.meituan.net/waimaiopenbucket/d7f06f82166cd3849c45e9dec00e490398837.jpg"
-          }
-        ]
-      },
       "mstand": {
         "name": "M Stand",
         "logo": "M",
@@ -3909,6 +3777,144 @@ const DATA = {
             "price": 19,
             "tags": [],
             "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003707__ALL__L__20260723170408220.jpg"
+          }
+        ]
+      }
+    }
+  },
+  "other": {
+    "label": "其他",
+    "emoji": "🍦",
+    "brands": {
+      "starbucks": {
+        "name": "星巴克",
+        "logo": "🟢",
+        "skus": [
+          {
+            "name": "抹茶可可碎片星冰乐®",
+            "price": 34,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/b081c2a938384d1409d219d81b2147c4115008.jpg"
+          },
+          {
+            "name": "抹茶星冰乐®",
+            "price": 31,
+            "tags": [],
+            "img": "https://p1.meituan.net/waimaiopenbucket/82df36771c0b30599d90e91d35ec82db109889.jpg"
+          },
+          {
+            "name": "焙茶星冰乐",
+            "price": 31,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/6b1d47a63caf53e0c65ca95afb3fae9f123055.jpg"
+          },
+          {
+            "name": "米芝士软雪星冰乐",
+            "price": 38,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/ede3ede47fc44baa3edcd15a2404ee97202732.jpg"
+          },
+          {
+            "name": "意式开心果软雪星冰乐",
+            "price": 38,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/804ea2a513e2df5a71add49fac1217c7184049.jpg"
+          },
+          {
+            "name": "摩卡可可碎片星冰乐®",
+            "price": 35,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/0a43e0261db0191455744a934f140763165920.png"
+          },
+          {
+            "name": "焦糖咖啡星冰乐®",
+            "price": 32,
+            "tags": [],
+            "img": "https://p1.meituan.net/waimaiopenbucket/066984e3f5f3dd9baf8928b572b3d2f4133534.jpg"
+          },
+          {
+            "name": "摩卡星冰乐®",
+            "price": 32,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/7eb83d475a9c32ab29973b30e35da0a7111463.jpg"
+          },
+          {
+            "name": "浓缩咖啡星冰乐®",
+            "price": 32,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/21bcd8083fd581da514fadc17e62f3af141841.jpg"
+          },
+          {
+            "name": "黄金奇异果果昔星冰乐",
+            "price": 35,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/eedfa43cd8ad874287d0fc28d96e4d6c192590.jpg"
+          },
+          {
+            "name": "红颜草莓星冰乐®",
+            "price": 34,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/f0ae36c393b07f092564c8a8cc4429e8203879.jpg"
+          },
+          {
+            "name": "比利时巧克力星冰乐®",
+            "price": 34,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/efd8cce7dd2934dbe7206806bdc82d06209003.jpg"
+          },
+          {
+            "name": "桃桃果冻星冰乐",
+            "price": 34,
+            "tags": [],
+            "img": "https://p1.meituan.net/waimaiopenbucket/884670e13d7da903dc2bf8801d232846135395.jpg"
+          },
+          {
+            "name": "芒果西番莲果茶星冰乐®",
+            "price": 28,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/a2b17a0376cdef6855e641fe3563be47128909.jpg"
+          },
+          {
+            "name": "香草风味星冰乐®",
+            "price": 28,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/bd21e2b15ae91fcd606eae2659d2ea55103360.jpg"
+          },
+          {
+            "name": "椰子好芒星冰乐",
+            "price": 39,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/c0142fc834939680449e4478241a96a5143020.jpg"
+          },
+          {
+            "name": "椰子可可香草星冰乐",
+            "price": 39,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/c62cc59817238cbe4f3fedd4bd40030d138436.jpg"
+          },
+          {
+            "name": "巧克力风味星冰乐®",
+            "price": 31,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/b99671ed26b37668b30574bfdf9ee0ec28426.jpg"
+          },
+          {
+            "name": "粉莓柠力生咖",
+            "price": 34,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/97bee3fdf4ae418fe7a1a5c3a62de07e170359.jpg"
+          },
+          {
+            "name": "原味蒸气奶",
+            "price": 22,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/d7f06f82166cd3849c45e9dec00e490398837.jpg"
+          },
+          {
+            "name": "香草味蒸气奶",
+            "price": 25,
+            "tags": [],
+            "img": "https://p0.meituan.net/waimaiopenbucket/d7f06f82166cd3849c45e9dec00e490398837.jpg"
           }
         ]
       }
