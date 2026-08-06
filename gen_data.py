@@ -68,15 +68,21 @@ def extract(fpath, brand_key, brand_name, brand_logo):
         b["skus"].append(sku)
     return brands
 
-def extract_url(fpath, brand_key, brand_name, brand_logo, price_col=4, url_col=5):
+def extract_url(fpath, brand_key, brand_name, brand_logo, price_col=4, url_col=5,
+                force_https=False, cat_map=None):
     """图床直链版：图片列直接是远程 URL，不落本地文件。
 
     price_col/url_col 可配：
       - 默认 4/5 → 肯悦 5 列布局(分类/名称/类型/价格/直链)
-      - OT另茶 4 列布局(分类/名称/价格/直链) → price_col=3, url_col=4
+      - OT另茶/星巴克 4 列布局(分类/名称/价格/直链) → price_col=3, url_col=4
+    force_https: 把 http:// 链接升级为 https:// (规避 https 站点的混合内容拦截)
+    cat_map: 额外/覆盖类别映射，如 {"其他":"milktea"}
     """
     wb = openpyxl.load_workbook(fpath, data_only=True)
     ws = wb.active
+    cmap = dict(CAT_MAP)
+    if cat_map:
+        cmap.update(cat_map)
     brands = {}
     skipped = 0
     for r in range(2, ws.max_row + 1):
@@ -86,14 +92,17 @@ def extract_url(fpath, brand_key, brand_name, brand_logo, price_col=4, url_col=5
         url = ws.cell(row=r, column=url_col).value
         if not name:
             continue
-        cat_key = CAT_MAP.get(cat)
+        cat_key = cmap.get(cat)
         if not cat_key:
             print(f"  ! 未知类别 '{cat}' @row{r} 跳过"); skipped += 1; continue
         if not url:
             print(f"  ! 缺少图床链接 @row{r} ({name}) 跳过"); skipped += 1; continue
+        url = str(url).strip()
+        if force_https and url.startswith("http://"):
+            url = "https://" + url[len("http://"):]
         sku = {"name": str(name).strip(),
                "price": price if isinstance(price, (int, float)) else 0,
-               "tags": [], "img": str(url).strip()}
+               "tags": [], "img": url}
         brands.setdefault(cat_key, {})
         b = brands[cat_key].setdefault(brand_key, {"name": brand_name, "logo": brand_logo, "skus": []})
         b["skus"].append(sku)
@@ -101,9 +110,10 @@ def extract_url(fpath, brand_key, brand_name, brand_logo, price_col=4, url_col=5
     print(f"  * {brand_key}: 读取 {n} 款 (跳过 {skipped})")
     return brands
 
-print(">> STARBUCKS")
-sb = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\STARBUCKS_饮品SKU清单_饮品居中版.xlsx",
-             "starbucks", "星巴克", "🟢")
+print(">> STARBUCKS (图床直链)")
+sb = extract_url(r"C:\Users\hspcadmin\Documents\drink\starbucks.xlsx",
+                 "starbucks", "星巴克", "🟢", price_col=3, url_col=4,
+                 force_https=True, cat_map={"其他": "milktea"})
 print(">> MSTAND")
 ms = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\MSTAND_饮品SKU清单.xlsx",
              "mstand", "M Stand", "M")
