@@ -68,6 +68,34 @@ def extract(fpath, brand_key, brand_name, brand_logo):
         b["skus"].append(sku)
     return brands
 
+def extract_url(fpath, brand_key, brand_name, brand_logo):
+    """图床直链版：图片列直接是远程 URL，不落本地文件。"""
+    wb = openpyxl.load_workbook(fpath, data_only=True)
+    ws = wb.active
+    brands = {}
+    skipped = 0
+    for r in range(2, ws.max_row + 1):
+        cat = ws.cell(row=r, column=1).value
+        name = ws.cell(row=r, column=2).value
+        price = ws.cell(row=r, column=4).value
+        url = ws.cell(row=r, column=5).value
+        if not name:
+            continue
+        cat_key = CAT_MAP.get(cat)
+        if not cat_key:
+            print(f"  ! 未知类别 '{cat}' @row{r} 跳过"); skipped += 1; continue
+        if not url:
+            print(f"  ! 缺少图床链接 @row{r} ({name}) 跳过"); skipped += 1; continue
+        sku = {"name": str(name).strip(),
+               "price": price if isinstance(price, (int, float)) else 0,
+               "tags": [], "img": str(url).strip()}
+        brands.setdefault(cat_key, {})
+        b = brands[cat_key].setdefault(brand_key, {"name": brand_name, "logo": brand_logo, "skus": []})
+        b["skus"].append(sku)
+    n = sum(len(b["skus"]) for cat in brands.values() for b in cat.values())
+    print(f"  * {brand_key}: 读取 {n} 款 (跳过 {skipped})")
+    return brands
+
 print(">> STARBUCKS")
 sb = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\STARBUCKS_饮品SKU清单_饮品居中版.xlsx",
              "starbucks", "星巴克", "🟢")
@@ -106,6 +134,9 @@ yd = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-08-01\new-chat\outputs\�
 print(">> O2")
 o2 = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-08-01\new-chat\outputs\O2饮品清单.xlsx",
              "o2", "O2", "🫧")
+print(">> 肯悦咖啡 (图床直链)")
+ky = extract_url(r"C:\Users\hspcadmin\Documents\drink\kenyue.xlsx",
+                 "kenyue", "肯悦咖啡", "KY")
 # 真实清单里没有“生椰拿铁”，但定制参数面板需要有样本：把演示 opts 挂到一杯真实拿铁上
 DEMO_OPTS = {"temp": {"label": "温度", "items": ["热", "冰", "去冰"]},
              "sugar": {"label": "甜度", "items": ["全糖", "五分糖", "无糖"]},
@@ -136,7 +167,7 @@ DATA = {
 }
 for cat_key in ("coffee", "milktea", "fruittea"):
     merged = {}
-    for src in (sb, ms, lk, gm, ot, molly, yulian, koi, hytea, yd, o2):  # 合并 十一表
+    for src in (sb, ms, lk, gm, ot, molly, yulian, koi, hytea, yd, o2, ky):  # 合并 十二表
         for bk, bv in src.get(cat_key, {}).items():
             merged[bk] = bv
     DATA[cat_key]["brands"] = merged

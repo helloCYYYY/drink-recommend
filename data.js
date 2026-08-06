@@ -911,6 +911,228 @@ const DATA = {
             "img": "images/yulian/25.jpg"
           }
         ]
+      },
+      "kenyue": {
+        "name": "肯悦咖啡",
+        "logo": "KY",
+        "skus": [
+          {
+            "name": "瓦搭子.精酿啤酒花风味气泡美式",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003562__ALL__L__20260618175849241.jpg"
+          },
+          {
+            "name": "全冰黄油巴斯克风味美式",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003727__ALL__L__20260731162529871.jpg"
+          },
+          {
+            "name": "树番茄百香果特调气泡美式",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003695__ALL__L__20260723155916918.jpg"
+          },
+          {
+            "name": "浓萃美式",
+            "price": 16,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01002009__ALL__L__20260403131217934.jpg"
+          },
+          {
+            "name": "红苹果金凤梨特调气泡美式",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003698__ALL__L__20260723155917237.jpg"
+          },
+          {
+            "name": "黄油巴斯克风味拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003728__ALL__L__20260731162529912.jpg"
+          },
+          {
+            "name": "拿铁(瑰夏)",
+            "price": 21,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01001993__ALL__L__20260402145401473.jpg"
+          },
+          {
+            "name": "拿铁(瑰夏)(小)",
+            "price": 11,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003431__ALL__L__20260507172715582.jpg"
+          },
+          {
+            "name": "红颜草莓气泡美式(瑰夏)",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01002448__ALL__L__20251222133142998.jpg"
+          },
+          {
+            "name": "美式(瑰夏)",
+            "price": 19,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01001991__ALL__L__20260618151006829.jpg"
+          },
+          {
+            "name": "美式(瑰夏)(小)",
+            "price": 9,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003430__ALL__L__20260507172715399.jpg"
+          },
+          {
+            "name": "浓萃美式(大)",
+            "price": 19,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003537__ALL__L__20260611091546470.jpg"
+          },
+          {
+            "name": "虎斑小橘奶盖美式",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003637__ALL__L__20260709134852156.jpg"
+          },
+          {
+            "name": "浓浓抹茶拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01002505__ALL__L__20260611152612071.jpg"
+          },
+          {
+            "name": "KY红苹果热美式",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/100108654__ALL__L__20251229173150624.jpg"
+          },
+          {
+            "name": "苹果气泡美式",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003121__ALL__L__20251230174108997.jpg"
+          },
+          {
+            "name": "苹果黄油风味拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003102__ALL__L__20260611151946098.jpg"
+          },
+          {
+            "name": "凤梨酥风味拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003208__ALL__L__20260611151946347.jpg"
+          },
+          {
+            "name": "桃花乌龙风味拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003313__ALL__L__20260706140043300.jpg"
+          },
+          {
+            "name": "浓萃拿铁",
+            "price": 18,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01002011__ALL__L__20260403131217993.jpg"
+          },
+          {
+            "name": "满杯生椰拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01001870__ALL__L__20260402145401342.jpg"
+          },
+          {
+            "name": "焦糖蛋糕风味拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003304__ALL__L__20260611151946878.jpg"
+          },
+          {
+            "name": "虎斑小橘奶盖拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003636__ALL__L__20260709134852031.jpg"
+          },
+          {
+            "name": "蜜桃生椰拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01002416__ALL__L__20260402145401979.jpg"
+          },
+          {
+            "name": "爆汁三柠气泡美式",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01001869__ALL__L__20251229174021269.jpg"
+          },
+          {
+            "name": "爆汁葡萄气泡美式",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003561__ALL__L__20260703152454315.jpg"
+          },
+          {
+            "name": "血橙西柚味气泡美式",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01002748__ALL__L__20251229174027107.jpg"
+          },
+          {
+            "name": "超大杯爆汁三柠气泡美式",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003544__ALL__L__20260611091546559.jpg"
+          },
+          {
+            "name": "超大杯血橙西柚风味气泡美式",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003545__ALL__L__20260611091546606.jpg"
+          },
+          {
+            "name": "KY浓萃美式超大冰",
+            "price": 22,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/100125700__ALL__L__20260611091546171.jpg"
+          },
+          {
+            "name": "超大杯树番茄百香果特调气泡美式",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003706__ALL__L__20260723170408102.jpg"
+          },
+          {
+            "name": "超大杯粉泡泡电解质气泡美式",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003700__ALL__L__20260724103604595.jpg"
+          },
+          {
+            "name": "超大杯红苹果金凤梨特调气泡美式",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003708__ALL__L__20260723170408265.jpg"
+          },
+          {
+            "name": "超大杯苹果气泡美式",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003543__ALL__L__20260611091546514.jpg"
+          },
+          {
+            "name": "苹果黄油巴斯克风味拿铁",
+            "price": 26,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003730__ALL__L__20260731162529993.jpg"
+          },
+          {
+            "name": "黄油巴斯克风味美式",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003729__ALL__L__20260731162529952.jpg"
+          }
+        ]
       }
     }
   },
@@ -2085,6 +2307,36 @@ const DATA = {
             "price": 19,
             "tags": [],
             "img": "images/o2/46.jpg"
+          }
+        ]
+      },
+      "kenyue": {
+        "name": "肯悦咖啡",
+        "logo": "KY",
+        "skus": [
+          {
+            "name": "黑糖珍珠奶茶",
+            "price": 17,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003502__ALL__L__20260605091326465.jpg"
+          },
+          {
+            "name": "凤梨酥风味浓浓抹茶拿铁(不含咖啡)",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003307__ALL__L__20260611151947063.jpg"
+          },
+          {
+            "name": "浓浓抹茶生椰拿铁(不含咖啡)",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01002447__ALL__L__20260402145402023.jpg"
+          },
+          {
+            "name": "粉桃浓浓抹茶拿铁(不含咖啡)",
+            "price": 23,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01002414__ALL__L__20260402145401930.jpg"
           }
         ]
       }
@@ -3435,6 +3687,96 @@ const DATA = {
             "price": 14,
             "tags": [],
             "img": "images/o2/48.jpg"
+          }
+        ]
+      },
+      "kenyue": {
+        "name": "肯悦咖啡",
+        "logo": "KY",
+        "skus": [
+          {
+            "name": "树番茄百香果特调果饮",
+            "price": 16,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003696__ALL__L__20260723155916985.jpg"
+          },
+          {
+            "name": "树番茄百香果特调茶",
+            "price": 16,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003694__ALL__L__20260724142952547.jpg"
+          },
+          {
+            "name": "爆汁三柠饮",
+            "price": 16,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01002954__ALL__L__20260127094404112.jpg"
+          },
+          {
+            "name": "芒芒杨枝甘露",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003397__ALL__L__20260611151947584.jpg"
+          },
+          {
+            "name": "超大杯爆汁三柠饮",
+            "price": 19,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003547__ALL__L__20260611091546708.jpg"
+          },
+          {
+            "name": "爆汁三柠浓浓抹茶(不含咖啡)",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01002415__ALL__L__20260611152612027.jpg"
+          },
+          {
+            "name": "苹果气泡浓浓抹茶",
+            "price": 20,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01002506__ALL__L__20260611152612104.jpg"
+          },
+          {
+            "name": "爆汁苹果饮",
+            "price": 16,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01002953__ALL__L__20260127094404073.jpg"
+          },
+          {
+            "name": "红苹果冰茶",
+            "price": 16,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003382__ALL__L__20260416132619588.jpg"
+          },
+          {
+            "name": "红苹果金凤梨特调果饮",
+            "price": 16,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003699__ALL__L__20260723155917298.jpg"
+          },
+          {
+            "name": "红苹果金凤梨特调茶",
+            "price": 16,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003697__ALL__L__20260724142952600.jpg"
+          },
+          {
+            "name": "超大杯树番茄百香果特调气泡茶",
+            "price": 19,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003705__ALL__L__20260723170408040.jpg"
+          },
+          {
+            "name": "超大杯爆汁苹果饮",
+            "price": 19,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003546__ALL__L__20260611091546647.jpg"
+          },
+          {
+            "name": "超大杯红苹果金凤梨特调气泡茶",
+            "price": 19,
+            "tags": [],
+            "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003707__ALL__L__20260723170408220.jpg"
           }
         ]
       }
