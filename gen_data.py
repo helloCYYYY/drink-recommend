@@ -68,8 +68,13 @@ def extract(fpath, brand_key, brand_name, brand_logo):
         b["skus"].append(sku)
     return brands
 
-def extract_url(fpath, brand_key, brand_name, brand_logo):
-    """图床直链版：图片列直接是远程 URL，不落本地文件。"""
+def extract_url(fpath, brand_key, brand_name, brand_logo, price_col=4, url_col=5):
+    """图床直链版：图片列直接是远程 URL，不落本地文件。
+
+    price_col/url_col 可配：
+      - 默认 4/5 → 肯悦 5 列布局(分类/名称/类型/价格/直链)
+      - OT另茶 4 列布局(分类/名称/价格/直链) → price_col=3, url_col=4
+    """
     wb = openpyxl.load_workbook(fpath, data_only=True)
     ws = wb.active
     brands = {}
@@ -77,8 +82,8 @@ def extract_url(fpath, brand_key, brand_name, brand_logo):
     for r in range(2, ws.max_row + 1):
         cat = ws.cell(row=r, column=1).value
         name = ws.cell(row=r, column=2).value
-        price = ws.cell(row=r, column=4).value
-        url = ws.cell(row=r, column=5).value
+        price = ws.cell(row=r, column=price_col).value
+        url = ws.cell(row=r, column=url_col).value
         if not name:
             continue
         cat_key = CAT_MAP.get(cat)
@@ -109,9 +114,9 @@ lk = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\瑞幸�
 print(">> GUMING")
 gm = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\古茗_饮品SKU清单.xlsx",
              "guming", "古茗", "🟡")
-print(">> OT另茶")
-ot = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\OT另茶_饮品SKU清单.xlsx",
-             "otlc", "OT另茶", "🍃")
+print(">> OT另茶 (图床直链)")
+ot = extract_url(r"C:\Users\hspcadmin\Documents\drink\OT另茶.xlsx",
+                 "otlc", "OT另茶", "🍃", price_col=3, url_col=4)
 print(">> 茉莉奶白")
 molly = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\茉莉奶白_饮品SKU清单.xlsx",
                 "molly", "茉莉奶白", "🌿")

@@ -882,18 +882,6 @@ const DATA = {
           }
         ]
       },
-      "otlc": {
-        "name": "OT另茶",
-        "logo": "🍃",
-        "skus": [
-          {
-            "name": "黑金咸摩卡",
-            "price": 25,
-            "tags": [],
-            "img": "images/otlc/11.jpg"
-          }
-        ]
-      },
       "yulian": {
         "name": "裕莲茶楼",
         "logo": "🏮",
@@ -915,7 +903,6 @@ const DATA = {
       "kenyue": {
         "name": "肯悦咖啡",
         "logo": "KY",
-		"logoImg":"images/logos/kenyue.jpg",
         "skus": [
           {
             "name": "瓦搭子.精酿啤酒花风味气泡美式",
@@ -1578,52 +1565,106 @@ const DATA = {
         "logo": "🍃",
         "skus": [
           {
-            "name": "泰式咸法酪(首创)",
-            "price": 24,
-            "tags": [],
-            "img": "images/otlc/8.jpg"
-          },
-          {
-            "name": "黑熔岩泰奶",
+            "name": "大马椰丸奶茶",
             "price": 25,
             "tags": [],
-            "img": "images/otlc/9.jpg"
+            "img": "https://images.qmai.cn/s204639/2025/10/16/15df167b75ef62fd4a.jpg"
           },
           {
-            "name": "泰式冰茶",
+            "name": "锅煮黑丸奶茶",
             "price": 21,
             "tags": [],
-            "img": "images/otlc/10.jpg"
+            "img": "https://images.qmai.cn/s204639/2025/11/14/2dc6e6223e00c7768f.jpg"
           },
           {
-            "name": "黑熔岩雪域",
+            "name": "雪域咸可可(首创)",
             "price": 25,
             "tags": [],
-            "img": "images/otlc/12.jpg"
+            "img": "https://images.qmai.cn/s204639/2026/07/22/41a076b04d8ccb4b05.jpg"
+          },
+          {
+            "name": "雪域咸奶茶(首创)",
+            "price": 25,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2026/02/06/bac6aced8c192a80ce.jpg"
           },
           {
             "name": "雪盐生椰茉莉",
             "price": 20,
             "tags": [],
-            "img": "images/otlc/13.jpg"
+            "img": "https://images.qmai.cn/s204639/2025/10/16/5070814060ad625f84.jpg"
+          },
+          {
+            "name": "黑熔岩雪域",
+            "price": 25,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2026/03/04/d22e864d739a474571.jpg"
+          },
+          {
+            "name": "黑金冰可可",
+            "price": 25,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2026/04/30/c024509063feea0a36.jpg"
+          },
+          {
+            "name": "黑金咸摩卡",
+            "price": 25,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2026/04/30/d88e4c4cdeb926f793.jpg"
           },
           {
             "name": "醇抹咸法酪(首创)",
             "price": 27,
             "tags": [],
-            "img": "images/otlc/17.jpg"
+            "img": "https://images.qmai.cn/s204639/2025/10/16/c56690c7134a3fce9c.jpg"
           },
           {
-            "name": "鲜芒清抹生椰",
+            "name": "圣胡安火凤梨",
+            "price": 23,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2026/07/14/56bf25010653165b51.jpg"
+          },
+          {
+            "name": "虎斑碎冰冻奶茶",
+            "price": 24,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2026/07/28/ee5b409f990853014f.jpg"
+          },
+          {
+            "name": "泰式冰茶",
+            "price": 21,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2025/10/16/facc301282e0dd3798.jpg"
+          },
+          {
+            "name": "泰式咸法酪(首创)",
+            "price": 24,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2026/02/06/df14cbbfe845349ece.jpg"
+          },
+          {
+            "name": "黑丸泰式咸法酪(首创)",
+            "price": 27,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2025/10/16/3a84cea87525fc061f.jpg"
+          },
+          {
+            "name": "黑熔岩泰奶",
             "price": 25,
             "tags": [],
-            "img": "images/otlc/22.jpg"
+            "img": "https://images.qmai.cn/s204639/2026/02/06/7542a50ea5c3acf0d7.jpg"
+          },
+          {
+            "name": "奶霜茶",
+            "price": 18,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2025/11/14/674cc3d5ce07141ffa.jpg"
           },
           {
             "name": "鲜乳茶",
             "price": 18,
             "tags": [],
-            "img": "images/otlc/23.jpg"
+            "img": "https://images.qmai.cn/s204639/2025/11/14/6e4f239cadee217d20.jpg"
           }
         ]
       },
@@ -2314,7 +2355,6 @@ const DATA = {
       "kenyue": {
         "name": "肯悦咖啡",
         "logo": "KY",
-		"logoImg":"images/logos/kenyue.jpg",
         "skus": [
           {
             "name": "黑糖珍珠奶茶",
@@ -2749,88 +2789,76 @@ const DATA = {
         "logo": "🍃",
         "skus": [
           {
-            "name": "虎斑手摇冻柠茶",
-            "price": 21,
+            "name": "冰奶油莳萝青苹果",
+            "price": 25,
             "tags": [],
-            "img": "images/otlc/2.jpg"
-          },
-          {
-            "name": "菠萝冰萃肯尼亚",
-            "price": 23,
-            "tags": [],
-            "img": "images/otlc/3.jpg"
+            "img": "https://images.qmai.cn/s204639/2026/07/14/f2af31b8213582989f.jpg"
           },
           {
             "name": "氧气油柑青苹果",
             "price": 23,
             "tags": [],
-            "img": "images/otlc/4.jpg"
-          },
-          {
-            "name": "圣胡安火凤梨",
-            "price": 23,
-            "tags": [],
-            "img": "images/otlc/5.jpg"
+            "img": "https://images.qmai.cn/s204639/2026/07/14/101e6d1f3285536b09.jpg"
           },
           {
             "name": "火凤梨冰茉莉",
             "price": 23,
             "tags": [],
-            "img": "images/otlc/6.jpg"
+            "img": "https://images.qmai.cn/s204639/2026/07/14/e49804d4b1cd3b618a.jpg"
+          },
+          {
+            "name": "菠萝冰萃肯尼亚",
+            "price": 23,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2026/07/28/77eb30b34b40679990.jpg"
+          },
+          {
+            "name": "虎斑手捣冻柠茶",
+            "price": 21,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2026/07/28/fab562f5c15bc9814f.jpg"
           },
           {
             "name": "黑凤梨椰子冰",
             "price": 25,
             "tags": [],
-            "img": "images/otlc/7.jpg"
-          },
-          {
-            "name": "血橙茉莉鲜柠茶",
-            "price": 21,
-            "tags": [],
-            "img": "images/otlc/14.jpg"
-          },
-          {
-            "name": "茉莉山柚鲜柠茶",
-            "price": 21,
-            "tags": [],
-            "img": "images/otlc/15.jpg"
-          },
-          {
-            "name": "经典酒鬼鲜柠茶",
-            "price": 21,
-            "tags": [],
-            "img": "images/otlc/16.jpg"
-          },
-          {
-            "name": "圣胡安火凤梨",
-            "price": 23,
-            "tags": [],
-            "img": "images/otlc/18.jpg"
-          },
-          {
-            "name": "黑凤梨椰子冰",
-            "price": 25,
-            "tags": [],
-            "img": "images/otlc/19.jpg"
-          },
-          {
-            "name": "火凤梨冰茉莉",
-            "price": 23,
-            "tags": [],
-            "img": "images/otlc/20.jpg"
-          },
-          {
-            "name": "花椰芒",
-            "price": 25,
-            "tags": [],
-            "img": "images/otlc/21.jpg"
+            "img": "https://images.qmai.cn/s204639/2026/07/14/0982979f9fd65d2aaf.jpg"
           },
           {
             "name": "清茶",
             "price": 13,
             "tags": [],
-            "img": "images/otlc/24.jpg"
+            "img": "https://images.qmai.cn/s204639/2025/11/14/b6084a313ccb4067ff.jpg"
+          },
+          {
+            "name": "经典酒鬼鲜柠茶",
+            "price": 21,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2025/11/14/cd57ebd585d8547b29.jpg"
+          },
+          {
+            "name": "茉莉山柚鲜柠茶",
+            "price": 21,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2025/11/14/380763a7c358fd0454.jpg"
+          },
+          {
+            "name": "血橙茉莉鲜柠茶",
+            "price": 21,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2025/10/16/0c4437fa78dc4c3780.jpg"
+          },
+          {
+            "name": "花椰芒",
+            "price": 25,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2026/04/20/a0fc56a30108938ef0.jpg"
+          },
+          {
+            "name": "鲜芒清抹生椰",
+            "price": 25,
+            "tags": [],
+            "img": "https://images.qmai.cn/s204639/2026/04/20/32f3fd332fbf81c5a5.jpg"
           }
         ]
       },
@@ -3695,7 +3723,6 @@ const DATA = {
       "kenyue": {
         "name": "肯悦咖啡",
         "logo": "KY",
-		"logoImg":"images/logos/kenyue.jpg",
         "skus": [
           {
             "name": "树番茄百香果特调果饮",
