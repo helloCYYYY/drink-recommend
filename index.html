@@ -438,7 +438,7 @@ function render(){
       const el=document.createElement('button');
       el.type='button';
       el.className='brand'+(state.brand===k?' sel':'');
-      const logoHtml = v.logoImg ? `<img src="${v.logoImg}" alt="${v.name}" style="width:100%;height:100%;object-fit:cover">` : v.logo;
+      const logoHtml = v.logoImg ? `<img src="${v.logoImg}" alt="${v.name}" style="width:100%;height:100%;object-fit:contain;background:#fff;padding:4px;box-sizing:border-box">` : v.logo;
       el.innerHTML=`<div class="logo" style="background:linear-gradient(135deg,var(--peach),var(--rose))">${logoHtml}</div><div class="bn">${v.name}</div>`;
       el.onclick=()=>pickBrand(k);
       brands.appendChild(el);

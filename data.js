@@ -915,6 +915,7 @@ const DATA = {
       "kenyue": {
         "name": "肯悦咖啡",
         "logo": "KY",
+		"logoImg":"images/logos/kenyue.jpg",
         "skus": [
           {
             "name": "瓦搭子.精酿啤酒花风味气泡美式",
@@ -2313,6 +2314,7 @@ const DATA = {
       "kenyue": {
         "name": "肯悦咖啡",
         "logo": "KY",
+		"logoImg":"images/logos/kenyue.jpg",
         "skus": [
           {
             "name": "黑糖珍珠奶茶",
@@ -3693,6 +3695,7 @@ const DATA = {
       "kenyue": {
         "name": "肯悦咖啡",
         "logo": "KY",
+		"logoImg":"images/logos/kenyue.jpg",
         "skus": [
           {
             "name": "树番茄百香果特调果饮",
