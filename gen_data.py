@@ -130,9 +130,9 @@ print(">> MSTAND")
 ms = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\MSTAND_饮品SKU清单.xlsx",
              "mstand", "M Stand", "M")
 
-print(">> LUCKIN")
-lk = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\瑞幸咖啡_饮品SKU清单_补全版.xlsx",
-             "luckin", "瑞幸", "🔵")
+print(">> LUCKIN (图床直链)")
+lk = extract_url(r"C:\Users\hspcadmin\Documents\drink\luckin.xlsx",
+                 "luckin", "瑞幸", "🔵", price_col=3, url_col=4, force_https=True)
 print(">> GUMING")
 gm = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\古茗_饮品SKU清单.xlsx",
              "guming", "古茗", "🟡")

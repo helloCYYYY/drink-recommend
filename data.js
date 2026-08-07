@@ -693,178 +693,82 @@ const DATA = {
         "logo": "🔵",
         "skus": [
           {
-            "name": "小黄油美式（首创）",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/2.jpg"
-          },
-          {
-            "name": "全冰黑巧美式",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/3.jpg"
-          },
-          {
-            "name": "全冰奶酪美式",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/4.jpg"
-          },
-          {
-            "name": "椰芙佳朵拿铁",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/7.jpg"
-          },
-          {
-            "name": "百香果C美式",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/11.jpg"
-          },
-          {
-            "name": "橙C美式（首创）",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/12.jpg"
-          },
-          {
-            "name": "轻椰茉莉拿铁",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/14.jpg"
-          },
-          {
-            "name": "标准美式",
-            "price": 19,
-            "tags": [],
-            "img": "images/luckin/17.jpg"
-          },
-          {
             "name": "埃塞瑰夏冷萃",
             "price": 19,
             "tags": [],
-            "img": "images/luckin/18.jpg"
+            "img": "https://p0.meituan.net/xianfu/253c2b7b6fa74f6c53bef3cd596eab39911049.png"
           },
           {
-            "name": "瑰夏云朵冷萃",
-            "price": 25,
+            "name": "精萃澳瑞白",
+            "price": 23,
             "tags": [],
-            "img": "images/luckin/19.jpg"
+            "img": "https://p1.meituan.net/xianfu/86544aa9f0ca9955a0b442ad5adf03b3615912.png"
           },
           {
-            "name": "埃塞金烘美式",
-            "price": 19,
+            "name": "耶加雪菲·拿铁",
+            "price": 27,
             "tags": [],
-            "img": "images/luckin/20.jpg"
+            "img": "https://p0.meituan.net/xianfu/5cced25c0b7df3c92690358c22e6ac78559352.png"
           },
           {
-            "name": "深烘美式",
-            "price": 19,
+            "name": "耶加雪菲·澳瑞白",
+            "price": 27,
             "tags": [],
-            "img": "images/luckin/21.jpg"
-          },
-          {
-            "name": "加浓美式",
-            "price": 22,
-            "tags": [],
-            "img": "images/luckin/22.jpg"
-          },
-          {
-            "name": "茉莉花香美式",
-            "price": 22,
-            "tags": [],
-            "img": "images/luckin/23.jpg"
-          },
-          {
-            "name": "小黄油拿铁（首创）",
-            "price": 25,
-            "tags": [],
-            "img": "images/luckin/24.jpg"
-          },
-          {
-            "name": "小青桔C美式",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/25.jpg"
-          },
-          {
-            "name": "缤纷C美式",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/26.jpg"
-          },
-          {
-            "name": "柠C气泡美式",
-            "price": 25,
-            "tags": [],
-            "img": "images/luckin/27.jpg"
-          },
-          {
-            "name": "苹果C美式",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/28.jpg"
-          },
-          {
-            "name": "柚C美式",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/29.jpg"
-          },
-          {
-            "name": "鲜切柠C美式",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/30.jpg"
-          },
-          {
-            "name": "椰青冰萃美式",
-            "price": 25,
-            "tags": [],
-            "img": "images/luckin/31.jpg"
-          },
-          {
-            "name": "葡萄冰萃美式",
-            "price": 25,
-            "tags": [],
-            "img": "images/luckin/32.jpg"
-          },
-          {
-            "name": "绿沙沙拿铁",
-            "price": 25,
-            "tags": [],
-            "img": "images/luckin/59.jpg"
-          },
-          {
-            "name": "绿沙沙拿铁（超大杯）",
-            "price": 26,
-            "tags": [],
-            "img": "images/luckin/60.jpg"
-          },
-          {
-            "name": "海盐焦糖拿铁",
-            "price": 25,
-            "tags": [],
-            "img": "images/luckin/61.jpg"
-          },
-          {
-            "name": "茉莉花香拿铁",
-            "price": 22,
-            "tags": [],
-            "img": "images/luckin/62.jpg"
+            "img": "https://p1.meituan.net/xianfu/a07a914841b8ef40cf8e08de3d577b93555013.png"
           },
           {
             "name": "丝绒拿铁",
             "price": 25,
             "tags": [],
-            "img": "images/luckin/63.jpg"
+            "img": "https://p0.meituan.net/xianfu/6e7c763d7cdb1419637952f2894f5733609705.png"
+          },
+          {
+            "name": "香草丝绒拿铁",
+            "price": 26,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/eb4bde52235bf79d3420c97b52e65b7d620985.png"
+          },
+          {
+            "name": "全冰抹茶丝绒拿铁",
+            "price": 26,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/5b385efffcaceb57bcee232a0b37781f115241.jpg"
+          },
+          {
+            "name": "抹茶 拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "https://p1.meituan.net/xianfu/a8991824ca5408f883e5d549ae872704549221.png"
+          },
+          {
+            "name": "抹茶丝绒 拿铁",
+            "price": 26,
+            "tags": [],
+            "img": "https://p1.meituan.net/xianfu/f7e268d6d6a4ec4e78137dc80628ddb3562971.png"
+          },
+          {
+            "name": "冰吸生椰拿铁（首创）",
+            "price": 25,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/dc2fa9b35867702fdc31d9314ac15e12804920.png"
+          },
+          {
+            "name": "大菠萝生椰冷萃",
+            "price": 24,
+            "tags": [],
+            "img": "https://p1.meituan.net/xianfu/0cee9b6cecf0a6d7af9b980f4e66014a34047.jpg"
+          },
+          {
+            "name": "大西瓜生椰冷萃",
+            "price": 21.1,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/f3d2004089e20c0e120b47e1f12ac924489848.png"
           },
           {
             "name": "生椰丝绒拿铁",
             "price": 26,
             "tags": [],
-            "img": "images/luckin/64.jpg",
+            "img": "https://p1.meituan.net/xianfu/02c095fd8e5d35f26946602bed5d618a657236.png",
             "opts": {
               "temp": {
                 "label": "温度",
@@ -893,70 +797,226 @@ const DATA = {
             }
           },
           {
-            "name": "香草丝绒拿铁",
-            "price": 26,
+            "name": "生椰拿铁",
+            "price": 24,
             "tags": [],
-            "img": "images/luckin/65.jpg"
+            "img": "https://p0.meituan.net/xianfu/756ce4e0923dfa11d42376fa1c9bf676704794.png"
           },
           {
-            "name": "埃塞金烘拿铁",
+            "name": "全冰奶酪美式",
+            "price": 24,
+            "tags": [],
+            "img": "https://p1.meituan.net/xianfu/a5bde364d0343e2f6359bc60ae52fec7188468.jpg"
+          },
+          {
+            "name": "全冰小黄油美式",
+            "price": 24,
+            "tags": [],
+            "img": "https://p1.meituan.net/xianfu/a13075912c2da9bb7c2d6e29aaa9d76435324.jpg"
+          },
+          {
+            "name": "全冰黑巧美式",
+            "price": 24,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/bb2e532cfd9c85a570a28dd67f1f13c0191862.jpg"
+          },
+          {
+            "name": "加浓 美式",
+            "price": 22,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/18d022e0378509e30aa687251c5d8b1c807909.png"
+          },
+          {
+            "name": "埃塞金烘美式",
+            "price": 19,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/0b3f9a2865e49a898b0a115e637060b4614800.png"
+          },
+          {
+            "name": "小青桔C美式",
+            "price": 24,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/77a8085992ba9213d5c3de86d5f00664886142.png"
+          },
+          {
+            "name": "小黄油美式",
+            "price": 24,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/2444956a5b6c452eac6f3c3a722d0fbc186746.jpg"
+          },
+          {
+            "name": "柚C 美式",
+            "price": 24,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/1a5314721156c3bab4855f264734a24e715176.png"
+          },
+          {
+            "name": "柠C气泡美式",
+            "price": 25,
+            "tags": [],
+            "img": "https://p1.meituan.net/xianfu/1aba0230c6b46044e281660c18314abc1011349.png"
+          },
+          {
+            "name": "标准 美式",
+            "price": 19,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/18d022e0378509e30aa687251c5d8b1c807909.png"
+          },
+          {
+            "name": "椰青冰萃美式",
+            "price": 25,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/3d31b637c3ced8a0223686f552385f7b826581.png"
+          },
+          {
+            "name": "橙C美式(首创)",
+            "price": 24,
+            "tags": [],
+            "img": "https://p1.meituan.net/xianfu/440f5c50c5f70bf382d6edfd6adb8963207301.jpg"
+          },
+          {
+            "name": "深烘美式",
+            "price": 19,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/18d022e0378509e30aa687251c5d8b1c807909.png"
+          },
+          {
+            "name": "百香果C美式",
+            "price": 24,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/15eb97aa8057b9e155d5553d83144de5872836.png"
+          },
+          {
+            "name": "缤纷C美式",
+            "price": 24,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/4c3f206d476602ac843509c7475a0f56967819.png"
+          },
+          {
+            "name": "耶加雪菲·美式",
+            "price": 24,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/51020d05f2acb319f088466da67ae9e4563782.png"
+          },
+          {
+            "name": "苹果C美式",
+            "price": 24,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/e2a37cf1463724273f5c16e39f61d2b5771875.png"
+          },
+          {
+            "name": "茉莉花香美式",
+            "price": 22,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/946eba38b287ed1074eed93679d44fb5798348.png"
+          },
+          {
+            "name": "葡萄冰萃 美式",
+            "price": 25,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/2357618d36952c9d80ac94b1fdb40e01872471.png"
+          },
+          {
+            "name": "鲜切柠C美式",
+            "price": 24,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/bd7c82f3e5497cd27a4e77e954d55450674467.png"
+          },
+          {
+            "name": "全冰经典拿铁",
             "price": 21,
             "tags": [],
-            "img": "images/luckin/66.jpg"
-          },
-          {
-            "name": "深烘拿铁",
-            "price": 21,
-            "tags": [],
-            "img": "images/luckin/67.jpg"
-          },
-          {
-            "name": "拿铁",
-            "price": 21,
-            "tags": [],
-            "img": "images/luckin/68.jpg"
-          },
-          {
-            "name": "精萃澳瑞白",
-            "price": 23,
-            "tags": [],
-            "img": "images/luckin/69.jpg"
-          },
-          {
-            "name": "燕麦拿铁",
-            "price": 21,
-            "tags": [],
-            "img": "images/luckin/70.jpg"
-          },
-          {
-            "name": "焦糖玛奇朵",
-            "price": 23,
-            "tags": [],
-            "img": "images/luckin/71.jpg"
-          },
-          {
-            "name": "香草拿铁",
-            "price": 23,
-            "tags": [],
-            "img": "images/luckin/72.jpg"
+            "img": "https://p1.meituan.net/xianfu/4a12662a9969d3333f09d99175025a9b552714.png"
           },
           {
             "name": "卡布奇诺",
             "price": 23,
             "tags": [],
-            "img": "images/luckin/73.jpg"
+            "img": "https://p1.meituan.net/xianfu/380b7b9bd4187bba9926de8f1060b8b3609048.png"
           },
           {
-            "name": "耶加雪菲美式",
+            "name": "埃塞金烘拿铁",
+            "price": 21,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/f4625e40207265f9aa445df2cd878db9661409.png"
+          },
+          {
+            "name": "小黄油拿铁（首创）",
+            "price": 25,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/f304f17ec9361c7b9511141a9c1ed2ad718278.png"
+          },
+          {
+            "name": "拿铁",
+            "price": 21,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/50bdec86d04ccff109e05d96747d1689635292.png"
+          },
+          {
+            "name": "桂花米酿拿铁",
+            "price": 22,
+            "tags": [],
+            "img": "https://p1.meituan.net/xianfu/4c078d6dd866cbd6cd2510c431c99353186349.jpg"
+          },
+          {
+            "name": "桂花米酿拿铁（超大杯）",
+            "price": 25,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/83f5309f2da5c225ba368d251aa80dcb593151.png"
+          },
+          {
+            "name": "椰芙佳朵拿铁",
             "price": 24,
             "tags": [],
-            "img": "images/luckin/74.jpg"
+            "img": "https://p1.meituan.net/xianfu/02e64828dafaa42f4f3d24b1f7264baf233032.jpg"
           },
           {
-            "name": "耶加雪菲拿铁",
-            "price": 27,
+            "name": "海盐焦糖拿铁",
+            "price": 25,
             "tags": [],
-            "img": "images/luckin/75.jpg"
+            "img": "https://p1.meituan.net/xianfu/203eb37c8900917242b779970046851a742521.png"
+          },
+          {
+            "name": "深烘拿铁",
+            "price": 21,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/31e60025105d228fc7722340cbb20d7c723411.png"
+          },
+          {
+            "name": "焦糖玛奇朵",
+            "price": 23,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/20ba559a191f872daa19f0f0b44e89ab608366.png"
+          },
+          {
+            "name": "燕麦拿铁",
+            "price": 21,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/1e0575e2a1f70407fc9bd514ea5dcda9663110.png"
+          },
+          {
+            "name": "绿沙沙拿铁",
+            "price": 25,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/fc2078fc1eae805e79781f10bacaf907409572.png"
+          },
+          {
+            "name": "茉莉花香拿铁",
+            "price": 22,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/6d03377f39e05d40deada79deb4da09c790594.png"
+          },
+          {
+            "name": "轻椰茉莉拿铁",
+            "price": 24,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/d231d36eabb136a4fac50ffd2892de64791620.png"
+          },
+          {
+            "name": "香草拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "https://p1.meituan.net/xianfu/e01ea8e5656018cfae2e2d4521d5d20a629842.png"
           }
         ]
       },
@@ -1314,118 +1374,112 @@ const DATA = {
         "logo": "🔵",
         "skus": [
           {
-            "name": "抹茶丝绒拿铁",
-            "price": 26,
-            "tags": [],
-            "img": "images/luckin/5.jpg"
-          },
-          {
-            "name": "Hello苹果茉莉",
+            "name": "大西瓜茉莉冰奶",
             "price": 22,
             "tags": [],
-            "img": "images/luckin/40.jpg"
+            "img": "https://p0.meituan.net/xianfu/8f77975d27559d4fa53d9b51a234ff4a167120.jpg"
+          },
+          {
+            "name": "大西瓜茉莉冰奶（超大杯）",
+            "price": 25,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/389f05db7347815654347870121adbcf547957.png"
+          },
+          {
+            "name": "小苹果茉莉冰奶",
+            "price": 22,
+            "tags": [],
+            "img": "https://p1.meituan.net/xianfu/9113c1638d3edbe4a134dad1cfd64e60711502.png"
+          },
+          {
+            "name": "小苹果茉莉冰奶（超大杯）",
+            "price": 22,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/3481474d10dbb20c19b7698673a44765689195.png"
           },
           {
             "name": "小青桔茉莉冰奶",
             "price": 22,
             "tags": [],
-            "img": "images/luckin/41.jpg"
+            "img": "https://p0.meituan.net/xianfu/976e2aacf735a6f5c0f447fc133f96da846814.png"
           },
           {
             "name": "小青桔茉莉冰奶（超大杯）",
+            "price": 22,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/fb695570d29609eedcdbf2778dbe7ad4826127.png"
+          },
+          {
+            "name": "紫葡萄茉莉冰奶",
+            "price": 22,
+            "tags": [],
+            "img": "https://p1.meituan.net/xianfu/9f88049dcb7ebf405c820170b6ed47de535930.png"
+          },
+          {
+            "name": "紫葡萄茉莉冰奶（超大杯）",
             "price": 25,
             "tags": [],
-            "img": "images/luckin/42.jpg"
+            "img": "https://p0.meituan.net/xianfu/9e754f0f8d622b6fd19fcde9b51545aa514840.png"
           },
           {
-            "name": "Hello苹果茉莉（超大杯）",
-            "price": 25,
+            "name": "鲜柠茉莉冰奶",
+            "price": 22,
             "tags": [],
-            "img": "images/luckin/43.jpg"
+            "img": "https://p1.meituan.net/xianfu/a98f57d24dee690c765ed5b10e1453c0165234.jpg"
           },
           {
-            "name": "鲜萃轻轻茉莉（特大杯）",
-            "price": 23,
+            "name": "抹茶  好喝椰",
+            "price": 26,
             "tags": [],
-            "img": "images/luckin/44.jpg"
+            "img": "https://p1.meituan.net/xianfu/2848480e5918eb2975c9378f8307e548512508.png"
           },
           {
-            "name": "鲜萃轻轻茉莉",
+            "name": "瑞之 抹茶",
             "price": 20,
             "tags": [],
-            "img": "images/luckin/45.jpg"
+            "img": "https://p0.meituan.net/xianfu/c9646733145857ab8bd717b0dec4d29c702933.png"
           },
           {
-            "name": "生椰杨枝甘露（超大杯）",
-            "price": 25,
+            "name": "瑞之抹茶（特大杯 ）",
+            "price": 23,
             "tags": [],
-            "img": "images/luckin/46.jpg"
+            "img": "https://p0.meituan.net/xianfu/67d5304cd154af726ff6fd0aabaf9b35626546.png"
           },
           {
             "name": "生椰杨枝甘露",
             "price": 22,
             "tags": [],
-            "img": "images/luckin/47.jpg"
+            "img": "https://p0.meituan.net/xianfu/61a1a944341ed7434323d9cdc001284d640866.png"
           },
           {
-            "name": "雪酪芝士抹茶",
+            "name": "生椰杨枝甘露（超大杯）",
             "price": 25,
             "tags": [],
-            "img": "images/luckin/48.jpg"
+            "img": "https://p0.meituan.net/xianfu/f3ece2086b257cc5a652789b73575e12694286.png"
           },
           {
-            "name": "瑞之抹茶（特大杯）",
-            "price": 23,
+            "name": "桂花米酿乌龙",
+            "price": 21,
             "tags": [],
-            "img": "images/luckin/50.jpg"
+            "img": "https://p0.meituan.net/xianfu/740f5b4580d2f1048f0c387243b5fb3e632698.png"
           },
           {
-            "name": "瑞之抹茶",
-            "price": 20,
-            "tags": [],
-            "img": "images/luckin/51.jpg"
-          },
-          {
-            "name": "抹茶丝绒拿铁",
-            "price": 26,
-            "tags": [],
-            "img": "images/luckin/52.jpg"
-          },
-          {
-            "name": "抹茶好喝椰",
-            "price": 26,
-            "tags": [],
-            "img": "images/luckin/53.jpg"
-          },
-          {
-            "name": "抹茶拿铁",
-            "price": 23,
-            "tags": [],
-            "img": "images/luckin/54.jpg"
-          },
-          {
-            "name": "瓦尔登蓝芒果酸奶昔",
+            "name": "桂花米酿乌龙（特大杯）",
             "price": 24,
             "tags": [],
-            "img": "images/luckin/55.jpg"
+            "img": "https://p0.meituan.net/xianfu/d8994bc5bc654649e1e30d8686fc90cc183820.jpg"
           },
           {
-            "name": "瓦尔登蓝芒果酸奶昔（冰沙）",
-            "price": 29,
+            "name": "鲜萃轻轻茉莉",
+            "price": 20,
             "tags": [],
-            "img": "images/luckin/56.jpg"
+            "img": "https://p0.meituan.net/xianfu/da6eed08db70af4bb3b2507854330745777671.png"
           },
           {
-            "name": "奶霜青露茉莉（特大杯）",
-            "price": 23,
+            "name": "鲜萃轻轻茉莉（特大杯）",
+            "price": 22,
             "tags": [],
-            "img": "images/luckin/57.jpg"
-          },
-          {
-            "name": "纯牛奶",
-            "price": 19,
-            "tags": [],
-            "img": "images/luckin/58.jpg"
+            "img": "https://p0.meituan.net/xianfu/5c10964b9c7c3de3913f6edefdab5e61372468.png"
           }
         ]
       },
@@ -2569,94 +2623,82 @@ const DATA = {
         "logo": "🔵",
         "skus": [
           {
-            "name": "大菠萝生椰冷萃",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/6.jpg"
-          },
-          {
-            "name": "大菠萝海盐气泡水（鲜柠）",
+            "name": "大菠萝海盐气泡水",
             "price": 22,
             "tags": [],
-            "img": "images/luckin/8.jpg"
+            "img": "https://p0.meituan.net/xianfu/186337bc022e2b6c7fdf45f3768153bb353914.jpg"
           },
           {
-            "name": "百香果凤梨气泡水（鲜柠）",
-            "price": 22,
+            "name": "手打鲜切柠檬茶（超大杯）",
+            "price": 20.7,
             "tags": [],
-            "img": "images/luckin/9.jpg"
-          },
-          {
-            "name": "百香果C冰茶",
-            "price": 19,
-            "tags": [],
-            "img": "images/luckin/10.jpg"
-          },
-          {
-            "name": "大西瓜生椰冷萃",
-            "price": 24,
-            "tags": [],
-            "img": "images/luckin/13.jpg"
-          },
-          {
-            "name": "苹果C冰茶",
-            "price": 19,
-            "tags": [],
-            "img": "images/luckin/15.jpg"
-          },
-          {
-            "name": "羽衣轻体果蔬茶",
-            "price": 22,
-            "tags": [],
-            "img": "images/luckin/16.jpg"
-          },
-          {
-            "name": "苹果C冰茶",
-            "price": 19,
-            "tags": [],
-            "img": "images/luckin/33.jpg"
-          },
-          {
-            "name": "橙C冰茶",
-            "price": 19,
-            "tags": [],
-            "img": "images/luckin/34.jpg"
-          },
-          {
-            "name": "小青桔C冰茶",
-            "price": 19,
-            "tags": [],
-            "img": "images/luckin/35.jpg"
+            "img": "https://p1.meituan.net/xianfu/692976d1d4974f314e43b78307ea10ba928328.png"
           },
           {
             "name": "柚C冰茶",
             "price": 19,
             "tags": [],
-            "img": "images/luckin/36.jpg"
+            "img": "https://p0.meituan.net/xianfu/c699053b1b6cc4f5df86255981317dc7711876.png"
+          },
+          {
+            "name": "橙C冰茶",
+            "price": 19,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/bc678c0df114afe52e8d0d460f0ed60f997186.png"
+          },
+          {
+            "name": "橙C冰茶-冰",
+            "price": 19,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/bc678c0df114afe52e8d0d460f0ed60f997186.png"
+          },
+          {
+            "name": "百香果C冰茶",
+            "price": 19,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/d2e8c0972546705285cecdf6bf051325814678.png"
+          },
+          {
+            "name": "百香果凤梨气泡水",
+            "price": 22,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/bf24da6bd0143c8ba7175773c968d035351064.jpg"
+          },
+          {
+            "name": "苹果C冰茶",
+            "price": 19,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/92f008b6f945d05fe5c66ffa50f4a7fd769906.png"
           },
           {
             "name": "葡萄冰茶",
             "price": 19,
             "tags": [],
-            "img": "images/luckin/37.jpg"
+            "img": "https://p0.meituan.net/xianfu/e77ea6ce0f9429d8c6b0cf3dce209b07825690.png"
           },
           {
-            "name": "手打鲜切柠檬茶（超大杯）",
-            "price": 23,
+            "name": "葡萄鲜切柠檬茶 （超大杯）",
+            "price": 22,
             "tags": [],
-            "img": "images/luckin/38.jpg"
+            "img": "https://p0.meituan.net/xianfu/880904ca5aedce3b903a147be8226f9e855186.png"
           },
           {
-            "name": "葡萄鲜切柠檬茶（超大杯）",
-            "price": 25,
+            "name": "小青桔C冰茶",
+            "price": 19,
             "tags": [],
-            "img": "images/luckin/39.jpg"
+            "img": "https://p0.meituan.net/xianfu/18751478b0595a74e1e7043e3d70670f870181.png"
+          },
+          {
+            "name": "羽衣轻体果蔬茶",
+            "price": 22,
+            "tags": [],
+            "img": "https://p0.meituan.net/xianfu/e8f899b4bb2421bfaca0f61767eaec83757019.png"
           },
           {
             "name": "羽衣轻体果蔬茶（超大杯）",
-            "price": 25,
+            "price": 22.9,
             "tags": [],
-            "img": "images/luckin/49.jpg"
+            "img": "https://p1.meituan.net/xianfu/90a5aa68fd830f41341b1926961688b1829957.png"
           }
         ]
       },
