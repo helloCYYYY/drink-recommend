@@ -1264,7 +1264,8 @@ const DATA = {
             "tags": [],
             "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003729__ALL__L__20260731162529952.jpg"
           }
-        ]
+        ],
+        "logoImg": "images/logos/kenyue.jpg"
       }
     }
   },
@@ -2386,7 +2387,8 @@ const DATA = {
             "tags": [],
             "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01002414__ALL__L__20260402145401930.jpg"
           }
-        ]
+        ],
+        "logoImg": "images/logos/kenyue.jpg"
       }
     }
   },
@@ -3778,7 +3780,8 @@ const DATA = {
             "tags": [],
             "img": "https://pcp-pic.hwwt8.com/1/01010/images/KG01003707__ALL__L__20260723170408220.jpg"
           }
-        ]
+        ],
+        "logoImg": "images/logos/kenyue.jpg"
       }
     }
   },

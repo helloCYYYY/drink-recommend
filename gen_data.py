@@ -9,6 +9,18 @@ os.makedirs(os.path.join(IMG_DIR, "mstand"), exist_ok=True)
 
 CAT_MAP = {"咖啡": "coffee", "奶茶": "milktea", "果茶": "fruittea", "其他": "other"}
 
+# 品牌 logo 图片（有则渲染图片，无则显示 logo 文字/emoji）。
+# 只列“已有 logo 图”的品牌，其余品牌保持文字标。
+BRAND_LOGO_IMG = {
+    "kenyue": "images/logos/kenyue.jpg",   # 肯悦咖啡本地 logo
+}
+
+def brand_meta(brand_key, brand_name, brand_logo):
+    m = {"name": brand_name, "logo": brand_logo, "skus": []}
+    if brand_key in BRAND_LOGO_IMG:
+        m["logoImg"] = BRAND_LOGO_IMG[brand_key]
+    return m
+
 def extract(fpath, brand_key, brand_name, brand_logo):
     os.makedirs(os.path.join(IMG_DIR, brand_key), exist_ok=True)
     z = zipfile.ZipFile(fpath)
@@ -64,7 +76,7 @@ def extract(fpath, brand_key, brand_name, brand_logo):
         sku = {"name": str(name), "price": price if isinstance(price, (int, float)) else 0,
                "tags": [], "img": f"images/{brand_key}/{out_name}"}
         brands.setdefault(cat_key, {})
-        b = brands[cat_key].setdefault(brand_key, {"name": brand_name, "logo": brand_logo, "skus": []})
+        b = brands[cat_key].setdefault(brand_key, brand_meta(brand_key, brand_name, brand_logo))
         b["skus"].append(sku)
     return brands
 
@@ -104,7 +116,7 @@ def extract_url(fpath, brand_key, brand_name, brand_logo, price_col=4, url_col=5
                "price": price if isinstance(price, (int, float)) else 0,
                "tags": [], "img": url}
         brands.setdefault(cat_key, {})
-        b = brands[cat_key].setdefault(brand_key, {"name": brand_name, "logo": brand_logo, "skus": []})
+        b = brands[cat_key].setdefault(brand_key, brand_meta(brand_key, brand_name, brand_logo))
         b["skus"].append(sku)
     n = sum(len(b["skus"]) for cat in brands.values() for b in cat.values())
     print(f"  * {brand_key}: 读取 {n} 款 (跳过 {skipped})")
