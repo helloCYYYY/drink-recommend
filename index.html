@@ -59,7 +59,7 @@
 
   /* ===== 内容区 ===== */
   .scroll{flex:1;overflow-y:auto;padding:max(54px,env(safe-area-inset-top)) 20px max(120px,calc(120px + env(safe-area-inset-bottom)));-webkit-overflow-scrolling:touch;}
-  .header{padding:6px 4px 14px;}
+  .header{padding:6px 4px 10px;}
   .header-top{display:flex;flex-direction:column;gap:6px;}
   .header-sub{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
   .header h1{font-size:23px;margin:0 0 4px;font-weight:800;letter-spacing:0;}
@@ -75,7 +75,7 @@
     outline:3px solid rgba(37,99,235,.35);outline-offset:2px;
   }
 
-  .progress{display:flex;align-items:center;gap:8px;margin:18px 2px 6px;}
+  .progress{display:flex;align-items:center;gap:8px;margin:10px 2px 0;}
   .progress .dot{width:9px;height:9px;border-radius:50%;background:rgba(59,130,246,.25);transition:.3s;}
   .progress .dot.on{background:var(--rose);transform:scale(1.25);}
   .progress .bar{flex:1;height:3px;border-radius:3px;background:rgba(59,130,246,.18);overflow:hidden;}
@@ -264,14 +264,13 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="progress">
-          <div class="dot" id="d1"></div>
-          <div class="bar"><i id="bar"></i></div>
-          <div class="dot" id="d2"></div>
-          <div class="bar"><i id="bar2"></i></div>
-          <div class="dot" id="d3"></div>
+          <div class="progress">
+            <div class="dot" id="d1"></div>
+            <div class="bar"><i id="bar"></i></div>
+            <div class="dot" id="d2"></div>
+            <div class="bar"><i id="bar2"></i></div>
+            <div class="dot" id="d3"></div>
+          </div>
         </div>
 
         <!-- 大类 -->
