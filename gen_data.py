@@ -146,9 +146,9 @@ print(">> 裕莲茶楼")
 yulian = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\裕莲茶楼_饮品SKU清单.xlsx",
                 "yulian", "裕莲茶楼", "🏮")
 
-print(">> KOI")
-koi = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-07-31\ban\outputs\KOI_饮品SKU清单.xlsx",
-              "koi", "KOI", "🧋")
+print(">> KOI (图床直链)")
+koi = extract_url(r"C:\Users\hspcadmin\Documents\drink\koi.xlsx",
+                  "koi", "KOI", "🧋")
 
 print(">> 喜茶")
 hytea = extract(r"C:\Users\hspcadmin\Documents\Codex\2026-08-01\new-chat\outputs\喜茶饮品清单.xlsx",

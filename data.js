@@ -1938,166 +1938,148 @@ const DATA = {
         "logo": "🧋",
         "skus": [
           {
-            "name": "酪酪菠萝夹心奶绿",
-            "price": 27,
-            "tags": [],
-            "img": "images/koi/3.jpg"
-          },
-          {
-            "name": "香草籽冰淇淋奶茶",
-            "price": 25,
-            "tags": [],
-            "img": "images/koi/4.jpg"
-          },
-          {
             "name": "香草籽冰淇淋抹茶奶茶",
+            "price": 26,
+            "tags": [],
+            "img": "https://images.qmai.cn/s216627/2026/07/22/5686e90917a6e52321.jpg"
+          },
+          {
+            "name": "烤糖粉粿冬瓜金乌龙奶茶",
             "price": 23,
             "tags": [],
-            "img": "images/koi/6.jpg"
-          },
-          {
-            "name": "烤糖粉糿冬瓜金乌龙奶茶",
-            "price": 20,
-            "tags": [],
-            "img": "images/koi/7.jpg"
+            "img": "https://images.qmai.cn/s216627/2026/06/10/5619aeba5d9543e2b9.jpg"
           },
           {
             "name": "黄金珍奶",
-            "price": 20,
+            "price": 23,
             "tags": [],
-            "img": "images/koi/10.jpg"
+            "img": "https://images.qmai.cn/s216627/2023/07/14/1d22939950795024fc.jpg"
           },
           {
             "name": "饼干奶茶",
-            "price": 25,
+            "price": 28,
             "tags": [],
-            "img": "images/koi/11.jpg"
+            "img": "https://images.qmai.cn/s216627/2025/10/29/699e6ca82afc929ca7.jpg"
           },
           {
             "name": "浆果乳酪奶绿",
-            "price": 25,
+            "price": 28,
             "tags": [],
-            "img": "images/koi/12.jpg"
+            "img": "https://images.qmai.cn/s216627/2025/10/29/c91f03fccf880d3c58.jpg"
           },
           {
             "name": "布蕾咸芝士奶绿",
-            "price": 23,
+            "price": 26,
             "tags": [],
-            "img": "images/koi/13.jpg"
+            "img": "https://images.qmai.cn/s216627/2026/04/08/e4321d42d90a07ea5b.jpg"
           },
           {
             "name": "比利时酥酪金乌龙奶茶",
-            "price": 23,
+            "price": 26,
             "tags": [],
-            "img": "images/koi/14.jpg"
+            "img": "https://images.qmai.cn/s216627/2025/10/29/cc397b864efb124f2d.jpg"
           },
           {
             "name": "炒米荞麦乌龙咸奶茶",
-            "price": 21,
+            "price": 24,
             "tags": [],
-            "img": "images/koi/15.jpg"
+            "img": "https://images.qmai.cn/s216627/2026/03/04/30a06ca38809216950.jpg"
           },
           {
             "name": "波霸奶茶",
-            "price": 20,
+            "price": 23,
             "tags": [],
-            "img": "images/koi/16.jpg"
+            "img": "https://images.qmai.cn/s216627/2023/07/14/82540b6726a1a8a94a.jpg"
           },
           {
             "name": "比利时酥酪奶茶",
-            "price": 23,
+            "price": 26,
             "tags": [],
-            "img": "images/koi/17.jpg"
+            "img": "https://images.qmai.cn/s216627/2025/10/29/c4d8018912329d03f3.jpg"
           },
           {
-            "name": "酪酪浆果夹心奶绿",
-            "price": 27,
+            "name": "酥酪浆果夹心奶绿",
+            "price": 30,
             "tags": [],
-            "img": "images/koi/18.jpg"
+            "img": "https://images.qmai.cn/s216627/2025/10/29/103e079ab34e665715.jpg"
           },
           {
-            "name": "酪酪多莓果夹心奶绿",
-            "price": 27,
+            "name": "酥酪多莓果夹心奶绿",
+            "price": 30,
             "tags": [],
-            "img": "images/koi/19.jpg"
+            "img": "https://images.qmai.cn/s216627/2026/04/08/c789a80d83287b8864.jpg"
           },
           {
-            "name": "酪酪芒果夹心奶绿",
-            "price": 27,
+            "name": "酥酪芒果夹心奶绿",
+            "price": 30,
             "tags": [],
-            "img": "images/koi/20.jpg"
+            "img": "https://images.qmai.cn/s216627/2025/10/29/9b0f88c6a4fbbf8fa9.jpg"
           },
           {
             "name": "多莓果乳酪奶绿",
-            "price": 25,
+            "price": 28,
             "tags": [],
-            "img": "images/koi/21.jpg"
+            "img": "https://images.qmai.cn/s216627/2026/04/08/57f40033ba7c5dc665.jpg"
           },
           {
             "name": "水蜜桃乳酪奶绿",
-            "price": 25,
+            "price": 28,
             "tags": [],
-            "img": "images/koi/22.jpg"
+            "img": "https://images.qmai.cn/s216627/2025/10/29/e81284d9cbec5b697f.jpg"
           },
           {
             "name": "芒果乳酪奶绿",
-            "price": 25,
+            "price": 28,
             "tags": [],
-            "img": "images/koi/23.jpg"
+            "img": "https://images.qmai.cn/s216627/2025/10/29/48db465cec1c6847d2.jpg"
           },
           {
             "name": "葡萄乳酪奶绿",
-            "price": 25,
+            "price": 28,
             "tags": [],
-            "img": "images/koi/24.jpg"
+            "img": "https://images.qmai.cn/s216627/2025/10/29/edc8ec1f622dd1c562.jpg"
           },
           {
             "name": "金乌龙咸拿铁",
-            "price": 20,
+            "price": 23,
             "tags": [],
-            "img": "images/koi/30.jpg"
+            "img": "https://images.qmai.cn/s216627/2025/04/12/a22d7fb972d6017624.png"
           },
           {
             "name": "茶拿铁",
-            "price": 20,
+            "price": 23,
             "tags": [],
-            "img": "images/koi/31.jpg"
+            "img": "https://images.qmai.cn/s216627/2024/08/08/409825ca6641485ae7.jpg"
           },
           {
             "name": "芋圆红茶拿铁",
-            "price": 23,
-            "tags": [],
-            "img": "images/koi/32.jpg"
-          },
-          {
-            "name": "芋圆牛乳",
             "price": 26,
             "tags": [],
-            "img": "images/koi/33.jpg"
+            "img": "https://images.qmai.cn/s216627/2024/08/08/ddbe3ea752640b20f6.jpg"
+          },
+          {
+            "name": "溪谷红叶拿铁",
+            "price": 23,
+            "tags": [],
+            "img": "https://images.qmai.cn/s216627/2024/08/08/918dbd56b2ea397525.jpg"
           },
           {
             "name": "金乌龙咸奶茶",
-            "price": 17,
-            "tags": [],
-            "img": "images/koi/34.jpg"
-          },
-          {
-            "name": "烤糖粉糿奶茶",
             "price": 20,
             "tags": [],
-            "img": "images/koi/35.jpg"
+            "img": "https://images.qmai.cn/s216627/2025/04/12/6e8aa504e5afe8f0e6.png"
           },
           {
             "name": "咸芝士奶绿",
-            "price": 20,
+            "price": 23,
             "tags": [],
-            "img": "images/koi/36.jpg"
+            "img": "https://images.qmai.cn/s216627/2025/07/16/9754ac579adf46e7ce.jpg"
           },
           {
             "name": "阿萨姆奶茶",
-            "price": 17,
+            "price": 20,
             "tags": [],
-            "img": "images/koi/37.jpg"
+            "img": "https://images.qmai.cn/s216627/2023/07/14/b6aae6bc3ca6651dd6.jpg"
           }
         ]
       },
@@ -3097,94 +3079,52 @@ const DATA = {
         "logo": "🧋",
         "skus": [
           {
-            "name": "菠萝青柠油柑果茶",
-            "price": 22,
+            "name": "杨桃酸木瓜果茶",
+            "price": 25,
             "tags": [],
-            "img": "images/koi/2.jpg"
+            "img": "https://images.qmai.cn/s216627/2026/08/03/f9ff199e5d6adbfead.jpg"
           },
           {
             "name": "香草籽冰淇淋冬瓜金乌龙",
-            "price": 20,
+            "price": 23,
             "tags": [],
-            "img": "images/koi/5.jpg"
+            "img": "https://images.qmai.cn/s216627/2026/07/22/344905ecc206035150.jpg"
           },
           {
-            "name": "烤糖粉糿冬瓜柠檬茶",
-            "price": 19,
-            "tags": [],
-            "img": "images/koi/8.jpg"
-          },
-          {
-            "name": "烤糖粉糿冬瓜金乌龙",
-            "price": 15,
-            "tags": [],
-            "img": "images/koi/9.jpg"
-          },
-          {
-            "name": "多莓果茶",
+            "name": "烤糖粉粿冬瓜柠檬茶",
             "price": 22,
             "tags": [],
-            "img": "images/koi/25.jpg"
+            "img": "https://images.qmai.cn/s216627/2026/05/01/54d85431dd6faec915.jpg"
+          },
+          {
+            "name": "烤糖粉粿冬瓜金乌龙",
+            "price": 18,
+            "tags": [],
+            "img": "https://images.qmai.cn/s216627/2026/05/01/b52e1f89a52fa35839.jpg"
           },
           {
             "name": "青柠香茶",
-            "price": 19,
+            "price": 22,
             "tags": [],
-            "img": "images/koi/26.jpg"
+            "img": "https://images.qmai.cn/s216627/2024/08/25/9f2418b6c67c322116.jpg"
           },
           {
             "name": "水蜜桃果茶",
-            "price": 22,
+            "price": 25,
             "tags": [],
-            "img": "images/koi/27.jpg"
+            "img": "https://images.qmai.cn/s216627/2023/07/14/5721c8735ddddbad1b.jpg"
           },
           {
             "name": "芒果果茶",
-            "price": 19,
+            "price": 22,
             "tags": [],
-            "img": "images/koi/28.jpg"
+            "img": "https://images.qmai.cn/s216627/2023/07/14/61a9fd23931b954dd2.jpg"
           },
           {
             "name": "葡萄果茶",
-            "price": 22,
+            "price": 25,
             "tags": [],
-            "img": "images/koi/29.jpg"
-          },
-          {
-            "name": "红茶玛奇朵",
-            "price": 17,
-            "tags": [],
-            "img": "images/koi/38.jpg"
-          },
-          {
-            "name": "芒果绿茶玛奇朵",
-            "price": 22,
-            "tags": [],
-            "img": "images/koi/39.jpg"
-          },
-          {
-            "name": "阿萨姆红茶",
-            "price": 12,
-            "tags": [],
-            "img": "images/koi/40.jpg"
-          },
-          {
-            "name": "茉莉绿茶",
-            "price": 12,
-            "tags": [],
-            "img": "images/koi/41.jpg"
-          },
-          {
-            "name": "金乌龙",
-            "price": 12,
-            "tags": [],
-            "img": "images/koi/42.jpg"
-          },
-          {
-            "name": "荞麦金乌龙",
-            "price": 12,
-            "tags": [],
-            "img": "images/koi/43.jpg"
+            "img": "https://images.qmai.cn/s216627/2023/07/14/2e659d2351e37c78e2.jpg"
           }
         ]
       },
@@ -3960,6 +3900,54 @@ const DATA = {
             "price": 25,
             "tags": [],
             "img": "https://p0.meituan.net/waimaiopenbucket/d7f06f82166cd3849c45e9dec00e490398837.jpg"
+          }
+        ]
+      },
+      "koi": {
+        "name": "KOI",
+        "logo": "🧋",
+        "skus": [
+          {
+            "name": "芋圆牛奶",
+            "price": 29,
+            "tags": [],
+            "img": "https://images.qmai.cn/s216627/2024/08/08/4b7c34eca3725196e9.jpg"
+          },
+          {
+            "name": "红茶玛奇朵",
+            "price": 20,
+            "tags": [],
+            "img": "https://images.qmai.cn/s216627/2023/07/14/cc68ce0d10674dd7c6.jpg"
+          },
+          {
+            "name": "芒果绿茶玛奇朵",
+            "price": 25,
+            "tags": [],
+            "img": "https://images.qmai.cn/s216627/2023/07/14/bdff8be461359645d6.jpg"
+          },
+          {
+            "name": "阿萨姆红茶",
+            "price": 15,
+            "tags": [],
+            "img": "https://images.qmai.cn/s216627/2023/07/14/3dc4d8844b8bbb8745.jpg"
+          },
+          {
+            "name": "茉莉绿茶",
+            "price": 15,
+            "tags": [],
+            "img": "https://images.qmai.cn/s216627/2024/06/03/a7d3d1ef1f9e3434ac.jpg"
+          },
+          {
+            "name": "金乌龙",
+            "price": 15,
+            "tags": [],
+            "img": "https://images.qmai.cn/s216627/2025/04/12/72b886e94f8e57790b.png"
+          },
+          {
+            "name": "荞麦金乌龙",
+            "price": 15,
+            "tags": [],
+            "img": "https://images.qmai.cn/s216627/2026/03/04/61649b68c5691df009.jpg"
           }
         ]
       }
